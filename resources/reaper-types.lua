@@ -3,6 +3,65 @@ reaper = {}
 gfx = {}
 
 ---@alias ReaProject integer
+---@class HWND
+---@class MediaTrack
+---@class MediaItem
+---@class MediaItem_Take
+---@class AudioAccessor
+---@class KbdSectionInfo
+---@class TrackEnvelope
+---@class PCM_source
+---@class IReaperControlSurface
+---@class reaper.array
+---@class joystick_device
+---@class takename
+---@class BR_Envelope
+---@class RprMidiTake
+---@class RprMidiNote
+---@class WDL_FastString
+---@class AudioWriter
+---@class FxChain
+---@class CF_Preview
+---@class gfx
+---@class ReaperArray
+---@alias identifier
+---| ReaProject 
+---| HWND
+---| MediaTrack
+---| MediaItem
+---| MediaItem_Take
+---| AudioAccessor
+---| KbdSectionInfo
+---| TrackEnvelope
+---| PCM_source
+---| IReaperControlSurface
+---| reaper.array
+---| joystick_device
+---| takename
+---| BR_Envelope
+---| RprMidiTake
+---| RprMidiNote
+---| WDL_FastString
+---| AudioWriter
+---| FxChain
+---| CF_Preview
+---| gfx
+---| ReaperArray
+---| identifier
+
+---@class PackageEntry
+---@class ImGui_Context
+---@class ImGui_Font
+---@class ImGui_Image
+---@class ImGui_DrawList
+---@class ImGui_DrawListSplitter
+---@class ImGui_Function
+---@class ImGui_ImageSet
+---@class ImGui_ListClipper
+---@class ImGui_TextFilter
+---@class ImGui_Viewport
+
+
 
 ---Creates a new media item. It will be empty and therefore not be shown in the arrange-view, until you associate a mediafile(audio, picture, video, etc) or a length and position to it using SetMediaItemInfo_Value
 ---@param tr MediaTrack

@@ -4,6 +4,8 @@ An extension for Reaper's ReaScript API methods in VS Code.
 Provides type-checking in lua, intellisense/Autocomplete, and doc-comments on hover for all functions.
 
 ## Changelog
+- 0.1.2 (Dec 13th 2023)
+  - add reaper pointers to list of types, using classes in types file
 - 0.1.0 (Sep 24rd 2023)
   - setup auto-highlight for Jesusonic file types
 - 0.1.0 (Sep 23rd 2023)

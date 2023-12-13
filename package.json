@@ -1,7 +1,7 @@
 {
   "name": "reascript-docs",
   "displayName": "REAPER ReaScript",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "antoinebalaine",
   "icon": "reaperlogo.png",
   "repository": {
@@ -78,10 +78,11 @@
     "print-lua-types": "npx ts-node src/api-scraper/typescript/helpers/typedef_write.ts",
     "scrape-ultraschall": "npx ts-node src/api-scraper/fix-and-escape-ultraschall-xml.ts",
     "scrape-api": "npx ts-node ./src/api-scraper/OLD_scrape-reascript-api.ts",
-    "vscode:prepublish": "yarn compile",
+    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "package": "vsce package"
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",

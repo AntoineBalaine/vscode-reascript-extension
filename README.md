@@ -4,6 +4,10 @@ An extension for Reaper's ReaScript API methods in VS Code.
 Provides type-checking in lua, intellisense/Autocomplete, and doc-comments on hover for all functions.
 
 ## Changelog
+- 0.1.3 (May 3rd 2024)
+  - use updated reaper types file from Sexan's api parser
+  - use updated ImGui types file from Cfillion's ci
+  - remove previous completion/hover/signature providers that were redundant
 - 0.1.2 (Dec 13th 2023)
   - add reaper pointers to list of types, using classes in types file
 - 0.1.0 (Sep 24rd 2023)

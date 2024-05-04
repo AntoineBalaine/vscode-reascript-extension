@@ -28,6 +28,20 @@
     "workspaceContains:**/*.jsfx-in"
   ],
   "contributes": {
+    "configuration": {
+      "title": "Reascript: ReaImGui version",
+      "properties": {
+        "reascript-docs.reaImGuiVersion": {
+          "type": "string",
+          "default": "0.9",
+          "description": "which version of reaImGui your system uses",
+          "enum": [
+            "<0.9",
+            "0.9"
+          ]
+        }
+      }
+    },
     "languages": [
       {
         "id": "lua",

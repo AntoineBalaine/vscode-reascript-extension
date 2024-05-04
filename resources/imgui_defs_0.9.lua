@@ -1,0 +1,22347 @@
+--- ReaImGui LuaCATS definitions
+---
+--- Generated for version 0.9.0.2-7-g0278540 - API version 0.9
+---
+--- @meta  imgui
+--- @class ImGui
+---
+--- **Button > Cardinal Directions > Dir\_Down**
+---
+--- ---
+---
+--- **Button > Cardinal Directions**
+---
+--- For ArrowButton.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Dir_Down integer
+---
+--- **Button > Cardinal Directions > Dir\_Left**
+---
+--- ---
+---
+--- **Button > Cardinal Directions**
+---
+--- For ArrowButton.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Dir_Left integer
+---
+--- **Button > Cardinal Directions > Dir\_None**
+---
+--- ---
+---
+--- **Button > Cardinal Directions**
+---
+--- For ArrowButton.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Dir_None integer
+---
+--- **Button > Cardinal Directions > Dir\_Right**
+---
+--- ---
+---
+--- **Button > Cardinal Directions**
+---
+--- For ArrowButton.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Dir_Right integer
+---
+--- **Button > Cardinal Directions > Dir\_Up**
+---
+--- ---
+---
+--- **Button > Cardinal Directions**
+---
+--- For ArrowButton.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Dir_Up integer
+---
+--- **Button > Flags > ButtonFlags\_MouseButtonLeft**
+---
+--- React on left mouse button (default).
+---
+--- ---
+---
+--- **Button > Flags**
+---
+--- For InvisibleButton.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ButtonFlags_MouseButtonLeft integer
+---
+--- **Button > Flags > ButtonFlags\_MouseButtonMiddle**
+---
+--- React on center mouse button.
+---
+--- ---
+---
+--- **Button > Flags**
+---
+--- For InvisibleButton.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ButtonFlags_MouseButtonMiddle integer
+---
+--- **Button > Flags > ButtonFlags\_MouseButtonRight**
+---
+--- React on right mouse button.
+---
+--- ---
+---
+--- **Button > Flags**
+---
+--- For InvisibleButton.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ButtonFlags_MouseButtonRight integer
+---
+--- **Button > Flags > ButtonFlags\_None**
+---
+--- ---
+---
+--- **Button > Flags**
+---
+--- For InvisibleButton.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ButtonFlags_None integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoAlpha**
+---
+--- ColorEdit, ColorPicker, ColorButton: ignore Alpha component
+---   (will only read 3 components from the input pointer).
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoAlpha integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoBorder**
+---
+--- ColorButton: disable border (which is enforced by default).
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoBorder integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoDragDrop**
+---
+--- ColorEdit: disable drag and drop target. ColorButton: disable drag and drop source.
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoDragDrop integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoInputs**
+---
+--- ColorEdit, ColorPicker: disable inputs sliders/text widgets
+---    (e.g. to show only the small preview color square).
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoInputs integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoLabel**
+---
+--- ColorEdit, ColorPicker: disable display of inline text label
+---    (the label is still forwarded to the tooltip and picker).
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoLabel integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoOptions**
+---
+--- ColorEdit: disable toggling options menu when right-clicking on inputs/small preview.
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoOptions integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoPicker**
+---
+--- ColorEdit: disable picker when clicking on color square.
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoPicker integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoSidePreview**
+---
+--- ColorPicker: disable bigger color preview on right side of the picker,
+---    use small color square preview instead.
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoSidePreview integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoSmallPreview**
+---
+--- ColorEdit, ColorPicker: disable color square preview next to the inputs.
+---    (e.g. to show only the inputs).
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoSmallPreview integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_NoTooltip**
+---
+--- ColorEdit, ColorPicker, ColorButton: disable tooltip when hovering the preview.
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_NoTooltip integer
+---
+--- **Color Edit > Flags > ColorEditFlags\_None**
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_None integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_AlphaBar**
+---
+--- ColorEdit, ColorPicker: show vertical alpha bar/gradient in picker.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_AlphaBar integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_AlphaPreview**
+---
+--- ColorEdit, ColorPicker, ColorButton: display preview as a transparent color
+---    over a checkerboard, instead of opaque.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_AlphaPreview integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_AlphaPreviewHalf**
+---
+--- ColorEdit, ColorPicker, ColorButton: display half opaque / half checkerboard,
+---    instead of opaque.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_AlphaPreviewHalf integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_DisplayHSV**
+---
+--- ColorEdit: override _display_ type to HSV. ColorPicker:
+---    select any combination using one or more of RGB/HSV/Hex.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_DisplayHSV integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_DisplayHex**
+---
+--- ColorEdit: override _display_ type to Hex. ColorPicker:
+---    select any combination using one or more of RGB/HSV/Hex.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_DisplayHex integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_DisplayRGB**
+---
+--- ColorEdit: override _display_ type to RGB. ColorPicker:
+---    select any combination using one or more of RGB/HSV/Hex.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_DisplayRGB integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_Float**
+---
+--- ColorEdit, ColorPicker, ColorButton: _display_ values formatted as 0.0..1.0
+---    floats instead of 0..255 integers. No round-trip of value via integers.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_Float integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_InputHSV**
+---
+--- ColorEdit, ColorPicker: input and output data in HSV format.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_InputHSV integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_InputRGB**
+---
+--- ColorEdit, ColorPicker: input and output data in RGB format.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_InputRGB integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_PickerHueBar**
+---
+--- ColorPicker: bar for Hue, rectangle for Sat/Value.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_PickerHueBar integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_PickerHueWheel**
+---
+--- ColorPicker: wheel for Hue, triangle for Sat/Value.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_PickerHueWheel integer
+---
+--- **Color Edit > Flags > User Options > ColorEditFlags\_Uint8**
+---
+--- ColorEdit, ColorPicker, ColorButton: _display_ values formatted as 0..255.
+---
+--- ---
+---
+--- **Color Edit > Flags > User Options**
+---
+--- (right-click on widget to change some of them)
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ColorEditFlags_Uint8 integer
+---
+--- **Combo \& List > Combo Box \(Dropdown\) > ComboFlags\_HeightLarge**
+---
+--- Max ~20 items visible.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ComboFlags_HeightLarge integer
+---
+--- **Combo \& List > Combo Box \(Dropdown\) > ComboFlags\_HeightLargest**
+---
+--- As many fitting items as possible.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ComboFlags_HeightLargest integer
+---
+--- **Combo \& List > Combo Box \(Dropdown\) > ComboFlags\_HeightRegular**
+---
+--- Max ~8 items visible (default).
+---
+--- ---
+---
+--- @since 0.1
+--- @field ComboFlags_HeightRegular integer
+---
+--- **Combo \& List > Combo Box \(Dropdown\) > ComboFlags\_HeightSmall**
+---
+--- Max ~4 items visible. Tip: If you want your combo popup to be a specific size
+--- you can use SetNextWindowSizeConstraints prior to calling BeginCombo.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ComboFlags_HeightSmall integer
+---
+--- **Combo \& List > Combo Box \(Dropdown\) > ComboFlags\_NoArrowButton**
+---
+--- Display on the preview box without the square arrow button.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ComboFlags_NoArrowButton integer
+---
+--- **Combo \& List > Combo Box \(Dropdown\) > ComboFlags\_NoPreview**
+---
+--- Display only a square arrow button.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ComboFlags_NoPreview integer
+---
+--- **Combo \& List > Combo Box \(Dropdown\) > ComboFlags\_None**
+---
+--- ---
+---
+--- @since 0.1
+--- @field ComboFlags_None integer
+---
+--- **Combo \& List > Combo Box \(Dropdown\) > ComboFlags\_PopupAlignLeft**
+---
+--- Align the popup toward the left by default.
+---
+--- ---
+---
+--- @since 0.1
+--- @field ComboFlags_PopupAlignLeft integer
+---
+--- **Combo \& List > Combo Box \(Dropdown\) > ComboFlags\_WidthFitPreview**
+---
+--- Width dynamically calculated from preview contents.
+---
+--- ---
+---
+--- @since 0.9
+--- @field ComboFlags_WidthFitPreview integer
+---
+--- **Combo \& List > Selectables > SelectableFlags\_AllowDoubleClick**
+---
+--- Generate press events on double clicks too.
+---
+--- ---
+---
+--- **Combo \& List > Selectables**
+---
+--- A selectable highlights when hovered, and can display another color when
+--- selected. Neighbors selectable extend their highlight bounds in order to leave
+--- no gap between them. This is so a series of selected Selectable appear
+--- contiguous.
+---
+--- ---
+---
+--- @since 0.1
+--- @field SelectableFlags_AllowDoubleClick integer
+---
+--- **Combo \& List > Selectables > SelectableFlags\_AllowOverlap**
+---
+--- Hit testing to allow subsequent widgets to overlap this one.
+---
+--- ---
+---
+--- **Combo \& List > Selectables**
+---
+--- A selectable highlights when hovered, and can display another color when
+--- selected. Neighbors selectable extend their highlight bounds in order to leave
+--- no gap between them. This is so a series of selected Selectable appear
+--- contiguous.
+---
+--- ---
+---
+--- @since 0.9
+--- @field SelectableFlags_AllowOverlap integer
+---
+--- **Combo \& List > Selectables > SelectableFlags\_Disabled**
+---
+--- Cannot be selected, display grayed out text.
+---
+--- ---
+---
+--- **Combo \& List > Selectables**
+---
+--- A selectable highlights when hovered, and can display another color when
+--- selected. Neighbors selectable extend their highlight bounds in order to leave
+--- no gap between them. This is so a series of selected Selectable appear
+--- contiguous.
+---
+--- ---
+---
+--- @since 0.1
+--- @field SelectableFlags_Disabled integer
+---
+--- **Combo \& List > Selectables > SelectableFlags\_DontClosePopups**
+---
+--- Clicking this doesn't close parent popup window.
+---
+--- ---
+---
+--- **Combo \& List > Selectables**
+---
+--- A selectable highlights when hovered, and can display another color when
+--- selected. Neighbors selectable extend their highlight bounds in order to leave
+--- no gap between them. This is so a series of selected Selectable appear
+--- contiguous.
+---
+--- ---
+---
+--- @since 0.1
+--- @field SelectableFlags_DontClosePopups integer
+---
+--- **Combo \& List > Selectables > SelectableFlags\_None**
+---
+--- ---
+---
+--- **Combo \& List > Selectables**
+---
+--- A selectable highlights when hovered, and can display another color when
+--- selected. Neighbors selectable extend their highlight bounds in order to leave
+--- no gap between them. This is so a series of selected Selectable appear
+--- contiguous.
+---
+--- ---
+---
+--- @since 0.1
+--- @field SelectableFlags_None integer
+---
+--- **Combo \& List > Selectables > SelectableFlags\_SpanAllColumns**
+---
+--- Frame will span all columns of its container table (text will still fit in current column).
+---
+--- ---
+---
+--- **Combo \& List > Selectables**
+---
+--- A selectable highlights when hovered, and can display another color when
+--- selected. Neighbors selectable extend their highlight bounds in order to leave
+--- no gap between them. This is so a series of selected Selectable appear
+--- contiguous.
+---
+--- ---
+---
+--- @since 0.1
+--- @field SelectableFlags_SpanAllColumns integer
+---
+--- **Context > Flags > ConfigFlags\_DockingEnable**
+---
+--- Enable docking functionality.
+---
+--- ---
+---
+--- **Context > Flags**
+---
+--- For CreateContext and SetConfigVar(ConfigVar_Flags()).
+---
+--- ---
+---
+--- @since 0.5
+--- @field ConfigFlags_DockingEnable integer
+---
+--- **Context > Flags > ConfigFlags\_NavEnableKeyboard**
+---
+--- Master keyboard navigation enable flag.
+---    Enable full Tabbing + directional arrows + space/enter to activate.
+---
+--- ---
+---
+--- **Context > Flags**
+---
+--- For CreateContext and SetConfigVar(ConfigVar_Flags()).
+---
+--- ---
+---
+--- @since 0.1
+--- @field ConfigFlags_NavEnableKeyboard integer
+---
+--- **Context > Flags > ConfigFlags\_NavEnableSetMousePos**
+---
+--- Instruct navigation to move the mouse cursor.
+---
+--- ---
+---
+--- **Context > Flags**
+---
+--- For CreateContext and SetConfigVar(ConfigVar_Flags()).
+---
+--- ---
+---
+--- @since 0.1
+--- @field ConfigFlags_NavEnableSetMousePos integer
+---
+--- **Context > Flags > ConfigFlags\_NavNoCaptureKeyboard**
+---
+--- Instruct navigation to not capture global keyboard input when
+---    ConfigFlags_NavEnableKeyboard is set (see SetNextFrameWantCaptureKeyboard).
+---
+--- ---
+---
+--- **Context > Flags**
+---
+--- For CreateContext and SetConfigVar(ConfigVar_Flags()).
+---
+--- ---
+---
+--- @since 0.8
+--- @field ConfigFlags_NavNoCaptureKeyboard integer
+---
+--- **Context > Flags > ConfigFlags\_NoMouse**
+---
+--- Instruct imgui to ignore mouse position/buttons.
+---
+--- ---
+---
+--- **Context > Flags**
+---
+--- For CreateContext and SetConfigVar(ConfigVar_Flags()).
+---
+--- ---
+---
+--- @since 0.1
+--- @field ConfigFlags_NoMouse integer
+---
+--- **Context > Flags > ConfigFlags\_NoMouseCursorChange**
+---
+--- Instruct backend to not alter mouse cursor shape and visibility.
+---
+--- ---
+---
+--- **Context > Flags**
+---
+--- For CreateContext and SetConfigVar(ConfigVar_Flags()).
+---
+--- ---
+---
+--- @since 0.1
+--- @field ConfigFlags_NoMouseCursorChange integer
+---
+--- **Context > Flags > ConfigFlags\_NoSavedSettings**
+---
+--- Disable state restoration and persistence for the whole context.
+---
+--- ---
+---
+--- **Context > Flags**
+---
+--- For CreateContext and SetConfigVar(ConfigVar_Flags()).
+---
+--- ---
+---
+--- @since 0.4
+--- @field ConfigFlags_NoSavedSettings integer
+---
+--- **Context > Flags > ConfigFlags\_None**
+---
+--- ---
+---
+--- **Context > Flags**
+---
+--- For CreateContext and SetConfigVar(ConfigVar_Flags()).
+---
+--- ---
+---
+--- @since 0.1
+--- @field ConfigFlags_None integer
+---
+--- **Context > Options > ConfigVar\_DebugBeginReturnValueLoop**
+---
+--- Some calls to Begin()/BeginChild() will return false.
+--- Will cycle through window depths then repeat. Suggested use: add
+--- "SetConfigVar(ConfigVar_DebugBeginReturnValueLoop(), GetKeyMods() == Mod_Shift"
+--- in your main loop then occasionally press SHIFT.
+--- Windows should be flickering while running.
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field ConfigVar_DebugBeginReturnValueLoop integer
+---
+--- **Context > Options > ConfigVar\_DebugBeginReturnValueOnce**
+---
+--- First-time calls to Begin()/BeginChild() will return false.
+--- **Needs to be set at context startup time** if you don't want to miss windows.
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field ConfigVar_DebugBeginReturnValueOnce integer
+---
+--- **Context > Options > ConfigVar\_DockingNoSplit**
+---
+--- Simplified docking mode: disable window splitting, so docking is limited to
+---    merging multiple windows together into tab-bars.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_DockingNoSplit integer
+---
+--- **Context > Options > ConfigVar\_DockingTransparentPayload**
+---
+--- Make window or viewport transparent when docking and only display docking
+---    boxes on the target viewport.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_DockingTransparentPayload integer
+---
+--- **Context > Options > ConfigVar\_DockingWithShift**
+---
+--- Enable docking with holding Shift key
+---    (reduce visual noise, allows dropping in wider space
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_DockingWithShift integer
+---
+--- **Context > Options > ConfigVar\_DragClickToInputText**
+---
+--- Enable turning Drag* widgets into text input with a simple mouse
+---    click-release (without moving). Not desirable on devices without a keyboard.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_DragClickToInputText integer
+---
+--- **Context > Options > ConfigVar\_Flags**
+---
+--- ConfigFlags_*
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_Flags integer
+---
+--- **Context > Options > ConfigVar\_HoverDelayNormal**
+---
+--- Delay for IsItemHovered(HoveredFlags_DelayNormal).
+---    Usually used along with ConfigVar_HoverStationaryDelay.
+---
+--- ---
+---
+--- @since 0.8
+--- @field ConfigVar_HoverDelayNormal integer
+---
+--- **Context > Options > ConfigVar\_HoverDelayShort**
+---
+--- Delay for IsItemHovered(HoveredFlags_DelayShort).
+---    Usually used along with ConfigVar_HoverStationaryDelay.
+---
+--- ---
+---
+--- @since 0.8
+--- @field ConfigVar_HoverDelayShort integer
+---
+--- **Context > Options > ConfigVar\_HoverFlagsForTooltipMouse**
+---
+--- Default flags when using IsItemHovered(HoveredFlags_ForTooltip) or
+---    BeginItemTooltip()/SetItemTooltip() while using mouse.
+---
+--- ---
+---
+--- @since 0.9
+--- @field ConfigVar_HoverFlagsForTooltipMouse integer
+---
+--- **Context > Options > ConfigVar\_HoverFlagsForTooltipNav**
+---
+--- Default flags when using IsItemHovered(HoveredFlags_ForTooltip) or
+---    BeginItemTooltip()/SetItemTooltip() while using keyboard/gamepad.
+---
+--- ---
+---
+--- @since 0.9
+--- @field ConfigVar_HoverFlagsForTooltipNav integer
+---
+--- **Context > Options > ConfigVar\_HoverStationaryDelay**
+---
+--- Delay for IsItemHovered(HoveredFlags_Stationary).
+---    Time required to consider mouse stationary.
+---
+--- ---
+---
+--- @since 0.9
+--- @field ConfigVar_HoverStationaryDelay integer
+---
+--- **Context > Options > ConfigVar\_InputTextCursorBlink**
+---
+--- Enable blinking cursor (optional as some users consider it to be distracting).
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_InputTextCursorBlink integer
+---
+--- **Context > Options > ConfigVar\_InputTextEnterKeepActive**
+---
+--- Pressing Enter will keep item active and select contents (single-line only).
+---
+--- ---
+---
+--- @since 0.8
+--- @field ConfigVar_InputTextEnterKeepActive integer
+---
+--- **Context > Options > ConfigVar\_InputTrickleEventQueue**
+---
+--- Enable input queue trickling: some types of events submitted during the same
+---    frame (e.g. button down + up) will be spread over multiple frames, improving
+---    interactions with low framerates.
+---
+---    Warning: when this option is disabled mouse clicks and key presses faster
+---    than a frame will be lost.
+---    This affects accessiblity features and some input devices.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_InputTrickleEventQueue integer
+---
+--- **Context > Options > ConfigVar\_KeyRepeatDelay**
+---
+--- When holding a key/button, time before it starts repeating, in seconds
+---    (for buttons in Repeat mode, etc.).
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_KeyRepeatDelay integer
+---
+--- **Context > Options > ConfigVar\_KeyRepeatRate**
+---
+--- When holding a key/button, rate at which it repeats, in seconds.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_KeyRepeatRate integer
+---
+--- **Context > Options > ConfigVar\_MacOSXBehaviors**
+---
+--- OS X style: Text editing cursor movement using Alt instead of Ctrl, Shortcuts
+---    using Cmd/Super instead of Ctrl, Line/Text Start and End using Cmd+Arrows
+---    instead of Home/End, Double click selects by word instead of selecting whole
+---    text, Multi-selection in lists uses Cmd/Super instead of Ctrl.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_MacOSXBehaviors integer
+---
+--- **Context > Options > ConfigVar\_MouseDoubleClickMaxDist**
+---
+--- Distance threshold to stay in to validate a double-click, in pixels.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_MouseDoubleClickMaxDist integer
+---
+--- **Context > Options > ConfigVar\_MouseDoubleClickTime**
+---
+--- Time for a double-click, in seconds.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_MouseDoubleClickTime integer
+---
+--- **Context > Options > ConfigVar\_MouseDragThreshold**
+---
+--- Distance threshold before considering we are dragging.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_MouseDragThreshold integer
+---
+--- **Context > Options > ConfigVar\_ViewportsNoDecoration**
+---
+--- Disable default OS window decoration. Enabling decoration can create
+---    subsequent issues at OS levels (e.g. minimum window size).
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_ViewportsNoDecoration integer
+---
+--- **Context > Options > ConfigVar\_WindowsMoveFromTitleBarOnly**
+---
+--- Enable allowing to move windows only when clicking on their title bar.
+---    Does not apply to windows without a title bar.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_WindowsMoveFromTitleBarOnly integer
+---
+--- **Context > Options > ConfigVar\_WindowsResizeFromEdges**
+---
+--- Enable resizing of windows from their edges and from the lower-left corner.
+---
+--- ---
+---
+--- @since 0.7
+--- @field ConfigVar_WindowsResizeFromEdges integer
+---
+--- **Drag \& Drop > Flags > DragDropFlags\_None**
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_None integer
+---
+--- **Drag \& Drop > Flags > Payload > DragDropFlags\_AcceptBeforeDelivery**
+---
+--- AcceptDragDropPayload will returns true even before the mouse button is
+---    released. You can then check GetDragDropPayload/is_delivery to test if the
+---    payload needs to be delivered.
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Payload**
+---
+--- For AcceptDragDropPayload
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_AcceptBeforeDelivery integer
+---
+--- **Drag \& Drop > Flags > Payload > DragDropFlags\_AcceptNoDrawDefaultRect**
+---
+--- Do not draw the default highlight rectangle when hovering over target.
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Payload**
+---
+--- For AcceptDragDropPayload
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_AcceptNoDrawDefaultRect integer
+---
+--- **Drag \& Drop > Flags > Payload > DragDropFlags\_AcceptNoPreviewTooltip**
+---
+--- Request hiding the BeginDragDropSource tooltip from the BeginDragDropTarget site.
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Payload**
+---
+--- For AcceptDragDropPayload
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_AcceptNoPreviewTooltip integer
+---
+--- **Drag \& Drop > Flags > Payload > DragDropFlags\_AcceptPeekOnly**
+---
+--- For peeking ahead and inspecting the payload before delivery.
+---    Equivalent to DragDropFlags_AcceptBeforeDelivery |
+---    DragDropFlags_AcceptNoDrawDefaultRect.
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Payload**
+---
+--- For AcceptDragDropPayload
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_AcceptPeekOnly integer
+---
+--- **Drag \& Drop > Flags > Source > DragDropFlags\_SourceAllowNullID**
+---
+--- Allow items such as Text, Image that have no unique identifier to be used as
+---    drag source, by manufacturing a temporary identifier based on their
+---    window-relative position. This is extremely unusual within the dear imgui
+---    ecosystem and so we made it explicit.
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Source**
+---
+--- For BeginDragDropSource
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_SourceAllowNullID integer
+---
+--- **Drag \& Drop > Flags > Source > DragDropFlags\_SourceAutoExpirePayload**
+---
+--- Automatically expire the payload if the source cease to be submitted
+---    (otherwise payloads are persisting while being dragged).
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Source**
+---
+--- For BeginDragDropSource
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_SourceAutoExpirePayload integer
+---
+--- **Drag \& Drop > Flags > Source > DragDropFlags\_SourceExtern**
+---
+--- External source (from outside of dear imgui), won't attempt to read current
+---    item/window info. Will always return true.
+---    Only one Extern source can be active simultaneously.
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Source**
+---
+--- For BeginDragDropSource
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_SourceExtern integer
+---
+--- **Drag \& Drop > Flags > Source > DragDropFlags\_SourceNoDisableHover**
+---
+--- By default, when dragging we clear data so that IsItemHovered will return
+---    false, to avoid subsequent user code submitting tooltips. This flag disables
+---    this behavior so you can still call IsItemHovered on the source item.
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Source**
+---
+--- For BeginDragDropSource
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_SourceNoDisableHover integer
+---
+--- **Drag \& Drop > Flags > Source > DragDropFlags\_SourceNoHoldToOpenOthers**
+---
+--- Disable the behavior that allows to open tree nodes and collapsing header by
+---    holding over them while dragging a source item.
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Source**
+---
+--- For BeginDragDropSource
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_SourceNoHoldToOpenOthers integer
+---
+--- **Drag \& Drop > Flags > Source > DragDropFlags\_SourceNoPreviewTooltip**
+---
+--- By default, a successful call to BeginDragDropSource opens a tooltip so you
+---    can display a preview or description of the source contents.
+---    This flag disables this behavior.
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Source**
+---
+--- For BeginDragDropSource
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @field DragDropFlags_SourceNoPreviewTooltip integer
+---
+--- **Drag \& Slider > Flags > SliderFlags\_AlwaysClamp**
+---
+--- Clamp value to min/max bounds when input manually with CTRL+Click.
+---    By default CTRL+Click allows going out of bounds.
+---
+--- ---
+---
+--- **Drag \& Slider > Flags**
+---
+--- For DragDouble, DragInt, SliderDouble, SliderInt etc. (Those are per-item
+--- flags. There are shared flags in SetConfigVar: ConfigVar_DragClickToInputText
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @field SliderFlags_AlwaysClamp integer
+---
+--- **Drag \& Slider > Flags > SliderFlags\_Logarithmic**
+---
+--- Make the widget logarithmic (linear otherwise).
+---    Consider using SliderFlags_NoRoundToFormat with this if using a format-string
+---    with small amount of digits.
+---
+--- ---
+---
+--- **Drag \& Slider > Flags**
+---
+--- For DragDouble, DragInt, SliderDouble, SliderInt etc. (Those are per-item
+--- flags. There are shared flags in SetConfigVar: ConfigVar_DragClickToInputText
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @field SliderFlags_Logarithmic integer
+---
+--- **Drag \& Slider > Flags > SliderFlags\_NoInput**
+---
+--- Disable CTRL+Click or Enter key allowing to input text directly into the widget.
+---
+--- ---
+---
+--- **Drag \& Slider > Flags**
+---
+--- For DragDouble, DragInt, SliderDouble, SliderInt etc. (Those are per-item
+--- flags. There are shared flags in SetConfigVar: ConfigVar_DragClickToInputText
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @field SliderFlags_NoInput integer
+---
+--- **Drag \& Slider > Flags > SliderFlags\_NoRoundToFormat**
+---
+--- Disable rounding underlying value to match precision of the display format
+---    string (e.g. %.3f values are rounded to those 3 digits).
+---
+--- ---
+---
+--- **Drag \& Slider > Flags**
+---
+--- For DragDouble, DragInt, SliderDouble, SliderInt etc. (Those are per-item
+--- flags. There are shared flags in SetConfigVar: ConfigVar_DragClickToInputText
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @field SliderFlags_NoRoundToFormat integer
+---
+--- **Drag \& Slider > Flags > SliderFlags\_None**
+---
+--- ---
+---
+--- **Drag \& Slider > Flags**
+---
+--- For DragDouble, DragInt, SliderDouble, SliderInt etc. (Those are per-item
+--- flags. There are shared flags in SetConfigVar: ConfigVar_DragClickToInputText
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @field SliderFlags_None integer
+---
+--- **Draw List > DrawFlags\_Closed**
+---
+--- DrawList_PathStroke, DrawList_AddPolyline: specify that shape should be
+---    closed (Important: this is always == 1 for legacy reason).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_Closed integer
+---
+--- **Draw List > DrawFlags\_None**
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_None integer
+---
+--- **Draw List > DrawFlags\_RoundCornersAll**
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersAll integer
+---
+--- **Draw List > DrawFlags\_RoundCornersBottom**
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersBottom integer
+---
+--- **Draw List > DrawFlags\_RoundCornersBottomLeft**
+---
+--- DrawList_AddRect, DrawList_AddRectFilled, DrawList_PathRect: enable rounding
+---    bottom-left corner only (when rounding > 0.0, we default to all corners).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersBottomLeft integer
+---
+--- **Draw List > DrawFlags\_RoundCornersBottomRight**
+---
+--- DrawList_AddRect, DrawList_AddRectFilled, DrawList_PathRect: enable rounding
+---    bottom-right corner only (when rounding > 0.0, we default to all corners).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersBottomRight integer
+---
+--- **Draw List > DrawFlags\_RoundCornersLeft**
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersLeft integer
+---
+--- **Draw List > DrawFlags\_RoundCornersNone**
+---
+--- DrawList_AddRect, DrawList_AddRectFilled, DrawList_PathRect: disable rounding
+---    on all corners (when rounding > 0.0). This is NOT zero, NOT an implicit flag!.
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersNone integer
+---
+--- **Draw List > DrawFlags\_RoundCornersRight**
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersRight integer
+---
+--- **Draw List > DrawFlags\_RoundCornersTop**
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersTop integer
+---
+--- **Draw List > DrawFlags\_RoundCornersTopLeft**
+---
+--- DrawList_AddRect, DrawList_AddRectFilled, DrawList_PathRect: enable rounding
+---    top-left corner only (when rounding > 0.0, we default to all corners).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersTopLeft integer
+---
+--- **Draw List > DrawFlags\_RoundCornersTopRight**
+---
+--- DrawList_AddRect, DrawList_AddRectFilled, DrawList_PathRect: enable rounding
+---    top-right corner only (when rounding > 0.0, we default to all corners).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @field DrawFlags_RoundCornersTopRight integer
+---
+--- **Font > FontFlags\_Bold**
+---
+--- ---
+---
+--- **Font**
+---
+--- Supports loading fonts from the system by family name or from a file.
+--- Glyphs may contain colors in COLR/CPAL format.
+---
+--- This API currently has multiple limitations (v1.0 blockers):
+--- - ReaImGui rasterizes glyphs only from the Basic Latin and Latin Supplement
+---   Unicode blocks (U+0020 to U+00FF). UTF-8 is fully supported internally,
+---   however characters outside those blocks are displayed as '?'.
+---   See [issue #5](https://github.com/cfillion/reaimgui/issues/5).
+--- - Dear ImGui does not support using new fonts in the middle of a frame.
+---   Because of this, fonts must first be registered using Attach before any
+---   other context functions are used in the same defer cycle.
+---   (Attaching a font is a heavy operation and should ideally be done outside
+---   of the defer loop.)
+---
+--- ---
+---
+--- @since 0.4
+--- @field FontFlags_Bold integer
+---
+--- **Font > FontFlags\_Italic**
+---
+--- ---
+---
+--- **Font**
+---
+--- Supports loading fonts from the system by family name or from a file.
+--- Glyphs may contain colors in COLR/CPAL format.
+---
+--- This API currently has multiple limitations (v1.0 blockers):
+--- - ReaImGui rasterizes glyphs only from the Basic Latin and Latin Supplement
+---   Unicode blocks (U+0020 to U+00FF). UTF-8 is fully supported internally,
+---   however characters outside those blocks are displayed as '?'.
+---   See [issue #5](https://github.com/cfillion/reaimgui/issues/5).
+--- - Dear ImGui does not support using new fonts in the middle of a frame.
+---   Because of this, fonts must first be registered using Attach before any
+---   other context functions are used in the same defer cycle.
+---   (Attaching a font is a heavy operation and should ideally be done outside
+---   of the defer loop.)
+---
+--- ---
+---
+--- @since 0.4
+--- @field FontFlags_Italic integer
+---
+--- **Font > FontFlags\_None**
+---
+--- ---
+---
+--- **Font**
+---
+--- Supports loading fonts from the system by family name or from a file.
+--- Glyphs may contain colors in COLR/CPAL format.
+---
+--- This API currently has multiple limitations (v1.0 blockers):
+--- - ReaImGui rasterizes glyphs only from the Basic Latin and Latin Supplement
+---   Unicode blocks (U+0020 to U+00FF). UTF-8 is fully supported internally,
+---   however characters outside those blocks are displayed as '?'.
+---   See [issue #5](https://github.com/cfillion/reaimgui/issues/5).
+--- - Dear ImGui does not support using new fonts in the middle of a frame.
+---   Because of this, fonts must first be registered using Attach before any
+---   other context functions are used in the same defer cycle.
+---   (Attaching a font is a heavy operation and should ideally be done outside
+---   of the defer loop.)
+---
+--- ---
+---
+--- @since 0.4
+--- @field FontFlags_None integer
+---
+--- **Item \& Status > Hovered Flags > HoveredFlags\_AllowWhenBlockedByActiveItem**
+---
+--- Return true even if an active item is blocking access to this item/window.
+---    Useful for Drag and Drop patterns.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_AllowWhenBlockedByActiveItem integer
+---
+--- **Item \& Status > Hovered Flags > HoveredFlags\_AllowWhenBlockedByPopup**
+---
+--- Return true even if a popup window is normally blocking access to this item/window.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_AllowWhenBlockedByPopup integer
+---
+--- **Item \& Status > Hovered Flags > HoveredFlags\_ForTooltip**
+---
+--- Typically used with IsItemHovered() before SetTooltip().
+---    This is a shortcut to pull flags from ConfigVar_HoverFlagsForTooltip* where
+---    you can reconfigure the desired behavior.
+---
+---    For frequently actioned or hovered items providing a tooltip, you want may to use
+---    this (defaults to stationary + delay) so the tooltip doesn't show too often.
+---    For items which main purpose is to be hovered, or items with low affordance,
+---    or in less consistent apps, prefer no delay or shorter delay.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.9
+--- @field HoveredFlags_ForTooltip integer
+---
+--- **Item \& Status > Hovered Flags > HoveredFlags\_NoNavOverride**
+---
+--- Disable using gamepad/keyboard navigation state when active, always query mouse.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.7
+--- @field HoveredFlags_NoNavOverride integer
+---
+--- **Item \& Status > Hovered Flags > HoveredFlags\_None**
+---
+--- Return true if directly over the item/window, not obstructed by another
+---    window, not obstructed by an active popup or modal blocking inputs under them.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_None integer
+---
+--- **Item \& Status > Hovered Flags > HoveredFlags\_Stationary**
+---
+--- Require mouse to be stationary for ConfigVar_HoverStationaryDelay (~0.15 sec)
+---    _at least one time_. After this, can move on same item/window.
+---    Using the stationary test tends to reduces the need for a long delay.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.9
+--- @field HoveredFlags_Stationary integer
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > HoveredFlags\_AllowWhenDisabled**
+---
+--- Return true even if the item is disabled.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_AllowWhenDisabled integer
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > HoveredFlags\_AllowWhenOverlapped**
+---
+--- HoveredFlags_AllowWhenOverlappedByItem | HoveredFlags_AllowWhenOverlappedByWindow
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_AllowWhenOverlapped integer
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > HoveredFlags\_AllowWhenOverlappedByItem**
+---
+--- Return true even if the item uses AllowOverlap mode and is overlapped by
+---    another hoverable item.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.9
+--- @field HoveredFlags_AllowWhenOverlappedByItem integer
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > HoveredFlags\_AllowWhenOverlappedByWindow**
+---
+--- Return true even if the position is obstructed or overlapped by another window.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.9
+--- @field HoveredFlags_AllowWhenOverlappedByWindow integer
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > HoveredFlags\_RectOnly**
+---
+--- HoveredFlags_AllowWhenBlockedByPopup |
+---    HoveredFlags_AllowWhenBlockedByActiveItem | HoveredFlags_AllowWhenOverlapped
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_RectOnly integer
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > Mouse Hovering Delays > HoveredFlags\_DelayNone**
+---
+--- Return true immediately (default). As this is the default you generally ignore this.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > Mouse Hovering Delays**
+---
+--- Generally you can use HoveredFlags_ForTooltip to use application-standardized flags.
+---   Use those if you need specific overrides. See also HoveredFlags_Stationary.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.9
+--- @field HoveredFlags_DelayNone integer
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > Mouse Hovering Delays > HoveredFlags\_DelayNormal**
+---
+--- Return true after ConfigVar_HoverDelayNormal elapsed (~0.40 sec)
+---    (shared between items) + requires mouse to be stationary for
+---    ConfigVar_HoverStationaryDelay (once per item).
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > Mouse Hovering Delays**
+---
+--- Generally you can use HoveredFlags_ForTooltip to use application-standardized flags.
+---   Use those if you need specific overrides. See also HoveredFlags_Stationary.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.8
+--- @field HoveredFlags_DelayNormal integer
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > Mouse Hovering Delays > HoveredFlags\_DelayShort**
+---
+--- Return true after ConfigVar_HoverDelayShort elapsed (~0.15 sec)
+---    (shared between items) + requires mouse to be stationary for
+---    ConfigVar_HoverStationaryDelay (once per item).
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > Mouse Hovering Delays**
+---
+--- Generally you can use HoveredFlags_ForTooltip to use application-standardized flags.
+---   Use those if you need specific overrides. See also HoveredFlags_Stationary.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.8
+--- @field HoveredFlags_DelayShort integer
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > Mouse Hovering Delays > HoveredFlags\_NoSharedDelay**
+---
+--- Disable shared delay system where moving from one item to the next keeps
+---    the previous timer for a short time (standard for tooltips with long delays
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags > For IsItemHovered > Mouse Hovering Delays**
+---
+--- Generally you can use HoveredFlags_ForTooltip to use application-standardized flags.
+---   Use those if you need specific overrides. See also HoveredFlags_Stationary.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.8
+--- @field HoveredFlags_NoSharedDelay integer
+---
+--- **Item \& Status > Hovered Flags > For IsWindowHovered > HoveredFlags\_AnyWindow**
+---
+--- Return true if any window is hovered.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_AnyWindow integer
+---
+--- **Item \& Status > Hovered Flags > For IsWindowHovered > HoveredFlags\_ChildWindows**
+---
+--- Return true if any children of the window is hovered.
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_ChildWindows integer
+---
+--- **Item \& Status > Hovered Flags > For IsWindowHovered > HoveredFlags\_DockHierarchy**
+---
+--- Consider docking hierarchy (treat dockspace host as
+---   parent of docked window) (when used with _ChildWindows or _RootWindow).
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.5.10
+--- @field HoveredFlags_DockHierarchy integer
+---
+--- **Item \& Status > Hovered Flags > For IsWindowHovered > HoveredFlags\_NoPopupHierarchy**
+---
+--- Do not consider popup hierarchy (do not treat popup
+---   emitter as parent of popup) (when used with _ChildWindows or _RootWindow).
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.5.10
+--- @field HoveredFlags_NoPopupHierarchy integer
+---
+--- **Item \& Status > Hovered Flags > For IsWindowHovered > HoveredFlags\_RootAndChildWindows**
+---
+--- HoveredFlags_RootWindow | HoveredFlags_ChildWindows
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_RootAndChildWindows integer
+---
+--- **Item \& Status > Hovered Flags > For IsWindowHovered > HoveredFlags\_RootWindow**
+---
+--- Test from root window (top most parent of the current hierarchy).
+---
+--- ---
+---
+--- **Item \& Status > Hovered Flags**
+---
+--- For IsItemHovered and IsWindowHovered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field HoveredFlags_RootWindow integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_0**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_0 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_1**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_1 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_2**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_2 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_3**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_3 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_4**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_4 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_5**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_5 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_6**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_6 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_7**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_7 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_8**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_8 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_9**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_9 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_A**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_A integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Apostrophe**
+---
+--- '
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Apostrophe integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_AppBack**
+---
+--- Available on some keyboard/mouses. Often referred as "Browser Back".
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_AppBack integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_AppForward**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_AppForward integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_B**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_B integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Backslash**
+---
+--- \
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Backslash integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Backspace**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Backspace integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_C**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_C integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_CapsLock**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_CapsLock integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Comma**
+---
+--- ,
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Comma integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_D**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_D integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Delete**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Delete integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_DownArrow**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_DownArrow integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_E**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_E integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_End**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_End integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Enter**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Enter integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Equal**
+---
+--- =
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Equal integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Escape**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Escape integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F1**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F1 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F10**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F10 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F11**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F11 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F12**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F12 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F13**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F13 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F14**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F14 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F15**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F15 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F16**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F16 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F17**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F17 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F18**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F18 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F19**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F19 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F2**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F2 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F20**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F20 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F21**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F21 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F22**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F22 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F23**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F23 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F24**
+---
+--- ---
+---
+--- @since 0.9
+--- @field Key_F24 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F3**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F3 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F4**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F4 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F5**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F5 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F6**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F6 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F7**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F7 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F8**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F8 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_F9**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_F9 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_G**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_G integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_GraveAccent**
+---
+--- `
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_GraveAccent integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_H**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_H integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Home**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Home integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_I**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_I integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Insert**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Insert integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_J**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_J integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_K**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_K integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad0**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad0 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad1**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad1 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad2**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad2 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad3**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad3 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad4**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad4 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad5**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad5 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad6**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad6 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad7**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad7 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad8**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad8 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Keypad9**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Keypad9 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_KeypadAdd**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_KeypadAdd integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_KeypadDecimal**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_KeypadDecimal integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_KeypadDivide**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_KeypadDivide integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_KeypadEnter**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_KeypadEnter integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_KeypadEqual**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_KeypadEqual integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_KeypadMultiply**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_KeypadMultiply integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_KeypadSubtract**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_KeypadSubtract integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_L**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_L integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_LeftAlt**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_LeftAlt integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_LeftArrow**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_LeftArrow integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_LeftBracket**
+---
+--- [
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_LeftBracket integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_LeftCtrl**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_LeftCtrl integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_LeftShift**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_LeftShift integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_LeftSuper**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_LeftSuper integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_M**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_M integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Menu**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Menu integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Minus**
+---
+--- -
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Minus integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_N**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_N integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_NumLock**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_NumLock integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_O**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_O integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_P**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_P integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_PageDown**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_PageDown integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_PageUp**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_PageUp integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Pause**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Pause integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Period**
+---
+--- .
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Period integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_PrintScreen**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_PrintScreen integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Q**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Q integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_R**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_R integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_RightAlt**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_RightAlt integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_RightArrow**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_RightArrow integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_RightBracket**
+---
+--- ]
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_RightBracket integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_RightCtrl**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_RightCtrl integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_RightShift**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_RightShift integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_RightSuper**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_RightSuper integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_S**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_S integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_ScrollLock**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_ScrollLock integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Semicolon**
+---
+--- ;
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Semicolon integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Slash**
+---
+--- /
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Slash integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Space**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Space integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_T**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_T integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Tab**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Tab integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_U**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_U integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_UpArrow**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_UpArrow integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_V**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_V integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_W**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_W integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_X**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_X integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Y**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Y integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Keyboard > Key\_Z**
+---
+--- ---
+---
+--- @since 0.6
+--- @field Key_Z integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_Alt**
+---
+--- ---
+---
+--- @since 0.8
+--- @field Mod_Alt integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_Ctrl**
+---
+--- ---
+---
+--- @since 0.8
+--- @field Mod_Ctrl integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_None**
+---
+--- ---
+---
+--- @since 0.8
+--- @field Mod_None integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_Shift**
+---
+--- ---
+---
+--- @since 0.8
+--- @field Mod_Shift integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_Shortcut**
+---
+--- Alias for Mod_Ctrl on Linux and Windows and Mod_Super on macOS (Cmd key).
+---
+--- ---
+---
+--- @since 0.8
+--- @field Mod_Shortcut integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_Super**
+---
+--- ---
+---
+--- @since 0.8
+--- @field Mod_Super integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons > Key\_MouseLeft**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons**
+---
+--- This is mirroring the data also written accessible via IsMouseDown,
+--- GetMouseWheel etc, in a format allowing them to be accessed via standard key API.
+---
+--- ---
+---
+--- @since 0.8
+--- @field Key_MouseLeft integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons > Key\_MouseMiddle**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons**
+---
+--- This is mirroring the data also written accessible via IsMouseDown,
+--- GetMouseWheel etc, in a format allowing them to be accessed via standard key API.
+---
+--- ---
+---
+--- @since 0.8
+--- @field Key_MouseMiddle integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons > Key\_MouseRight**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons**
+---
+--- This is mirroring the data also written accessible via IsMouseDown,
+--- GetMouseWheel etc, in a format allowing them to be accessed via standard key API.
+---
+--- ---
+---
+--- @since 0.8
+--- @field Key_MouseRight integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons > Key\_MouseWheelX**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons**
+---
+--- This is mirroring the data also written accessible via IsMouseDown,
+--- GetMouseWheel etc, in a format allowing them to be accessed via standard key API.
+---
+--- ---
+---
+--- @since 0.8
+--- @field Key_MouseWheelX integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons > Key\_MouseWheelY**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons**
+---
+--- This is mirroring the data also written accessible via IsMouseDown,
+--- GetMouseWheel etc, in a format allowing them to be accessed via standard key API.
+---
+--- ---
+---
+--- @since 0.8
+--- @field Key_MouseWheelY integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons > Key\_MouseX1**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons**
+---
+--- This is mirroring the data also written accessible via IsMouseDown,
+--- GetMouseWheel etc, in a format allowing them to be accessed via standard key API.
+---
+--- ---
+---
+--- @since 0.8
+--- @field Key_MouseX1 integer
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons > Key\_MouseX2**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons**
+---
+--- This is mirroring the data also written accessible via IsMouseDown,
+--- GetMouseWheel etc, in a format allowing them to be accessed via standard key API.
+---
+--- ---
+---
+--- @since 0.8
+--- @field Key_MouseX2 integer
+---
+--- **Keyboard \& Mouse > Mouse > MouseButton\_Left**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseButton_Left integer
+---
+--- **Keyboard \& Mouse > Mouse > MouseButton\_Middle**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseButton_Middle integer
+---
+--- **Keyboard \& Mouse > Mouse > MouseButton\_Right**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseButton_Right integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_Arrow**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseCursor_Arrow integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_Hand**
+---
+--- (Unused by Dear ImGui functions. Use for e.g. hyperlinks)
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseCursor_Hand integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_None**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.8.4
+--- @field MouseCursor_None integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_NotAllowed**
+---
+--- When hovering something with disallowed interaction. Usually a crossed circle.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseCursor_NotAllowed integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_ResizeAll**
+---
+--- (Unused by Dear ImGui functions)
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseCursor_ResizeAll integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_ResizeEW**
+---
+--- When hovering over a vertical border or a column.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseCursor_ResizeEW integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_ResizeNESW**
+---
+--- When hovering over the bottom-left corner of a window.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseCursor_ResizeNESW integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_ResizeNS**
+---
+--- When hovering over a horizontal border.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseCursor_ResizeNS integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_ResizeNWSE**
+---
+--- When hovering over the bottom-right corner of a window.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseCursor_ResizeNWSE integer
+---
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > MouseCursor\_TextInput**
+---
+--- When hovering over InputText, etc.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @field MouseCursor_TextInput integer
+---
+--- **Popup \& Modal > Flags > PopupFlags\_None**
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @field PopupFlags_None integer
+---
+--- **Popup \& Modal > Flags > For BeginPopupContext\* > PopupFlags\_MouseButtonLeft**
+---
+--- Open on Left Mouse release.
+---    Guaranteed to always be == 0 (same as MouseButton_Left).
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @field PopupFlags_MouseButtonLeft integer
+---
+--- **Popup \& Modal > Flags > For BeginPopupContext\* > PopupFlags\_MouseButtonMiddle**
+---
+--- Open on Middle Mouse release.
+---    Guaranteed to always be == 2 (same as MouseButton_Middle).
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @field PopupFlags_MouseButtonMiddle integer
+---
+--- **Popup \& Modal > Flags > For BeginPopupContext\* > PopupFlags\_MouseButtonRight**
+---
+--- Open on Right Mouse release.
+---    Guaranteed to always be == 1 (same as MouseButton_Right).
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @field PopupFlags_MouseButtonRight integer
+---
+--- **Popup \& Modal > Flags > For BeginPopupContext\* > PopupFlags\_NoOpenOverItems**
+---
+--- For BeginPopupContextWindow: don't return true when hovering items,
+---    only when hovering empty space.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @field PopupFlags_NoOpenOverItems integer
+---
+--- **Popup \& Modal > Flags > For IsPopupOpen > PopupFlags\_AnyPopup**
+---
+--- PopupFlags_AnyPopupId | PopupFlags_AnyPopupLevel
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @field PopupFlags_AnyPopup integer
+---
+--- **Popup \& Modal > Flags > For IsPopupOpen > PopupFlags\_AnyPopupId**
+---
+--- Ignore the str_id parameter and test for any popup.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @field PopupFlags_AnyPopupId integer
+---
+--- **Popup \& Modal > Flags > For IsPopupOpen > PopupFlags\_AnyPopupLevel**
+---
+--- Search/test at any level of the popup stack (default test in the current level).
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @field PopupFlags_AnyPopupLevel integer
+---
+--- **Popup \& Modal > Flags > For OpenPopup\* and BeginPopupContext\* > PopupFlags\_NoOpenOverExistingPopup**
+---
+--- Don't open if there's already a popup at the same level of the popup stack.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @field PopupFlags_NoOpenOverExistingPopup integer
+---
+--- **Popup \& Modal > Flags > For OpenPopup\* and BeginPopupContext\* > PopupFlags\_NoReopen**
+---
+--- Don't reopen same popup if already open
+---    (won't reposition, won't reinitialize navigation).
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.9
+--- @field PopupFlags_NoReopen integer
+---
+--- **Style > Colors > Col\_Border**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_Border integer
+---
+--- **Style > Colors > Col\_BorderShadow**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_BorderShadow integer
+---
+--- **Style > Colors > Col\_Button**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_Button integer
+---
+--- **Style > Colors > Col\_ButtonActive**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ButtonActive integer
+---
+--- **Style > Colors > Col\_ButtonHovered**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ButtonHovered integer
+---
+--- **Style > Colors > Col\_CheckMark**
+---
+--- Checkbox tick and RadioButton circle
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_CheckMark integer
+---
+--- **Style > Colors > Col\_ChildBg**
+---
+--- Background of child windows.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ChildBg integer
+---
+--- **Style > Colors > Col\_DockingEmptyBg**
+---
+--- Background color for empty node (e.g. CentralNode with no window docked into it).
+---
+--- ---
+---
+--- @since 0.5
+--- @field Col_DockingEmptyBg integer
+---
+--- **Style > Colors > Col\_DockingPreview**
+---
+--- Preview overlay color when about to docking something.
+---
+--- ---
+---
+--- @since 0.5
+--- @field Col_DockingPreview integer
+---
+--- **Style > Colors > Col\_DragDropTarget**
+---
+--- Rectangle highlighting a drop target
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_DragDropTarget integer
+---
+--- **Style > Colors > Col\_FrameBg**
+---
+--- Background of checkbox, radio button, plot, slider, text input.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_FrameBg integer
+---
+--- **Style > Colors > Col\_FrameBgActive**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_FrameBgActive integer
+---
+--- **Style > Colors > Col\_FrameBgHovered**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_FrameBgHovered integer
+---
+--- **Style > Colors > Col\_Header**
+---
+--- Header* colors are used for CollapsingHeader, TreeNode, Selectable, MenuItem.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_Header integer
+---
+--- **Style > Colors > Col\_HeaderActive**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_HeaderActive integer
+---
+--- **Style > Colors > Col\_HeaderHovered**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_HeaderHovered integer
+---
+--- **Style > Colors > Col\_MenuBarBg**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_MenuBarBg integer
+---
+--- **Style > Colors > Col\_ModalWindowDimBg**
+---
+--- Darken/colorize entire screen behind a modal window, when one is active.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ModalWindowDimBg integer
+---
+--- **Style > Colors > Col\_NavHighlight**
+---
+--- Gamepad/keyboard: current highlighted item.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_NavHighlight integer
+---
+--- **Style > Colors > Col\_NavWindowingDimBg**
+---
+--- Darken/colorize entire screen behind the CTRL+TAB window list, when active.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_NavWindowingDimBg integer
+---
+--- **Style > Colors > Col\_NavWindowingHighlight**
+---
+--- Highlight window when using CTRL+TAB.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_NavWindowingHighlight integer
+---
+--- **Style > Colors > Col\_PlotHistogram**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_PlotHistogram integer
+---
+--- **Style > Colors > Col\_PlotHistogramHovered**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_PlotHistogramHovered integer
+---
+--- **Style > Colors > Col\_PlotLines**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_PlotLines integer
+---
+--- **Style > Colors > Col\_PlotLinesHovered**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_PlotLinesHovered integer
+---
+--- **Style > Colors > Col\_PopupBg**
+---
+--- Background of popups, menus, tooltips windows.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_PopupBg integer
+---
+--- **Style > Colors > Col\_ResizeGrip**
+---
+--- Resize grip in lower-right and lower-left corners of windows.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ResizeGrip integer
+---
+--- **Style > Colors > Col\_ResizeGripActive**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ResizeGripActive integer
+---
+--- **Style > Colors > Col\_ResizeGripHovered**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ResizeGripHovered integer
+---
+--- **Style > Colors > Col\_ScrollbarBg**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ScrollbarBg integer
+---
+--- **Style > Colors > Col\_ScrollbarGrab**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ScrollbarGrab integer
+---
+--- **Style > Colors > Col\_ScrollbarGrabActive**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ScrollbarGrabActive integer
+---
+--- **Style > Colors > Col\_ScrollbarGrabHovered**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_ScrollbarGrabHovered integer
+---
+--- **Style > Colors > Col\_Separator**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_Separator integer
+---
+--- **Style > Colors > Col\_SeparatorActive**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_SeparatorActive integer
+---
+--- **Style > Colors > Col\_SeparatorHovered**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_SeparatorHovered integer
+---
+--- **Style > Colors > Col\_SliderGrab**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_SliderGrab integer
+---
+--- **Style > Colors > Col\_SliderGrabActive**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_SliderGrabActive integer
+---
+--- **Style > Colors > Col\_Tab**
+---
+--- TabItem in a TabBar
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_Tab integer
+---
+--- **Style > Colors > Col\_TabActive**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TabActive integer
+---
+--- **Style > Colors > Col\_TabHovered**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TabHovered integer
+---
+--- **Style > Colors > Col\_TabUnfocused**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TabUnfocused integer
+---
+--- **Style > Colors > Col\_TabUnfocusedActive**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TabUnfocusedActive integer
+---
+--- **Style > Colors > Col\_TableBorderLight**
+---
+--- Table inner borders (prefer using Alpha=1.0 here).
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TableBorderLight integer
+---
+--- **Style > Colors > Col\_TableBorderStrong**
+---
+--- Table outer and header borders (prefer using Alpha=1.0 here).
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TableBorderStrong integer
+---
+--- **Style > Colors > Col\_TableHeaderBg**
+---
+--- Table header background.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TableHeaderBg integer
+---
+--- **Style > Colors > Col\_TableRowBg**
+---
+--- Table row background (even rows).
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TableRowBg integer
+---
+--- **Style > Colors > Col\_TableRowBgAlt**
+---
+--- Table row background (odd rows).
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TableRowBgAlt integer
+---
+--- **Style > Colors > Col\_Text**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_Text integer
+---
+--- **Style > Colors > Col\_TextDisabled**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TextDisabled integer
+---
+--- **Style > Colors > Col\_TextSelectedBg**
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TextSelectedBg integer
+---
+--- **Style > Colors > Col\_TitleBg**
+---
+--- Title bar
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TitleBg integer
+---
+--- **Style > Colors > Col\_TitleBgActive**
+---
+--- Title bar when focused
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TitleBgActive integer
+---
+--- **Style > Colors > Col\_TitleBgCollapsed**
+---
+--- Title bar when collapsed
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_TitleBgCollapsed integer
+---
+--- **Style > Colors > Col\_WindowBg**
+---
+--- Background of normal windows. See also WindowFlags_NoBackground.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Col_WindowBg integer
+---
+--- **Style > Variables > StyleVar\_Alpha**
+---
+--- Global alpha applies to everything in Dear ImGui.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_Alpha integer
+---
+--- **Style > Variables > StyleVar\_ButtonTextAlign**
+---
+--- Alignment of button text when button is larger than text.
+---    Defaults to (0.5, 0.5) (centered).
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_ButtonTextAlign integer
+---
+--- **Style > Variables > StyleVar\_CellPadding**
+---
+--- Padding within a table cell.
+---    CellPadding.x is locked for entire table.
+---    CellPadding.y may be altered between different rows.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_CellPadding integer
+---
+--- **Style > Variables > StyleVar\_ChildBorderSize**
+---
+--- Thickness of border around child windows. Generally set to 0.0 or 1.0.
+---    (Other values are not well tested and more CPU/GPU costly).
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_ChildBorderSize integer
+---
+--- **Style > Variables > StyleVar\_ChildRounding**
+---
+--- Radius of child window corners rounding. Set to 0.0 to have rectangular windows.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_ChildRounding integer
+---
+--- **Style > Variables > StyleVar\_DisabledAlpha**
+---
+--- Additional alpha multiplier applied by BeginDisabled.
+---   Multiply over current value of Alpha.
+---
+--- ---
+---
+--- @since 0.5.5
+--- @field StyleVar_DisabledAlpha integer
+---
+--- **Style > Variables > StyleVar\_FrameBorderSize**
+---
+--- Thickness of border around frames. Generally set to 0.0 or 1.0.
+---    (Other values are not well tested and more CPU/GPU costly).
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_FrameBorderSize integer
+---
+--- **Style > Variables > StyleVar\_FramePadding**
+---
+--- Padding within a framed rectangle (used by most widgets).
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_FramePadding integer
+---
+--- **Style > Variables > StyleVar\_FrameRounding**
+---
+--- Radius of frame corners rounding.
+---    Set to 0.0 to have rectangular frame (used by most widgets).
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_FrameRounding integer
+---
+--- **Style > Variables > StyleVar\_GrabMinSize**
+---
+--- Minimum width/height of a grab box for slider/scrollbar.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_GrabMinSize integer
+---
+--- **Style > Variables > StyleVar\_GrabRounding**
+---
+--- Radius of grabs corners rounding. Set to 0.0 to have rectangular slider grabs.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_GrabRounding integer
+---
+--- **Style > Variables > StyleVar\_IndentSpacing**
+---
+--- Horizontal indentation when e.g. entering a tree node.
+---    Generally == (GetFontSize + StyleVar_FramePadding.x*2).
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_IndentSpacing integer
+---
+--- **Style > Variables > StyleVar\_ItemInnerSpacing**
+---
+--- Horizontal and vertical spacing between within elements of a composed widget
+---    (e.g. a slider and its label).
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_ItemInnerSpacing integer
+---
+--- **Style > Variables > StyleVar\_ItemSpacing**
+---
+--- Horizontal and vertical spacing between widgets/lines.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_ItemSpacing integer
+---
+--- **Style > Variables > StyleVar\_PopupBorderSize**
+---
+--- Thickness of border around popup/tooltip windows. Generally set to 0.0 or 1.0.
+---    (Other values are not well tested and more CPU/GPU costly).
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_PopupBorderSize integer
+---
+--- **Style > Variables > StyleVar\_PopupRounding**
+---
+--- Radius of popup window corners rounding.
+---    (Note that tooltip windows use StyleVar_WindowRounding.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_PopupRounding integer
+---
+--- **Style > Variables > StyleVar\_ScrollbarRounding**
+---
+--- Radius of grab corners for scrollbar.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_ScrollbarRounding integer
+---
+--- **Style > Variables > StyleVar\_ScrollbarSize**
+---
+--- Width of the vertical scrollbar, Height of the horizontal scrollbar.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_ScrollbarSize integer
+---
+--- **Style > Variables > StyleVar\_SelectableTextAlign**
+---
+--- Alignment of selectable text. Defaults to (0.0, 0.0) (top-left aligned).
+---    It's generally important to keep this left-aligned if you want to lay
+---    multiple items on a same line.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_SelectableTextAlign integer
+---
+--- **Style > Variables > StyleVar\_SeparatorTextAlign**
+---
+--- Alignment of text within the separator.
+--- Defaults to (0.0, 0.5) (left aligned, center).
+---
+--- ---
+---
+--- @since 0.8.4
+--- @field StyleVar_SeparatorTextAlign integer
+---
+--- **Style > Variables > StyleVar\_SeparatorTextBorderSize**
+---
+--- Thickness of border in SeparatorText()
+---
+--- ---
+---
+--- @since 0.8.4
+--- @field StyleVar_SeparatorTextBorderSize integer
+---
+--- **Style > Variables > StyleVar\_SeparatorTextPadding**
+---
+--- Horizontal offset of text from each edge of the separator + spacing on other
+--- axis. Generally small values. .y is recommended to be == StyleVar_FramePadding.y.
+---
+--- ---
+---
+--- @since 0.8.4
+--- @field StyleVar_SeparatorTextPadding integer
+---
+--- **Style > Variables > StyleVar\_TabBarBorderSize**
+---
+--- Thickness of tab-bar separator, which takes on the tab active color to denote focus.
+---
+--- ---
+---
+--- @since 0.9
+--- @field StyleVar_TabBarBorderSize integer
+---
+--- **Style > Variables > StyleVar\_TabBorderSize**
+---
+--- Thickness of border around tabs.
+---
+--- ---
+---
+--- @since 0.9
+--- @field StyleVar_TabBorderSize integer
+---
+--- **Style > Variables > StyleVar\_TabRounding**
+---
+--- Radius of upper corners of a tab. Set to 0.0 to have rectangular tabs.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_TabRounding integer
+---
+--- **Style > Variables > StyleVar\_TableAngledHeadersAngle**
+---
+--- Angle of angled headers (supported values range from -50.0 degrees to +50.0 degrees).
+---
+--- ---
+---
+--- @since 0.9
+--- @field StyleVar_TableAngledHeadersAngle integer
+---
+--- **Style > Variables > StyleVar\_WindowBorderSize**
+---
+--- Thickness of border around windows. Generally set to 0.0 or 1.0.
+---   (Other values are not well tested and more CPU/GPU costly).
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_WindowBorderSize integer
+---
+--- **Style > Variables > StyleVar\_WindowMinSize**
+---
+--- Minimum window size. This is a global setting.
+---   If you want to constrain individual windows, use SetNextWindowSizeConstraints.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_WindowMinSize integer
+---
+--- **Style > Variables > StyleVar\_WindowPadding**
+---
+--- Padding within a window.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_WindowPadding integer
+---
+--- **Style > Variables > StyleVar\_WindowRounding**
+---
+--- Radius of window corners rounding. Set to 0.0 to have rectangular windows.
+---   Large values tend to lead to variety of artifacts and are not recommended.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_WindowRounding integer
+---
+--- **Style > Variables > StyleVar\_WindowTitleAlign**
+---
+--- Alignment for title bar text.
+---    Defaults to (0.0,0.5) for left-aligned,vertically centered.
+---
+--- ---
+---
+--- @since 0.1
+--- @field StyleVar_WindowTitleAlign integer
+---
+--- **Tab Bar > TabBarFlags\_AutoSelectNewTabs**
+---
+--- Automatically select new tabs when they appear.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabBarFlags_AutoSelectNewTabs integer
+---
+--- **Tab Bar > TabBarFlags\_FittingPolicyResizeDown**
+---
+--- Resize tabs when they don't fit.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabBarFlags_FittingPolicyResizeDown integer
+---
+--- **Tab Bar > TabBarFlags\_FittingPolicyScroll**
+---
+--- Add scroll buttons when tabs don't fit.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabBarFlags_FittingPolicyScroll integer
+---
+--- **Tab Bar > TabBarFlags\_NoCloseWithMiddleMouseButton**
+---
+--- Disable behavior of closing tabs (that are submitted with p_open != nil)
+---    with middle mouse button. You may handle this behavior manually on user's
+---    side with if(IsItemHovered() && IsMouseClicked(2)) p_open = false.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabBarFlags_NoCloseWithMiddleMouseButton integer
+---
+--- **Tab Bar > TabBarFlags\_NoTabListScrollingButtons**
+---
+--- Disable scrolling buttons (apply when fitting policy is
+---    TabBarFlags_FittingPolicyScroll).
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabBarFlags_NoTabListScrollingButtons integer
+---
+--- **Tab Bar > TabBarFlags\_NoTooltip**
+---
+--- Disable tooltips when hovering a tab.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabBarFlags_NoTooltip integer
+---
+--- **Tab Bar > TabBarFlags\_None**
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabBarFlags_None integer
+---
+--- **Tab Bar > TabBarFlags\_Reorderable**
+---
+--- Allow manually dragging tabs to re-order them + New tabs are appended at
+---    the end of list.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabBarFlags_Reorderable integer
+---
+--- **Tab Bar > TabBarFlags\_TabListPopupButton**
+---
+--- Disable buttons to open the tab list popup.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabBarFlags_TabListPopupButton integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_Leading**
+---
+--- Enforce the tab position to the left of the tab bar (after the tab list popup button).
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabItemFlags_Leading integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_NoAssumedClosure**
+---
+--- Tab is selected when trying to close + closure is not immediately assumed
+---    (will wait for user to stop submitting the tab).
+---    Otherwise closure is assumed when pressing the X, so if you keep submitting
+---    the tab may reappear at end of tab bar.
+---
+--- ---
+---
+--- @since 0.9
+--- @field TabItemFlags_NoAssumedClosure integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_NoCloseWithMiddleMouseButton**
+---
+--- Disable behavior of closing tabs (that are submitted with p_open != nil) with
+---    middle mouse button. You can still repro this behavior on user's side with
+---    if(IsItemHovered() && IsMouseClicked(2)) p_open = false.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabItemFlags_NoCloseWithMiddleMouseButton integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_NoPushId**
+---
+--- Don't call PushID()/PopID() on BeginTabItem/EndTabItem.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabItemFlags_NoPushId integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_NoReorder**
+---
+--- Disable reordering this tab or having another tab cross over this tab.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabItemFlags_NoReorder integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_NoTooltip**
+---
+--- Disable tooltip for the given tab.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabItemFlags_NoTooltip integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_None**
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabItemFlags_None integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_SetSelected**
+---
+--- Trigger flag to programmatically make the tab selected when calling BeginTabItem.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabItemFlags_SetSelected integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_Trailing**
+---
+--- Enforce the tab position to the right of the tab bar (before the scrolling buttons).
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabItemFlags_Trailing integer
+---
+--- **Tab Bar > Tab Item > TabItemFlags\_UnsavedDocument**
+---
+--- Display a dot next to the title + set TabItemFlags_NoAssumedClosure.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TabItemFlags_UnsavedDocument integer
+---
+--- **Table > TableRowFlags\_Headers**
+---
+--- Identify header row (set default background color + width of its contents
+---    accounted different for auto column width).
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableRowFlags_Headers integer
+---
+--- **Table > TableRowFlags\_None**
+---
+--- For TableNextRow.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableRowFlags_None integer
+---
+--- **Table > Background > TableBgTarget\_CellBg**
+---
+--- Set cell background color (top-most color).
+---
+--- ---
+---
+--- **Table > Background**
+---
+--- Background colors are rendering in 3 layers:
+---
+--- - Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set.
+--- - Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set.
+--- - Layer 2: draw with CellBg color if set.
+---
+--- The purpose of the two row/columns layers is to let you decide if a background
+--- color change should override or blend with the existing color.
+--- When using TableFlags_RowBg on the table, each row has the RowBg0 color
+--- automatically set for odd/even rows.
+--- If you set the color of RowBg0 target, your color will override the existing
+--- RowBg0 color.
+--- If you set the color of RowBg1 or ColumnBg1 target, your color will blend over
+--- the RowBg0 color.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableBgTarget_CellBg integer
+---
+--- **Table > Background > TableBgTarget\_None**
+---
+--- ---
+---
+--- **Table > Background**
+---
+--- Background colors are rendering in 3 layers:
+---
+--- - Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set.
+--- - Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set.
+--- - Layer 2: draw with CellBg color if set.
+---
+--- The purpose of the two row/columns layers is to let you decide if a background
+--- color change should override or blend with the existing color.
+--- When using TableFlags_RowBg on the table, each row has the RowBg0 color
+--- automatically set for odd/even rows.
+--- If you set the color of RowBg0 target, your color will override the existing
+--- RowBg0 color.
+--- If you set the color of RowBg1 or ColumnBg1 target, your color will blend over
+--- the RowBg0 color.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableBgTarget_None integer
+---
+--- **Table > Background > TableBgTarget\_RowBg0**
+---
+--- Set row background color 0 (generally used for background,
+---    automatically set when TableFlags_RowBg is used).
+---
+--- ---
+---
+--- **Table > Background**
+---
+--- Background colors are rendering in 3 layers:
+---
+--- - Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set.
+--- - Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set.
+--- - Layer 2: draw with CellBg color if set.
+---
+--- The purpose of the two row/columns layers is to let you decide if a background
+--- color change should override or blend with the existing color.
+--- When using TableFlags_RowBg on the table, each row has the RowBg0 color
+--- automatically set for odd/even rows.
+--- If you set the color of RowBg0 target, your color will override the existing
+--- RowBg0 color.
+--- If you set the color of RowBg1 or ColumnBg1 target, your color will blend over
+--- the RowBg0 color.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableBgTarget_RowBg0 integer
+---
+--- **Table > Background > TableBgTarget\_RowBg1**
+---
+--- Set row background color 1 (generally used for selection marking).
+---
+--- ---
+---
+--- **Table > Background**
+---
+--- Background colors are rendering in 3 layers:
+---
+--- - Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set.
+--- - Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set.
+--- - Layer 2: draw with CellBg color if set.
+---
+--- The purpose of the two row/columns layers is to let you decide if a background
+--- color change should override or blend with the existing color.
+--- When using TableFlags_RowBg on the table, each row has the RowBg0 color
+--- automatically set for odd/even rows.
+--- If you set the color of RowBg0 target, your color will override the existing
+--- RowBg0 color.
+--- If you set the color of RowBg1 or ColumnBg1 target, your color will blend over
+--- the RowBg0 color.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableBgTarget_RowBg1 integer
+---
+--- **Table > Header \& Columns > Column Flags > TableColumnFlags\_None**
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_None integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_AngledHeader**
+---
+--- TableHeadersRow will submit an angled header row for this column.
+---    Note this will add an extra row.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.9
+--- @field TableColumnFlags_AngledHeader integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_DefaultHide**
+---
+--- Default as a hidden/disabled column.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_DefaultHide integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_DefaultSort**
+---
+--- Default as a sorting column.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_DefaultSort integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_Disabled**
+---
+--- Overriding/master disable flag: hide column, won't show in context menu
+---    (unlike calling TableSetColumnEnabled which manipulates the user accessible state).
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.5.5
+--- @field TableColumnFlags_Disabled integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_IndentDisable**
+---
+--- Ignore current Indent value when entering cell (default for columns > 0).
+---    Indentation changes _within_ the cell will still be honored.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_IndentDisable integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_IndentEnable**
+---
+--- Use current Indent value when entering cell (default for column 0).
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_IndentEnable integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_NoClip**
+---
+--- Disable clipping for this column
+---    (all NoClip columns will render in a same draw command).
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_NoClip integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_NoHeaderLabel**
+---
+--- TableHeadersRow will not submit horizontal label for this column.
+---    Convenient for some small columns. Name will still appear in context menu
+---    or in angled headers.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.5.5
+--- @field TableColumnFlags_NoHeaderLabel integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_NoHeaderWidth**
+---
+--- Disable header text width contribution to automatic column width.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_NoHeaderWidth integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_NoHide**
+---
+--- Disable ability to hide/disable this column.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_NoHide integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_NoReorder**
+---
+--- Disable manual reordering this column, this will also prevent other columns
+---    from crossing over this column.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_NoReorder integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_NoResize**
+---
+--- Disable manual resizing.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_NoResize integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_NoSort**
+---
+--- Disable ability to sort on this field
+---    (even if TableFlags_Sortable is set on the table).
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_NoSort integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_NoSortAscending**
+---
+--- Disable ability to sort in the ascending direction.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_NoSortAscending integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_NoSortDescending**
+---
+--- Disable ability to sort in the descending direction.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_NoSortDescending integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_PreferSortAscending**
+---
+--- Make the initial sort direction Ascending when first sorting on this column (default).
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_PreferSortAscending integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_PreferSortDescending**
+---
+--- Make the initial sort direction Descending when first sorting on this column.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_PreferSortDescending integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_WidthFixed**
+---
+--- Column will not stretch. Preferable with horizontal scrolling enabled
+---    (default if table sizing policy is _SizingFixedFit and table is resizable).
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_WidthFixed integer
+---
+--- **Table > Header \& Columns > Column Flags > Input Configuration > TableColumnFlags\_WidthStretch**
+---
+--- Column will stretch. Preferable with horizontal scrolling disabled
+---    (default if table sizing policy is _SizingStretchSame or _SizingStretchProp).
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_WidthStretch integer
+---
+--- **Table > Header \& Columns > Column Flags > Output Status > TableColumnFlags\_IsEnabled**
+---
+--- Status: is enabled == not hidden by user/api (referred to as "Hide" in
+---    _DefaultHide and _NoHide) flags.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags > Output Status**
+---
+--- Read-only via TableGetColumnFlags
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_IsEnabled integer
+---
+--- **Table > Header \& Columns > Column Flags > Output Status > TableColumnFlags\_IsHovered**
+---
+--- Status: is hovered by mouse.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags > Output Status**
+---
+--- Read-only via TableGetColumnFlags
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_IsHovered integer
+---
+--- **Table > Header \& Columns > Column Flags > Output Status > TableColumnFlags\_IsSorted**
+---
+--- Status: is currently part of the sort specs.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags > Output Status**
+---
+--- Read-only via TableGetColumnFlags
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_IsSorted integer
+---
+--- **Table > Header \& Columns > Column Flags > Output Status > TableColumnFlags\_IsVisible**
+---
+--- Status: is visible == is enabled AND not clipped by scrolling.
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags > Output Status**
+---
+--- Read-only via TableGetColumnFlags
+---
+--- ---
+---
+--- **Table > Header \& Columns > Column Flags**
+---
+--- For TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableColumnFlags_IsVisible integer
+---
+--- **Table > Sorting > SortDirection\_Ascending**
+---
+--- Ascending = 0->9, A->Z etc.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field SortDirection_Ascending integer
+---
+--- **Table > Sorting > SortDirection\_Descending**
+---
+--- Descending = 9->0, Z->A etc.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field SortDirection_Descending integer
+---
+--- **Table > Sorting > SortDirection\_None**
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field SortDirection_None integer
+---
+--- **Table > Table Flags > TableFlags\_None**
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_None integer
+---
+--- **Table > Table Flags > Clipping > TableFlags\_NoClip**
+---
+--- Disable clipping rectangle for every individual columns
+---    (reduce draw command count, items will be able to overflow into other columns).
+---    Generally incompatible with TableSetupScrollFreeze.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_NoClip integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_Borders**
+---
+--- Draw all borders.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_Borders integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_BordersH**
+---
+--- Draw horizontal borders.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_BordersH integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_BordersInner**
+---
+--- Draw inner borders.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_BordersInner integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_BordersInnerH**
+---
+--- Draw horizontal borders between rows.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_BordersInnerH integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_BordersInnerV**
+---
+--- Draw vertical borders between columns.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_BordersInnerV integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_BordersOuter**
+---
+--- Draw outer borders.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_BordersOuter integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_BordersOuterH**
+---
+--- Draw horizontal borders at the top and bottom.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_BordersOuterH integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_BordersOuterV**
+---
+--- Draw vertical borders on the left and right sides.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_BordersOuterV integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_BordersV**
+---
+--- Draw vertical borders.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_BordersV integer
+---
+--- **Table > Table Flags > Decorations > TableFlags\_RowBg**
+---
+--- Set each RowBg color with Col_TableRowBg or Col_TableRowBgAlt (equivalent of
+---    calling TableSetBgColor with TableBgTarget_RowBg0 on each row manually).
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_RowBg integer
+---
+--- **Table > Table Flags > Features > TableFlags\_ContextMenuInBody**
+---
+--- Right-click on columns body/contents will display table context menu.
+---    By default it is available in TableHeadersRow.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_ContextMenuInBody integer
+---
+--- **Table > Table Flags > Features > TableFlags\_Hideable**
+---
+--- Enable hiding/disabling columns in context menu.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_Hideable integer
+---
+--- **Table > Table Flags > Features > TableFlags\_NoSavedSettings**
+---
+--- Disable persisting columns order, width and sort settings in the .ini file.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.4
+--- @field TableFlags_NoSavedSettings integer
+---
+--- **Table > Table Flags > Features > TableFlags\_Reorderable**
+---
+--- Enable reordering columns in header row
+---    (need calling TableSetupColumn + TableHeadersRow to display headers).
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_Reorderable integer
+---
+--- **Table > Table Flags > Features > TableFlags\_Resizable**
+---
+--- Enable resizing columns.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_Resizable integer
+---
+--- **Table > Table Flags > Features > TableFlags\_Sortable**
+---
+--- Enable sorting. Call TableNeedSort/TableGetColumnSortSpecs to obtain sort specs.
+---    Also see TableFlags_SortMulti and TableFlags_SortTristate.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_Sortable integer
+---
+--- **Table > Table Flags > Miscellaneous > TableFlags\_HighlightHoveredColumn**
+---
+--- Highlight column headers when hovered (may evolve into a fuller highlight.)
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.9
+--- @field TableFlags_HighlightHoveredColumn integer
+---
+--- **Table > Table Flags > Padding > TableFlags\_NoPadInnerX**
+---
+--- Disable inner padding between columns (double inner padding if
+---    TableFlags_BordersOuterV is on, single inner padding if BordersOuterV is off).
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_NoPadInnerX integer
+---
+--- **Table > Table Flags > Padding > TableFlags\_NoPadOuterX**
+---
+--- Default if TableFlags_BordersOuterV is off. Disable outermost padding.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_NoPadOuterX integer
+---
+--- **Table > Table Flags > Padding > TableFlags\_PadOuterX**
+---
+--- Default if TableFlags_BordersOuterV is on. Enable outermost padding.
+---    Generally desirable if you have headers.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_PadOuterX integer
+---
+--- **Table > Table Flags > Scrolling > TableFlags\_ScrollX**
+---
+--- Enable horizontal scrolling. Require 'outer_size' parameter of BeginTable to
+---    specify the container size. Changes default sizing policy.
+---    Because this creates a child window, ScrollY is currently generally
+---    recommended when using ScrollX.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_ScrollX integer
+---
+--- **Table > Table Flags > Scrolling > TableFlags\_ScrollY**
+---
+--- Enable vertical scrolling.
+---    Require 'outer_size' parameter of BeginTable to specify the container size.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_ScrollY integer
+---
+--- **Table > Table Flags > Sizing Extra Options > TableFlags\_NoHostExtendX**
+---
+--- Make outer width auto-fit to columns, overriding outer_size.x value. Only
+---    available when ScrollX/ScrollY are disabled and Stretch columns are not used.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_NoHostExtendX integer
+---
+--- **Table > Table Flags > Sizing Extra Options > TableFlags\_NoHostExtendY**
+---
+--- Make outer height stop exactly at outer_size.y (prevent auto-extending table
+---    past the limit). Only available when ScrollX/ScrollY are disabled.
+---    Data below the limit will be clipped and not visible.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_NoHostExtendY integer
+---
+--- **Table > Table Flags > Sizing Extra Options > TableFlags\_NoKeepColumnsVisible**
+---
+--- Disable keeping column always minimally visible when ScrollX is off and table
+---    gets too small. Not recommended if columns are resizable.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_NoKeepColumnsVisible integer
+---
+--- **Table > Table Flags > Sizing Extra Options > TableFlags\_PreciseWidths**
+---
+--- Disable distributing remainder width to stretched columns (width allocation
+---    on a 100-wide table with 3 columns: Without this flag: 33,33,34. With this
+---    flag: 33,33,33).
+---    With larger number of columns, resizing will appear to be less smooth.
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_PreciseWidths integer
+---
+--- **Table > Table Flags > Sizing Policy > TableFlags\_SizingFixedFit**
+---
+--- Columns default to _WidthFixed or _WidthAuto (if resizable or not resizable),
+---    matching contents width.
+---
+--- ---
+---
+--- **Table > Table Flags > Sizing Policy**
+---
+--- (read above for defaults)
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_SizingFixedFit integer
+---
+--- **Table > Table Flags > Sizing Policy > TableFlags\_SizingFixedSame**
+---
+--- Columns default to _WidthFixed or _WidthAuto (if resizable or not resizable),
+---    matching the maximum contents width of all columns.
+---    Implicitly enable TableFlags_NoKeepColumnsVisible.
+---
+--- ---
+---
+--- **Table > Table Flags > Sizing Policy**
+---
+--- (read above for defaults)
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_SizingFixedSame integer
+---
+--- **Table > Table Flags > Sizing Policy > TableFlags\_SizingStretchProp**
+---
+--- Columns default to _WidthStretch with default weights proportional to each
+---    columns contents widths.
+---
+--- ---
+---
+--- **Table > Table Flags > Sizing Policy**
+---
+--- (read above for defaults)
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_SizingStretchProp integer
+---
+--- **Table > Table Flags > Sizing Policy > TableFlags\_SizingStretchSame**
+---
+--- Columns default to _WidthStretch with default weights all equal,
+---    unless overriden by TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Table Flags > Sizing Policy**
+---
+--- (read above for defaults)
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_SizingStretchSame integer
+---
+--- **Table > Table Flags > Sorting > TableFlags\_SortMulti**
+---
+--- Hold shift when clicking headers to sort on multiple column.
+---    TableGetColumnSortSpecs may return specs where (SpecsCount > 1).
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_SortMulti integer
+---
+--- **Table > Table Flags > Sorting > TableFlags\_SortTristate**
+---
+--- Allow no sorting, disable default sorting.
+---    TableGetColumnSortSpecs may return specs where (SpecsCount == 0).
+---
+--- ---
+---
+--- **Table > Table Flags**
+---
+--- For BeginTable.
+---
+--- - Important! Sizing policies have complex and subtle side effects,
+---   more so than you would expect. Read comments/demos carefully +
+---   experiment with live demos to get acquainted with them.
+--- - The DEFAULT sizing policies are:
+---    - Default to TableFlags_SizingFixedFit
+---      if ScrollX is on, or if host window has WindowFlags_AlwaysAutoResize.
+---    - Default to TableFlags_SizingStretchSame if ScrollX is off.
+--- - When ScrollX is off:
+---    - Table defaults to TableFlags_SizingStretchSame ->
+---      all Columns defaults to TableColumnFlags_WidthStretch with same weight.
+---    - Columns sizing policy allowed: Stretch (default), Fixed/Auto.
+---    - Fixed Columns will generally obtain their requested width
+---      (unless the table cannot fit them all).
+---    - Stretch Columns will share the remaining width.
+---    - Mixed Fixed/Stretch columns is possible but has various side-effects on
+---      resizing behaviors.
+---      The typical use of mixing sizing policies is: any number of LEADING Fixed
+---      columns, followed by one or two TRAILING Stretch columns.
+---      (this is because the visible order of columns have subtle but necessary
+---      effects on how they react to manual resizing).
+--- - When ScrollX is on:
+---    - Table defaults to TableFlags_SizingFixedFit ->
+---      all Columns defaults to TableColumnFlags_WidthFixed
+---    - Columns sizing policy allowed: Fixed/Auto mostly.
+---    - Fixed Columns can be enlarged as needed.
+---      Table will show a horizontal scrollbar if needed.
+---    - When using auto-resizing (non-resizable) fixed columns,
+---      querying the content width to use item right-alignment e.g.
+---      SetNextItemWidth(-FLT_MIN) doesn't make sense, would create a feedback loop.
+---    - Using Stretch columns OFTEN DOES NOT MAKE SENSE if ScrollX is on,
+---      UNLESS you have specified a value for 'inner_width' in BeginTable().
+---      If you specify a value for 'inner_width' then effectively the scrolling
+---      space is known and Stretch or mixed Fixed/Stretch columns become meaningful
+---      again.
+--- - Read on documentation at the top of imgui_tables.cpp for details.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TableFlags_SortTristate integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_AllowTabInput**
+---
+--- Pressing TAB input a '\t' character into the text field.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_AllowTabInput integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_AlwaysOverwrite**
+---
+--- Overwrite mode.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.2
+--- @field InputTextFlags_AlwaysOverwrite integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_AutoSelectAll**
+---
+--- Select entire text when first taking mouse focus.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_AutoSelectAll integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackAlways**
+---
+--- Callback on each iteration. User code may query cursor position, modify text buffer.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackAlways integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackCharFilter**
+---
+--- Callback on character inputs to replace or discard them.
+---    Modify 'EventChar' to replace or 'EventChar = 0' to discard.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackCharFilter integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackCompletion**
+---
+--- Callback on pressing TAB (for completion handling).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackCompletion integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackEdit**
+---
+--- Callback on any edit (note that InputText() already returns true on edit,
+---    the callback is useful mainly to manipulate the underlying buffer while
+---    focus is active).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackEdit integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackHistory**
+---
+--- Callback on pressing Up/Down arrows (for history handling).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackHistory integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CharsDecimal**
+---
+--- Allow 0123456789.+-*/.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsDecimal integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CharsHexadecimal**
+---
+--- Allow 0123456789ABCDEFabcdef.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsHexadecimal integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CharsNoBlank**
+---
+--- Filter out spaces, tabs.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsNoBlank integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CharsScientific**
+---
+--- Allow 0123456789.+-*/eE (Scientific notation input).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsScientific integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CharsUppercase**
+---
+--- Turn a..z into A..Z.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsUppercase integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_CtrlEnterForNewLine**
+---
+--- In multi-line mode, unfocus with Enter, add new line with Ctrl+Enter
+---    (default is opposite: unfocus with Ctrl+Enter, add line with Enter).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CtrlEnterForNewLine integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_EnterReturnsTrue**
+---
+--- Return 'true' when Enter is pressed (as opposed to every time the value was
+---    modified). Consider looking at the IsItemDeactivatedAfterEdit function.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_EnterReturnsTrue integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_EscapeClearsAll**
+---
+--- Escape key clears content if not empty, and deactivate otherwise
+---    (constrast to default behavior of Escape to revert).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8
+--- @field InputTextFlags_EscapeClearsAll integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_NoHorizontalScroll**
+---
+--- Disable following the cursor horizontally.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_NoHorizontalScroll integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_NoUndoRedo**
+---
+--- Disable undo/redo. Note that input text owns the text data while active.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_NoUndoRedo integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_None**
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_None integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_Password**
+---
+--- Password mode, display all characters as '*'.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_Password integer
+---
+--- **Text \& Scalar Input > Flags > InputTextFlags\_ReadOnly**
+---
+--- Read-only mode.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_ReadOnly integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_AllowOverlap**
+---
+--- Hit testing to allow subsequent widgets to overlap this one.
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.9
+--- @field TreeNodeFlags_AllowOverlap integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_Bullet**
+---
+--- Display a bullet instead of arrow. IMPORTANT: node can still be marked
+---    open/close if you don't set the _Leaf flag!
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_Bullet integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_CollapsingHeader**
+---
+--- TreeNodeFlags_Framed | TreeNodeFlags_NoTreePushOnOpen | TreeNodeFlags_NoAutoOpenOnLog
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_CollapsingHeader integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_DefaultOpen**
+---
+--- Default node to be open.
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_DefaultOpen integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_FramePadding**
+---
+--- Use FramePadding (even for an unframed text node) to vertically align text
+---    baseline to regular widget height.
+---    Equivalent to calling AlignTextToFramePadding.
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_FramePadding integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_Framed**
+---
+--- Draw frame with background (e.g. for CollapsingHeader).
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_Framed integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_Leaf**
+---
+--- No collapsing, no arrow (use as a convenience for leaf nodes).
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_Leaf integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_NoAutoOpenOnLog**
+---
+--- Don't automatically and temporarily open node when Logging is active
+---    (by default logging will automatically open tree nodes).
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_NoAutoOpenOnLog integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_NoTreePushOnOpen**
+---
+--- Don't do a TreePush when open (e.g. for CollapsingHeader)
+---    = no extra indent nor pushing on ID stack.
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_NoTreePushOnOpen integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_None**
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_None integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_OpenOnArrow**
+---
+--- Only open when clicking on the arrow part.
+---    If TreeNodeFlags_OpenOnDoubleClick is also set, single-click arrow or
+---    double-click all box to open.
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_OpenOnArrow integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_OpenOnDoubleClick**
+---
+--- Need double-click to open node.
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_OpenOnDoubleClick integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_Selected**
+---
+--- Draw as selected.
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_Selected integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_SpanAllColumns**
+---
+--- Frame will span all columns of its container table (text will still fit in current column).
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.9
+--- @field TreeNodeFlags_SpanAllColumns integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_SpanAvailWidth**
+---
+--- Extend hit box to the right-most edge, even if not framed.
+---    This is not the default in order to allow adding other items on the same line.
+---    In the future we may refactor the hit system to be front-to-back,
+---    allowing natural overlaps and then this can become the default.
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_SpanAvailWidth integer
+---
+--- **Tree Node > Flags > TreeNodeFlags\_SpanFullWidth**
+---
+--- Extend hit box to the left-most and right-most edges (bypass the indented area).
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.1
+--- @field TreeNodeFlags_SpanFullWidth integer
+---
+--- **Utility > Conditions > Cond\_Always**
+---
+--- No condition (always set the variable).
+---
+--- ---
+---
+--- **Utility > Conditions**
+---
+--- Used for SetNextWindow*(), SetWindow*() and SetNextItem*() functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Cond_Always integer
+---
+--- **Utility > Conditions > Cond\_Appearing**
+---
+--- Set the variable if the object/window is appearing after being
+---    hidden/inactive (or the first time).
+---
+--- ---
+---
+--- **Utility > Conditions**
+---
+--- Used for SetNextWindow*(), SetWindow*() and SetNextItem*() functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Cond_Appearing integer
+---
+--- **Utility > Conditions > Cond\_FirstUseEver**
+---
+--- Set the variable if the object/window has no persistently saved data
+---    (no entry in .ini file).
+---
+--- ---
+---
+--- **Utility > Conditions**
+---
+--- Used for SetNextWindow*(), SetWindow*() and SetNextItem*() functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Cond_FirstUseEver integer
+---
+--- **Utility > Conditions > Cond\_Once**
+---
+--- Set the variable once per runtime session (only the first call will succeed).
+---
+--- ---
+---
+--- **Utility > Conditions**
+---
+--- Used for SetNextWindow*(), SetWindow*() and SetNextItem*() functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @field Cond_Once integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_AlwaysAutoResize**
+---
+--- Combined with AutoResizeX/AutoResizeY. Always measure size even when child
+--- is hidden, always return true, always disable clipping optimization! NOT RECOMMENDED.
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @field ChildFlags_AlwaysAutoResize integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_AlwaysUseWindowPadding**
+---
+--- Pad with StyleVar_WindowPadding even if no border are drawn (no padding by
+--- default for non-bordered child windows because it makes more sense).
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @field ChildFlags_AlwaysUseWindowPadding integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_AutoResizeX**
+---
+--- Enable auto-resizing width. Read notes above.
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @field ChildFlags_AutoResizeX integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_AutoResizeY**
+---
+--- Enable auto-resizing height. Read notes above.
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @field ChildFlags_AutoResizeY integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_Border**
+---
+--- Show an outer border and enable WindowPadding.
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @field ChildFlags_Border integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_FrameStyle**
+---
+--- Style the child window like a framed item: use Col_FrameBg,
+--- StyleVar_FrameRounding, StyleVar_FrameBorderSize, StyleVar_FramePadding instead
+--- of Col_ChildBg, StyleVar_ChildRounding, StyleVar_ChildBorderSize,
+--- StyleVar_WindowPadding.
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @field ChildFlags_FrameStyle integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_None**
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @field ChildFlags_None integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_ResizeX**
+---
+--- Allow resize from right border (layout direction).
+--- Enables .ini saving (unless WindowFlags_NoSavedSettings passed to window flags).
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @field ChildFlags_ResizeX integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_ResizeY**
+---
+--- Allow resize from bottom border (layout direction).
+--- Enables .ini saving (unless WindowFlags_NoSavedSettings passed to window flags).
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @field ChildFlags_ResizeY integer
+---
+--- **Window > Flags > WindowFlags\_AlwaysAutoResize**
+---
+--- Resize every window to its content every frame.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_AlwaysAutoResize integer
+---
+--- **Window > Flags > WindowFlags\_AlwaysHorizontalScrollbar**
+---
+--- Always show horizontal scrollbar (even if ContentSize.x < Size.x).
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_AlwaysHorizontalScrollbar integer
+---
+--- **Window > Flags > WindowFlags\_AlwaysVerticalScrollbar**
+---
+--- Always show vertical scrollbar (even if ContentSize.y < Size.y).
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_AlwaysVerticalScrollbar integer
+---
+--- **Window > Flags > WindowFlags\_HorizontalScrollbar**
+---
+--- Allow horizontal scrollbar to appear (off by default).
+---    You may use SetNextWindowContentSize(width, 0.0) prior to calling Begin() to
+---    specify width. Read code in the demo's "Horizontal Scrolling" section.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_HorizontalScrollbar integer
+---
+--- **Window > Flags > WindowFlags\_MenuBar**
+---
+--- Has a menu-bar.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_MenuBar integer
+---
+--- **Window > Flags > WindowFlags\_NoBackground**
+---
+--- Disable drawing background color (WindowBg, etc.) and outside border.
+---    Similar as using SetNextWindowBgAlpha(0.0).
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoBackground integer
+---
+--- **Window > Flags > WindowFlags\_NoCollapse**
+---
+--- Disable user collapsing window by double-clicking on it.
+---    Also referred to as Window Menu Button (e.g. within a docking node).
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoCollapse integer
+---
+--- **Window > Flags > WindowFlags\_NoDecoration**
+---
+--- WindowFlags_NoTitleBar | WindowFlags_NoResize | WindowFlags_NoScrollbar |
+---    WindowFlags_NoCollapse
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoDecoration integer
+---
+--- **Window > Flags > WindowFlags\_NoDocking**
+---
+--- Disable docking of this window.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @field WindowFlags_NoDocking integer
+---
+--- **Window > Flags > WindowFlags\_NoFocusOnAppearing**
+---
+--- Disable taking focus when transitioning from hidden to visible state.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoFocusOnAppearing integer
+---
+--- **Window > Flags > WindowFlags\_NoInputs**
+---
+--- WindowFlags_NoMouseInputs | WindowFlags_NoNavInputs | WindowFlags_NoNavFocus
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoInputs integer
+---
+--- **Window > Flags > WindowFlags\_NoMouseInputs**
+---
+--- Disable catching mouse, hovering test with pass through.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoMouseInputs integer
+---
+--- **Window > Flags > WindowFlags\_NoMove**
+---
+--- Disable user moving the window.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoMove integer
+---
+--- **Window > Flags > WindowFlags\_NoNav**
+---
+--- WindowFlags_NoNavInputs | WindowFlags_NoNavFocus
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoNav integer
+---
+--- **Window > Flags > WindowFlags\_NoNavFocus**
+---
+--- No focusing toward this window with gamepad/keyboard navigation
+---    (e.g. skipped by CTRL+TAB).
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoNavFocus integer
+---
+--- **Window > Flags > WindowFlags\_NoNavInputs**
+---
+--- No gamepad/keyboard navigation within the window.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoNavInputs integer
+---
+--- **Window > Flags > WindowFlags\_NoResize**
+---
+--- Disable user resizing with the lower-right grip.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoResize integer
+---
+--- **Window > Flags > WindowFlags\_NoSavedSettings**
+---
+--- Never load/save settings in .ini file.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.4
+--- @field WindowFlags_NoSavedSettings integer
+---
+--- **Window > Flags > WindowFlags\_NoScrollWithMouse**
+---
+--- Disable user vertically scrolling with mouse wheel.
+---    On child window, mouse wheel will be forwarded to the parent unless
+---    NoScrollbar is also set.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoScrollWithMouse integer
+---
+--- **Window > Flags > WindowFlags\_NoScrollbar**
+---
+--- Disable scrollbars (window can still scroll with mouse or programmatically).
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoScrollbar integer
+---
+--- **Window > Flags > WindowFlags\_NoTitleBar**
+---
+--- Disable title-bar.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_NoTitleBar integer
+---
+--- **Window > Flags > WindowFlags\_None**
+---
+--- Default flag.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_None integer
+---
+--- **Window > Flags > WindowFlags\_TopMost**
+---
+--- Show the window above all non-topmost windows.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5.5
+--- @field WindowFlags_TopMost integer
+---
+--- **Window > Flags > WindowFlags\_UnsavedDocument**
+---
+--- Display a dot next to the title. When used in a tab/docking context,
+---    tab is selected when clicking the X + closure is not assumed
+---    (will wait for user to stop submitting the tab).
+---    Otherwise closure is assumed when pressing the X,
+---    so if you keep submitting the tab may reappear at end of tab bar.
+---
+--- ---
+---
+--- **Window > Flags**
+---
+--- For Begin and BeginChild.
+---
+--- (Those are per-window flags. There are shared flags in SetConfigVar:
+--- ConfigVar_WindowsResizeFromEdges and ConfigVar_WindowsMoveFromTitleBarOnly)
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field WindowFlags_UnsavedDocument integer
+---
+--- **Window > Properties > Focused Flags > FocusedFlags\_AnyWindow**
+---
+--- Return true if any window is focused.
+---
+--- ---
+---
+--- **Window > Properties > Focused Flags**
+---
+--- For IsWindowFocused.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field FocusedFlags_AnyWindow integer
+---
+--- **Window > Properties > Focused Flags > FocusedFlags\_ChildWindows**
+---
+--- Return true if any children of the window is focused.
+---
+--- ---
+---
+--- **Window > Properties > Focused Flags**
+---
+--- For IsWindowFocused.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field FocusedFlags_ChildWindows integer
+---
+--- **Window > Properties > Focused Flags > FocusedFlags\_DockHierarchy**
+---
+--- Consider docking hierarchy (treat dockspace host as parent of docked window)
+---    (when used with _ChildWindows or _RootWindow).
+---
+--- ---
+---
+--- **Window > Properties > Focused Flags**
+---
+--- For IsWindowFocused.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5.10
+--- @field FocusedFlags_DockHierarchy integer
+---
+--- **Window > Properties > Focused Flags > FocusedFlags\_NoPopupHierarchy**
+---
+--- Do not consider popup hierarchy (do not treat popup emitter as parent of
+---    popup) (when used with _ChildWindows or _RootWindow).
+---
+--- ---
+---
+--- **Window > Properties > Focused Flags**
+---
+--- For IsWindowFocused.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5.10
+--- @field FocusedFlags_NoPopupHierarchy integer
+---
+--- **Window > Properties > Focused Flags > FocusedFlags\_None**
+---
+--- ---
+---
+--- **Window > Properties > Focused Flags**
+---
+--- For IsWindowFocused.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field FocusedFlags_None integer
+---
+--- **Window > Properties > Focused Flags > FocusedFlags\_RootAndChildWindows**
+---
+--- FocusedFlags_RootWindow | FocusedFlags_ChildWindows
+---
+--- ---
+---
+--- **Window > Properties > Focused Flags**
+---
+--- For IsWindowFocused.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field FocusedFlags_RootAndChildWindows integer
+---
+--- **Window > Properties > Focused Flags > FocusedFlags\_RootWindow**
+---
+--- Test from root window (top most parent of the current hierarchy).
+---
+--- ---
+---
+--- **Window > Properties > Focused Flags**
+---
+--- For IsWindowFocused.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @field FocusedFlags_RootWindow integer
+local ImGui = {}
+
+--- @alias nil​ nil
+--- @class (exact) ImGui_Resource         : userdata
+--- @class (exact) ImGui_DrawList         : userdata
+--- @class (exact) ImGui_Viewport         : userdata
+--- @class (exact) ImGui_Context          : ImGui_Resource
+--- @class (exact) ImGui_DrawListSplitter : ImGui_Resource
+--- @class (exact) ImGui_Font             : ImGui_Resource
+--- @class (exact) ImGui_Function         : ImGui_Resource
+--- @class (exact) ImGui_Image            : ImGui_Resource
+--- @class (exact) ImGui_ImageSet         : ImGui_Image
+--- @class (exact) ImGui_ListClipper      : ImGui_Resource
+--- @class (exact) ImGui_TextFilter       : ImGui_Resource
+--- @diagnostic disable: keyword
+
+--- **Button > ArrowButton**
+---
+--- Square button with an arrow shape. 'dir' is one of the Dir_* values
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param dir integer
+--- @return boolean retval
+function ImGui.ArrowButton(ctx, str_id, dir) end
+
+--- **Button > Button**
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param size_w? number default value = `0.0`
+--- @param size_h? number default value = `0.0`
+--- @return boolean retval
+function ImGui.Button(ctx, label, size_w, size_h) end
+
+--- **Button > Checkbox**
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v boolean
+--- @return boolean retval
+--- @return boolean v
+function ImGui.Checkbox(ctx, label, v) end
+
+--- **Button > CheckboxFlags**
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param flags integer
+--- @param flags_value integer
+--- @return boolean retval
+--- @return integer flags
+function ImGui.CheckboxFlags(ctx, label, flags, flags_value) end
+
+--- **Button > InvisibleButton**
+---
+--- Flexible button behavior without the visuals, frequently useful to build
+--- custom behaviors using the public api (along with IsItemActive, IsItemHovered, etc.).
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param size_w number
+--- @param size_h number
+--- @param flags? integer default value = `ButtonFlags_None`
+--- @return boolean retval
+function ImGui.InvisibleButton(ctx, str_id, size_w, size_h, flags) end
+
+--- **Button > PopButtonRepeat**
+---
+--- See PushButtonRepeat
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.PopButtonRepeat(ctx) end
+
+--- **Button > PushButtonRepeat**
+---
+--- In 'repeat' mode, Button*() functions return repeated true in a typematic
+--- manner (using ConfigVar_KeyRepeatDelay/ConfigVar_KeyRepeatRate settings).
+---
+--- Note that you can call IsItemActive after any Button to tell if the button is
+--- held in the current frame.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param repeat boolean
+function ImGui.PushButtonRepeat(ctx, repeat) end
+
+--- **Button > RadioButton**
+---
+--- Use with e.g. if (RadioButton("one", my_value==1)) { my_value = 1; }
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param active boolean
+--- @return boolean retval
+function ImGui.RadioButton(ctx, label, active) end
+
+--- **Button > RadioButtonEx**
+---
+--- Shortcut to handle RadioButton's example pattern when value is an integer
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v integer
+--- @param v_button integer
+--- @return boolean retval
+--- @return integer v
+function ImGui.RadioButtonEx(ctx, label, v, v_button) end
+
+--- **Button > SmallButton**
+---
+--- Button with StyleVar_FramePadding.y == 0 to easily embed within text.
+---
+--- ---
+---
+--- **Button**
+---
+--- Most widgets return true when the value has been changed or when pressed/selected.
+---
+--- You may also use one of the many IsItem* functions (e.g. IsItemActive,
+--- IsItemHovered, etc.) to query widget state.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @return boolean retval
+function ImGui.SmallButton(ctx, label) end
+
+--- **Color Edit > ColorButton**
+---
+--- Display a color square/button, hover for details, return true when pressed.
+--- Color is in 0xRRGGBBAA or, if ColorEditFlags_NoAlpha is set, 0xRRGGBB.
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param desc_id string
+--- @param col_rgba integer
+--- @param flags? integer default value = `ColorEditFlags_None`
+--- @param size_w? number default value = `0.0`
+--- @param size_h? number default value = `0.0`
+--- @return boolean retval
+function ImGui.ColorButton(ctx, desc_id, col_rgba, flags, size_w, size_h) end
+
+--- **Color Edit > ColorEdit3**
+---
+--- Color is in 0xXXRRGGBB. XX is ignored and will not be modified.
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param col_rgb integer
+--- @param flags? integer default value = `ColorEditFlags_None`
+--- @return boolean retval
+--- @return integer col_rgb
+function ImGui.ColorEdit3(ctx, label, col_rgb, flags) end
+
+--- **Color Edit > ColorEdit4**
+---
+--- Color is in 0xRRGGBBAA or, if ColorEditFlags_NoAlpha is set, 0xXXRRGGBB
+--- (XX is ignored and will not be modified).
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param col_rgba integer
+--- @param flags? integer default value = `ColorEditFlags_None`
+--- @return boolean retval
+--- @return integer col_rgba
+function ImGui.ColorEdit4(ctx, label, col_rgba, flags) end
+
+--- **Color Edit > ColorPicker3**
+---
+--- Color is in 0xXXRRGGBB. XX is ignored and will not be modified.
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param col_rgb integer
+--- @param flags? integer default value = `ColorEditFlags_None`
+--- @return boolean retval
+--- @return integer col_rgb
+function ImGui.ColorPicker3(ctx, label, col_rgb, flags) end
+
+--- **Color Edit > ColorPicker4**
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param col_rgba integer
+--- @param flags? integer default value = `ColorEditFlags_None`
+--- @param ref_col? integer default value = `nil`
+--- @return boolean retval
+--- @return integer col_rgba
+function ImGui.ColorPicker4(ctx, label, col_rgba, flags, ref_col) end
+
+--- **Color Edit > SetColorEditOptions**
+---
+--- Picker type, etc. User will be able to change many settings, unless you pass
+--- the _NoOptions flag to your calls.
+---
+--- ---
+---
+--- **Color Edit**
+---
+--- Tip: the ColorEdit* functions have a little color square that can be
+--- left-clicked to open a picker, and right-clicked to open an option menu.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param flags integer
+function ImGui.SetColorEditOptions(ctx, flags) end
+
+--- **Combo \& List > Combo Box \(Dropdown\) > BeginCombo**
+---
+--- The BeginCombo/EndCombo API allows you to manage your contents and selection
+--- state however you want it, by creating e.g. Selectable items.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param preview_value string
+--- @param flags? integer default value = `ComboFlags_None`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginCombo(ctx, label, preview_value, flags) end
+
+--- **Combo \& List > Combo Box \(Dropdown\) > Combo**
+---
+--- Helper over BeginCombo/EndCombo for convenience purpose. Each item must be
+--- null-terminated (requires REAPER v6.44 or newer for EEL and Lua).
+---
+--- ---
+---
+--- @since 0.7
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param current_item integer
+--- @param items string
+--- @param popup_max_height_in_items? integer default value = `-1`
+--- @return boolean retval
+--- @return integer current_item
+function ImGui.Combo(ctx, label, current_item, items, popup_max_height_in_items) end
+
+--- **Combo \& List > Combo Box \(Dropdown\) > EndCombo**
+---
+--- Only call EndCombo() if BeginCombo returns true!
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.EndCombo(ctx) end
+
+--- **Combo \& List > List Boxes > BeginListBox**
+---
+--- Open a framed scrolling region.
+---
+--- You can submit contents and manage your selection state however you want it,
+--- by creating e.g. Selectable or any other items.
+---
+--- - Choose frame width:
+---   - width  > 0.0: custom
+---   - width  < 0.0 or -FLT_MIN: right-align
+---   - width  = 0.0 (default): use current ItemWidth
+--- - Choose frame height:
+---   - height > 0.0: custom
+---   - height < 0.0 or -FLT_MIN: bottom-align
+---   - height = 0.0 (default): arbitrary default height which can fit ~7 items
+---
+--- See EndListBox.
+---
+--- ---
+---
+--- **Combo \& List > List Boxes**
+---
+--- This is essentially a thin wrapper to using BeginChild/EndChild with the
+--- ChildFlags_FrameStyle flag for stylistic changes + displaying a label.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param size_w? number default value = `0.0`
+--- @param size_h? number default value = `0.0`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginListBox(ctx, label, size_w, size_h) end
+
+--- **Combo \& List > List Boxes > EndListBox**
+---
+--- Only call EndListBox() if BeginListBox returned true!
+---
+--- ---
+---
+--- **Combo \& List > List Boxes**
+---
+--- This is essentially a thin wrapper to using BeginChild/EndChild with the
+--- ChildFlags_FrameStyle flag for stylistic changes + displaying a label.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.EndListBox(ctx) end
+
+--- **Combo \& List > List Boxes > ListBox**
+---
+--- This is an helper over BeginListBox/EndListBox for convenience purpose.
+---
+--- Each item must be null-terminated (requires REAPER v6.44 or newer for EEL and Lua).
+---
+--- ---
+---
+--- **Combo \& List > List Boxes**
+---
+--- This is essentially a thin wrapper to using BeginChild/EndChild with the
+--- ChildFlags_FrameStyle flag for stylistic changes + displaying a label.
+---
+--- ---
+---
+--- @since 0.7
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param current_item integer
+--- @param items string
+--- @param height_in_items? integer default value = `-1`
+--- @return boolean retval
+--- @return integer current_item
+function ImGui.ListBox(ctx, label, current_item, items, height_in_items) end
+
+--- **Combo \& List > Selectables > Selectable**
+---
+--- ---
+---
+--- **Combo \& List > Selectables**
+---
+--- A selectable highlights when hovered, and can display another color when
+--- selected. Neighbors selectable extend their highlight bounds in order to leave
+--- no gap between them. This is so a series of selected Selectable appear
+--- contiguous.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param p_selected? boolean default value = `nil`
+--- @param flags? integer default value = `SelectableFlags_None`
+--- @param size_w? number default value = `0.0`
+--- @param size_h? number default value = `0.0`
+--- @return boolean retval
+--- @return boolean p_selected
+function ImGui.Selectable(ctx, label, p_selected, flags, size_w, size_h) end
+
+--- **Context > Attach**
+---
+--- Link the object's lifetime to the given context.
+--- Objects can be draw list splitters, fonts, images, list clippers, etc.
+--- Call Detach to let the object be garbage-collected after unuse again.
+---
+--- List clipper objects may only be attached to the context they were created for.
+---
+--- Fonts are (currently) a special case: they must be attached to the context
+--- before usage. Furthermore, fonts may only be attached or detached immediately
+--- after the context is created or before any other function calls modifying the
+--- context per defer cycle. See "limitations" in the font API documentation.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+--- @param obj ImGui_Resource
+function ImGui.Attach(ctx, obj) end
+
+--- **Context > CreateContext**
+---
+--- Create a new ReaImGui context.
+--- The context will remain valid as long as it is used in each defer cycle.
+---
+--- The label is used for the tab text when windows are docked in REAPER
+--- and also as a unique identifier for storing settings.
+---
+--- ---
+---
+--- @since 0.5
+--- @param label string
+--- @param config_flags? integer default value = `ConfigFlags_None`
+--- @nodiscard
+--- @return ImGui_Context retval
+function ImGui.CreateContext(label, config_flags) end
+
+--- **Context > Detach**
+---
+--- Unlink the object's lifetime. Unattached objects are automatically destroyed
+--- when left unused. You may check whether an object has been destroyed using
+--- ValidatePtr.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+--- @param obj ImGui_Resource
+function ImGui.Detach(ctx, obj) end
+
+--- **Context > GetDeltaTime**
+---
+--- Time elapsed since last frame, in seconds.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetDeltaTime(ctx) end
+
+--- **Context > GetFrameCount**
+---
+--- Get global imgui frame count. incremented by 1 every frame.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return integer retval
+function ImGui.GetFrameCount(ctx) end
+
+--- **Context > GetFramerate**
+---
+--- Estimate of application framerate (rolling average over 60 frames, based on
+--- GetDeltaTime), in frame per second. Solely for convenience.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetFramerate(ctx) end
+
+--- **Context > GetTime**
+---
+--- Get global imgui time. Incremented every frame.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetTime(ctx) end
+
+--- **Context > Options > GetConfigVar**
+---
+--- ---
+---
+--- @since 0.7
+--- @param ctx ImGui_Context
+--- @param var_idx integer
+--- @return number retval
+function ImGui.GetConfigVar(ctx, var_idx) end
+
+--- **Context > Options > SetConfigVar**
+---
+--- ---
+---
+--- @since 0.7
+--- @param ctx ImGui_Context
+--- @param var_idx integer
+--- @param value number
+function ImGui.SetConfigVar(ctx, var_idx, value) end
+
+--- **Drag \& Drop > AcceptDragDropPayload**
+---
+--- Accept contents of a given type. If DragDropFlags_AcceptBeforeDelivery is set
+--- you can peek into the payload before the mouse button is released.
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param type string
+--- @param _1? nil​
+--- @param flags? integer default value = `DragDropFlags_None`
+--- @return boolean retval
+--- @return string payload
+function ImGui.AcceptDragDropPayload(ctx, type, _1, flags) end
+
+--- **Drag \& Drop > AcceptDragDropPayloadFiles**
+---
+--- Accept a list of dropped files. See AcceptDragDropPayload and GetDragDropPayloadFile.
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param _1? nil​
+--- @param flags? integer default value = `DragDropFlags_None`
+--- @return boolean retval
+--- @return integer count
+function ImGui.AcceptDragDropPayloadFiles(ctx, _1, flags) end
+
+--- **Drag \& Drop > AcceptDragDropPayloadRGB**
+---
+--- Accept a RGB color. See AcceptDragDropPayload.
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param _1? nil​
+--- @param flags? integer default value = `DragDropFlags_None`
+--- @return boolean retval
+--- @return integer rgb
+function ImGui.AcceptDragDropPayloadRGB(ctx, _1, flags) end
+
+--- **Drag \& Drop > AcceptDragDropPayloadRGBA**
+---
+--- Accept a RGBA color. See AcceptDragDropPayload.
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param _1? nil​
+--- @param flags? integer default value = `DragDropFlags_None`
+--- @return boolean retval
+--- @return integer rgba
+function ImGui.AcceptDragDropPayloadRGBA(ctx, _1, flags) end
+
+--- **Drag \& Drop > BeginDragDropSource**
+---
+--- Call after submitting an item which may be dragged. when this return true,
+--- you can call SetDragDropPayload() + EndDragDropSource()
+---
+--- If you stop calling BeginDragDropSource() the payload is preserved however
+--- it won't have a preview tooltip (we currently display a fallback "..." tooltip
+--- as replacement).
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param flags? integer default value = `DragDropFlags_None`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginDragDropSource(ctx, flags) end
+
+--- **Drag \& Drop > BeginDragDropTarget**
+---
+--- Call after submitting an item that may receive a payload.
+--- If this returns true, you can call AcceptDragDropPayload + EndDragDropTarget.
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginDragDropTarget(ctx) end
+
+--- **Drag \& Drop > EndDragDropSource**
+---
+--- Only call EndDragDropSource() if BeginDragDropSource returns true!
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.EndDragDropSource(ctx) end
+
+--- **Drag \& Drop > EndDragDropTarget**
+---
+--- Only call EndDragDropTarget() if BeginDragDropTarget returns true!
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.EndDragDropTarget(ctx) end
+
+--- **Drag \& Drop > GetDragDropPayload**
+---
+--- Peek directly into the current payload from anywhere.
+--- Returns false when drag and drop is finished or inactive.
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+--- @return string type
+--- @return string payload
+--- @return boolean is_preview
+--- @return boolean is_delivery
+function ImGui.GetDragDropPayload(ctx) end
+
+--- **Drag \& Drop > GetDragDropPayloadFile**
+---
+--- Get a filename from the list of dropped files.
+--- Returns false if index is out of bounds.
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param index integer
+--- @return boolean retval
+--- @return string filename
+function ImGui.GetDragDropPayloadFile(ctx, index) end
+
+--- **Drag \& Drop > SetDragDropPayload**
+---
+--- The type is a user defined string of maximum 32 characters.
+--- Strings starting with '_' are reserved for dear imgui internal types.
+--- Data is copied and held by imgui.
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param type string
+--- @param data string
+--- @param cond? integer default value = `Cond_Always`
+--- @return boolean retval
+function ImGui.SetDragDropPayload(ctx, type, data, cond) end
+
+--- **Drag \& Slider > Drag Sliders > DragDouble**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v number
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? number default value = `0.0`
+--- @param v_max? number default value = `0.0`
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v
+function ImGui.DragDouble(ctx, label, v, v_speed, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragDouble2**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 number
+--- @param v2 number
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? number default value = `0.0`
+--- @param v_max? number default value = `0.0`
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v1
+--- @return number v2
+function ImGui.DragDouble2(ctx, label, v1, v2, v_speed, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragDouble3**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 number
+--- @param v2 number
+--- @param v3 number
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? number default value = `0.0`
+--- @param v_max? number default value = `0.0`
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v1
+--- @return number v2
+--- @return number v3
+function ImGui.DragDouble3(ctx, label, v1, v2, v3, v_speed, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragDouble4**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 number
+--- @param v2 number
+--- @param v3 number
+--- @param v4 number
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? number default value = `0.0`
+--- @param v_max? number default value = `0.0`
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v1
+--- @return number v2
+--- @return number v3
+--- @return number v4
+function ImGui.DragDouble4(ctx, label, v1, v2, v3, v4, v_speed, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragDoubleN**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param values reaper.array
+--- @param speed? number default value = `1.0`
+--- @param min? number default value = `0.0`
+--- @param max? number default value = `0.0`
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+function ImGui.DragDoubleN(ctx, label, values, speed, min, max, format, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragFloatRange2**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v_current_min number
+--- @param v_current_max number
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? number default value = `0.0`
+--- @param v_max? number default value = `0.0`
+--- @param format? string default value = `"%.3f"`
+--- @param format_max? string default value = `nil`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v_current_min
+--- @return number v_current_max
+function ImGui.DragFloatRange2(ctx, label, v_current_min, v_current_max, v_speed, v_min, v_max, format, format_max, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragInt**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v integer
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? integer default value = `0`
+--- @param v_max? integer default value = `0`
+--- @param format? string default value = `"%d"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v
+function ImGui.DragInt(ctx, label, v, v_speed, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragInt2**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 integer
+--- @param v2 integer
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? integer default value = `0`
+--- @param v_max? integer default value = `0`
+--- @param format? string default value = `"%d"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v1
+--- @return integer v2
+function ImGui.DragInt2(ctx, label, v1, v2, v_speed, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragInt3**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 integer
+--- @param v2 integer
+--- @param v3 integer
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? integer default value = `0`
+--- @param v_max? integer default value = `0`
+--- @param format? string default value = `"%d"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v1
+--- @return integer v2
+--- @return integer v3
+function ImGui.DragInt3(ctx, label, v1, v2, v3, v_speed, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragInt4**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 integer
+--- @param v2 integer
+--- @param v3 integer
+--- @param v4 integer
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? integer default value = `0`
+--- @param v_max? integer default value = `0`
+--- @param format? string default value = `"%d"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v1
+--- @return integer v2
+--- @return integer v3
+--- @return integer v4
+function ImGui.DragInt4(ctx, label, v1, v2, v3, v4, v_speed, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Drag Sliders > DragIntRange2**
+---
+--- ---
+---
+--- **Drag \& Slider > Drag Sliders**
+---
+--- Speed are per-pixel of mouse movement (v_speed=0.2: mouse needs to move by 5
+--- pixels to increase value by 1). For gamepad/keyboard navigation, minimum speed
+--- is Max(v_speed, minimum_step_at_given_precision).
+---
+--- Use v_min < v_max to clamp edits to given limits. Note that CTRL+Click manual
+--- input can override those limits if SliderFlags_AlwaysClamp is not used.
+--- Use v_max = FLT_MAX / INT_MAX etc to avoid clamping to a maximum, same with
+--- v_min = -FLT_MAX / INT_MIN to avoid clamping to a minimum.
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v_current_min integer
+--- @param v_current_max integer
+--- @param v_speed? number default value = `1.0`
+--- @param v_min? integer default value = `0`
+--- @param v_max? integer default value = `0`
+--- @param format? string default value = `"%d"`
+--- @param format_max? string default value = `nil`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v_current_min
+--- @return integer v_current_max
+function ImGui.DragIntRange2(ctx, label, v_current_min, v_current_max, v_speed, v_min, v_max, format, format_max, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderAngle**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v_rad number
+--- @param v_degrees_min? number default value = `-360.0`
+--- @param v_degrees_max? number default value = `+360.0`
+--- @param format? string default value = `"%.0f deg"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v_rad
+function ImGui.SliderAngle(ctx, label, v_rad, v_degrees_min, v_degrees_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderDouble**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v number
+--- @param v_min number
+--- @param v_max number
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v
+function ImGui.SliderDouble(ctx, label, v, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderDouble2**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 number
+--- @param v2 number
+--- @param v_min number
+--- @param v_max number
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v1
+--- @return number v2
+function ImGui.SliderDouble2(ctx, label, v1, v2, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderDouble3**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 number
+--- @param v2 number
+--- @param v3 number
+--- @param v_min number
+--- @param v_max number
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v1
+--- @return number v2
+--- @return number v3
+function ImGui.SliderDouble3(ctx, label, v1, v2, v3, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderDouble4**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 number
+--- @param v2 number
+--- @param v3 number
+--- @param v4 number
+--- @param v_min number
+--- @param v_max number
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v1
+--- @return number v2
+--- @return number v3
+--- @return number v4
+function ImGui.SliderDouble4(ctx, label, v1, v2, v3, v4, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderDoubleN**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param values reaper.array
+--- @param v_min number
+--- @param v_max number
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+function ImGui.SliderDoubleN(ctx, label, values, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderInt**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v integer
+--- @param v_min integer
+--- @param v_max integer
+--- @param format? string default value = `"%d"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v
+function ImGui.SliderInt(ctx, label, v, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderInt2**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 integer
+--- @param v2 integer
+--- @param v_min integer
+--- @param v_max integer
+--- @param format? string default value = `"%d"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v1
+--- @return integer v2
+function ImGui.SliderInt2(ctx, label, v1, v2, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderInt3**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 integer
+--- @param v2 integer
+--- @param v3 integer
+--- @param v_min integer
+--- @param v_max integer
+--- @param format? string default value = `"%d"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v1
+--- @return integer v2
+--- @return integer v3
+function ImGui.SliderInt3(ctx, label, v1, v2, v3, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > SliderInt4**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 integer
+--- @param v2 integer
+--- @param v3 integer
+--- @param v4 integer
+--- @param v_min integer
+--- @param v_max integer
+--- @param format? string default value = `"%d"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v1
+--- @return integer v2
+--- @return integer v3
+--- @return integer v4
+function ImGui.SliderInt4(ctx, label, v1, v2, v3, v4, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > VSliderDouble**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param size_w number
+--- @param size_h number
+--- @param v number
+--- @param v_min number
+--- @param v_max number
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return number v
+function ImGui.VSliderDouble(ctx, label, size_w, size_h, v, v_min, v_max, format, flags) end
+
+--- **Drag \& Slider > Regular Sliders > VSliderInt**
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param size_w number
+--- @param size_h number
+--- @param v integer
+--- @param v_min integer
+--- @param v_max integer
+--- @param format? string default value = `"%d"`
+--- @param flags? integer default value = `SliderFlags_None`
+--- @return boolean retval
+--- @return integer v
+function ImGui.VSliderInt(ctx, label, size_w, size_h, v, v_min, v_max, format, flags) end
+
+--- **Draw List > DrawList\_PopClipRect**
+---
+--- See DrawList_PushClipRect
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+function ImGui.DrawList_PopClipRect(draw_list) end
+
+--- **Draw List > DrawList\_PushClipRect**
+---
+--- Render-level scissoring. Prefer using higher-level PushClipRect to affect
+--- logic (hit-testing and widget culling).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param clip_rect_min_x number
+--- @param clip_rect_min_y number
+--- @param clip_rect_max_x number
+--- @param clip_rect_max_y number
+--- @param intersect_with_current_clip_rect? boolean default value = `false`
+function ImGui.DrawList_PushClipRect(draw_list, clip_rect_min_x, clip_rect_min_y, clip_rect_max_x, clip_rect_max_y, intersect_with_current_clip_rect) end
+
+--- **Draw List > DrawList\_PushClipRectFullScreen**
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+function ImGui.DrawList_PushClipRectFullScreen(draw_list) end
+
+--- **Draw List > GetBackgroundDrawList**
+---
+--- This draw list will be the first rendering one. Useful to quickly draw
+--- shapes/text behind dear imgui contents.
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return ImGui_DrawList retval
+function ImGui.GetBackgroundDrawList(ctx) end
+
+--- **Draw List > GetForegroundDrawList**
+---
+--- This draw list will be the last rendered one. Useful to quickly draw
+--- shapes/text over dear imgui contents.
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return ImGui_DrawList retval
+function ImGui.GetForegroundDrawList(ctx) end
+
+--- **Draw List > GetWindowDrawList**
+---
+--- The draw list associated to the current window, to append your own drawing primitives
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return ImGui_DrawList retval
+function ImGui.GetWindowDrawList(ctx) end
+
+--- **Draw List > Primitives > DrawList\_AddBezierCubic**
+---
+--- Cubic Bezier (4 control points)
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p1_x number
+--- @param p1_y number
+--- @param p2_x number
+--- @param p2_y number
+--- @param p3_x number
+--- @param p3_y number
+--- @param p4_x number
+--- @param p4_y number
+--- @param col_rgba integer
+--- @param thickness number
+--- @param num_segments? integer default value = `0`
+function ImGui.DrawList_AddBezierCubic(draw_list, p1_x, p1_y, p2_x, p2_y, p3_x, p3_y, p4_x, p4_y, col_rgba, thickness, num_segments) end
+
+--- **Draw List > Primitives > DrawList\_AddBezierQuadratic**
+---
+--- Quadratic Bezier (3 control points)
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p1_x number
+--- @param p1_y number
+--- @param p2_x number
+--- @param p2_y number
+--- @param p3_x number
+--- @param p3_y number
+--- @param col_rgba integer
+--- @param thickness number
+--- @param num_segments? integer default value = `0`
+function ImGui.DrawList_AddBezierQuadratic(draw_list, p1_x, p1_y, p2_x, p2_y, p3_x, p3_y, col_rgba, thickness, num_segments) end
+
+--- **Draw List > Primitives > DrawList\_AddCircle**
+---
+--- Use "num_segments == 0" to automatically calculate tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param center_x number
+--- @param center_y number
+--- @param radius number
+--- @param col_rgba integer
+--- @param num_segments? integer default value = `0`
+--- @param thickness? number default value = `1.0`
+function ImGui.DrawList_AddCircle(draw_list, center_x, center_y, radius, col_rgba, num_segments, thickness) end
+
+--- **Draw List > Primitives > DrawList\_AddCircleFilled**
+---
+--- Use "num_segments == 0" to automatically calculate tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param center_x number
+--- @param center_y number
+--- @param radius number
+--- @param col_rgba integer
+--- @param num_segments? integer default value = `0`
+function ImGui.DrawList_AddCircleFilled(draw_list, center_x, center_y, radius, col_rgba, num_segments) end
+
+--- **Draw List > Primitives > DrawList\_AddConcavePolyFilled**
+---
+--- Concave polygon fill is more expensive than convex one: it has O(N^2) complexity.
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.9
+--- @param draw_list ImGui_DrawList
+--- @param points reaper.array
+--- @param col_rgba integer
+function ImGui.DrawList_AddConcavePolyFilled(draw_list, points, col_rgba) end
+
+--- **Draw List > Primitives > DrawList\_AddConvexPolyFilled**
+---
+--- Note: Anti-aliased filling requires points to be in clockwise order.
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.6
+--- @param draw_list ImGui_DrawList
+--- @param points reaper.array
+--- @param col_rgba integer
+function ImGui.DrawList_AddConvexPolyFilled(draw_list, points, col_rgba) end
+
+--- **Draw List > Primitives > DrawList\_AddEllipse**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.9
+--- @param draw_list ImGui_DrawList
+--- @param center_x number
+--- @param center_y number
+--- @param radius_x number
+--- @param radius_y number
+--- @param col_rgba integer
+--- @param rot? number default value = `0.0`
+--- @param num_segments? integer default value = `0`
+--- @param thickness? number default value = `1.0`
+function ImGui.DrawList_AddEllipse(draw_list, center_x, center_y, radius_x, radius_y, col_rgba, rot, num_segments, thickness) end
+
+--- **Draw List > Primitives > DrawList\_AddEllipseFilled**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.9
+--- @param draw_list ImGui_DrawList
+--- @param center_x number
+--- @param center_y number
+--- @param radius_x number
+--- @param radius_y number
+--- @param col_rgba integer
+--- @param rot? number default value = `0.0`
+--- @param num_segments? integer default value = `0`
+function ImGui.DrawList_AddEllipseFilled(draw_list, center_x, center_y, radius_x, radius_y, col_rgba, rot, num_segments) end
+
+--- **Draw List > Primitives > DrawList\_AddImage**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.8
+--- @param draw_list ImGui_DrawList
+--- @param image ImGui_Image
+--- @param p_min_x number
+--- @param p_min_y number
+--- @param p_max_x number
+--- @param p_max_y number
+--- @param uv_min_x? number default value = `0.0`
+--- @param uv_min_y? number default value = `0.0`
+--- @param uv_max_x? number default value = `1.0`
+--- @param uv_max_y? number default value = `1.0`
+--- @param col_rgba? integer default value = `0xFFFFFFFF`
+function ImGui.DrawList_AddImage(draw_list, image, p_min_x, p_min_y, p_max_x, p_max_y, uv_min_x, uv_min_y, uv_max_x, uv_max_y, col_rgba) end
+
+--- **Draw List > Primitives > DrawList\_AddImageQuad**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.8
+--- @param draw_list ImGui_DrawList
+--- @param image ImGui_Image
+--- @param p1_x number
+--- @param p1_y number
+--- @param p2_x number
+--- @param p2_y number
+--- @param p3_x number
+--- @param p3_y number
+--- @param p4_x number
+--- @param p4_y number
+--- @param uv1_x? number default value = `0.0`
+--- @param uv1_y? number default value = `0.0`
+--- @param uv2_x? number default value = `1.0`
+--- @param uv2_y? number default value = `0.0`
+--- @param uv3_x? number default value = `1.0`
+--- @param uv3_y? number default value = `1.0`
+--- @param uv4_x? number default value = `0.0`
+--- @param uv4_y? number default value = `1.0`
+--- @param col_rgba? integer default value = `0xFFFFFFFF`
+function ImGui.DrawList_AddImageQuad(draw_list, image, p1_x, p1_y, p2_x, p2_y, p3_x, p3_y, p4_x, p4_y, uv1_x, uv1_y, uv2_x, uv2_y, uv3_x, uv3_y, uv4_x, uv4_y, col_rgba) end
+
+--- **Draw List > Primitives > DrawList\_AddImageRounded**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.8
+--- @param draw_list ImGui_DrawList
+--- @param image ImGui_Image
+--- @param p_min_x number
+--- @param p_min_y number
+--- @param p_max_x number
+--- @param p_max_y number
+--- @param uv_min_x number
+--- @param uv_min_y number
+--- @param uv_max_x number
+--- @param uv_max_y number
+--- @param col_rgba integer
+--- @param rounding number
+--- @param flags? integer default value = `DrawFlags_None`
+function ImGui.DrawList_AddImageRounded(draw_list, image, p_min_x, p_min_y, p_max_x, p_max_y, uv_min_x, uv_min_y, uv_max_x, uv_max_y, col_rgba, rounding, flags) end
+
+--- **Draw List > Primitives > DrawList\_AddLine**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p1_x number
+--- @param p1_y number
+--- @param p2_x number
+--- @param p2_y number
+--- @param col_rgba integer
+--- @param thickness? number default value = `1.0`
+function ImGui.DrawList_AddLine(draw_list, p1_x, p1_y, p2_x, p2_y, col_rgba, thickness) end
+
+--- **Draw List > Primitives > DrawList\_AddNgon**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param center_x number
+--- @param center_y number
+--- @param radius number
+--- @param col_rgba integer
+--- @param num_segments integer
+--- @param thickness? number default value = `1.0`
+function ImGui.DrawList_AddNgon(draw_list, center_x, center_y, radius, col_rgba, num_segments, thickness) end
+
+--- **Draw List > Primitives > DrawList\_AddNgonFilled**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param center_x number
+--- @param center_y number
+--- @param radius number
+--- @param col_rgba integer
+--- @param num_segments integer
+function ImGui.DrawList_AddNgonFilled(draw_list, center_x, center_y, radius, col_rgba, num_segments) end
+
+--- **Draw List > Primitives > DrawList\_AddPolyline**
+---
+--- Points is a list of x,y coordinates.
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @param draw_list ImGui_DrawList
+--- @param points reaper.array
+--- @param col_rgba integer
+--- @param flags integer
+--- @param thickness number
+function ImGui.DrawList_AddPolyline(draw_list, points, col_rgba, flags, thickness) end
+
+--- **Draw List > Primitives > DrawList\_AddQuad**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p1_x number
+--- @param p1_y number
+--- @param p2_x number
+--- @param p2_y number
+--- @param p3_x number
+--- @param p3_y number
+--- @param p4_x number
+--- @param p4_y number
+--- @param col_rgba integer
+--- @param thickness? number default value = `1.0`
+function ImGui.DrawList_AddQuad(draw_list, p1_x, p1_y, p2_x, p2_y, p3_x, p3_y, p4_x, p4_y, col_rgba, thickness) end
+
+--- **Draw List > Primitives > DrawList\_AddQuadFilled**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p1_x number
+--- @param p1_y number
+--- @param p2_x number
+--- @param p2_y number
+--- @param p3_x number
+--- @param p3_y number
+--- @param p4_x number
+--- @param p4_y number
+--- @param col_rgba integer
+function ImGui.DrawList_AddQuadFilled(draw_list, p1_x, p1_y, p2_x, p2_y, p3_x, p3_y, p4_x, p4_y, col_rgba) end
+
+--- **Draw List > Primitives > DrawList\_AddRect**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p_min_x number
+--- @param p_min_y number
+--- @param p_max_x number
+--- @param p_max_y number
+--- @param col_rgba integer
+--- @param rounding? number default value = `0.0`
+--- @param flags? integer default value = `DrawFlags_None`
+--- @param thickness? number default value = `1.0`
+function ImGui.DrawList_AddRect(draw_list, p_min_x, p_min_y, p_max_x, p_max_y, col_rgba, rounding, flags, thickness) end
+
+--- **Draw List > Primitives > DrawList\_AddRectFilled**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p_min_x number
+--- @param p_min_y number
+--- @param p_max_x number
+--- @param p_max_y number
+--- @param col_rgba integer
+--- @param rounding? number default value = `0.0`
+--- @param flags? integer default value = `DrawFlags_None`
+function ImGui.DrawList_AddRectFilled(draw_list, p_min_x, p_min_y, p_max_x, p_max_y, col_rgba, rounding, flags) end
+
+--- **Draw List > Primitives > DrawList\_AddRectFilledMultiColor**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p_min_x number
+--- @param p_min_y number
+--- @param p_max_x number
+--- @param p_max_y number
+--- @param col_upr_left integer
+--- @param col_upr_right integer
+--- @param col_bot_right integer
+--- @param col_bot_left integer
+function ImGui.DrawList_AddRectFilledMultiColor(draw_list, p_min_x, p_min_y, p_max_x, p_max_y, col_upr_left, col_upr_right, col_bot_right, col_bot_left) end
+
+--- **Draw List > Primitives > DrawList\_AddText**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param x number
+--- @param y number
+--- @param col_rgba integer
+--- @param text string
+function ImGui.DrawList_AddText(draw_list, x, y, col_rgba, text) end
+
+--- **Draw List > Primitives > DrawList\_AddTextEx**
+---
+--- The last pushed font is used if font is nil.
+--- The size of the last pushed font is used if font_size is 0.
+--- cpu_fine_clip_rect_* only takes effect if all four are non-nil.
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.4
+--- @param draw_list ImGui_DrawList
+--- @param font ImGui_Font|nil
+--- @param font_size number
+--- @param pos_x number
+--- @param pos_y number
+--- @param col_rgba integer
+--- @param text string
+--- @param wrap_width? number default value = `0.0`
+--- @param cpu_fine_clip_rect_x? number default value = `nil`
+--- @param cpu_fine_clip_rect_y? number default value = `nil`
+--- @param cpu_fine_clip_rect_w? number default value = `nil`
+--- @param cpu_fine_clip_rect_h? number default value = `nil`
+function ImGui.DrawList_AddTextEx(draw_list, font, font_size, pos_x, pos_y, col_rgba, text, wrap_width, cpu_fine_clip_rect_x, cpu_fine_clip_rect_y, cpu_fine_clip_rect_w, cpu_fine_clip_rect_h) end
+
+--- **Draw List > Primitives > DrawList\_AddTriangle**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p1_x number
+--- @param p1_y number
+--- @param p2_x number
+--- @param p2_y number
+--- @param p3_x number
+--- @param p3_y number
+--- @param col_rgba integer
+--- @param thickness? number default value = `1.0`
+function ImGui.DrawList_AddTriangle(draw_list, p1_x, p1_y, p2_x, p2_y, p3_x, p3_y, col_rgba, thickness) end
+
+--- **Draw List > Primitives > DrawList\_AddTriangleFilled**
+---
+--- ---
+---
+--- **Draw List > Primitives**
+---
+--- Filled shapes must always use clockwise winding order! The anti-aliasing
+--- fringe depends on it. Counter-clockwise shapes will have "inward" anti-aliasing.
+--- So e.g. `DrawList_PathArcTo(center, radius, PI * -0.5, PI)` is ok, whereas
+--- `DrawList_PathArcTo(center, radius, PI, PI * -0.5)` won't have correct
+--- anti-aliasing when followed by DrawList_PathFillConvex.
+---
+--- For rectangular primitives, "p_min" and "p_max" represent the upper-left and
+--- lower-right corners.
+---
+--- For circle primitives, use "num_segments == 0" to automatically calculate
+--- tessellation (preferred).
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p1_x number
+--- @param p1_y number
+--- @param p2_x number
+--- @param p2_y number
+--- @param p3_x number
+--- @param p3_y number
+--- @param col_rgba integer
+function ImGui.DrawList_AddTriangleFilled(draw_list, p1_x, p1_y, p2_x, p2_y, p3_x, p3_y, col_rgba) end
+
+--- **Draw List > Splitter > CreateDrawListSplitter**
+---
+--- ---
+---
+--- **Draw List > Splitter**
+---
+--- Split/Merge functions are used to split the draw list into different layers
+--- which can be drawn into out of order (e.g. submit FG primitives before BG primitives).
+---
+--- Use to minimize draw calls (e.g. if going back-and-forth between multiple
+--- clipping rectangles, prefer to append into separate channels then merge at the end).
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(splitter, 'ImGui_DrawListSplitter*') then
+---       splitter = ImGui.CreateDrawListSplitter(draw_list)
+---     end
+---     ImGui.DrawListSplitter_Split(splitter, 2)
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 1)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- foreground
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_Merge(splitter)
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.9
+--- @param draw_list ImGui_DrawList
+--- @nodiscard
+--- @return ImGui_DrawListSplitter retval
+function ImGui.CreateDrawListSplitter(draw_list) end
+
+--- **Draw List > Splitter > DrawListSplitter\_Clear**
+---
+--- ---
+---
+--- **Draw List > Splitter**
+---
+--- Split/Merge functions are used to split the draw list into different layers
+--- which can be drawn into out of order (e.g. submit FG primitives before BG primitives).
+---
+--- Use to minimize draw calls (e.g. if going back-and-forth between multiple
+--- clipping rectangles, prefer to append into separate channels then merge at the end).
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(splitter, 'ImGui_DrawListSplitter*') then
+---       splitter = ImGui.CreateDrawListSplitter(draw_list)
+---     end
+---     ImGui.DrawListSplitter_Split(splitter, 2)
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 1)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- foreground
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_Merge(splitter)
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.7.1
+--- @param splitter ImGui_DrawListSplitter
+function ImGui.DrawListSplitter_Clear(splitter) end
+
+--- **Draw List > Splitter > DrawListSplitter\_Merge**
+---
+--- ---
+---
+--- **Draw List > Splitter**
+---
+--- Split/Merge functions are used to split the draw list into different layers
+--- which can be drawn into out of order (e.g. submit FG primitives before BG primitives).
+---
+--- Use to minimize draw calls (e.g. if going back-and-forth between multiple
+--- clipping rectangles, prefer to append into separate channels then merge at the end).
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(splitter, 'ImGui_DrawListSplitter*') then
+---       splitter = ImGui.CreateDrawListSplitter(draw_list)
+---     end
+---     ImGui.DrawListSplitter_Split(splitter, 2)
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 1)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- foreground
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_Merge(splitter)
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.7.1
+--- @param splitter ImGui_DrawListSplitter
+function ImGui.DrawListSplitter_Merge(splitter) end
+
+--- **Draw List > Splitter > DrawListSplitter\_SetCurrentChannel**
+---
+--- ---
+---
+--- **Draw List > Splitter**
+---
+--- Split/Merge functions are used to split the draw list into different layers
+--- which can be drawn into out of order (e.g. submit FG primitives before BG primitives).
+---
+--- Use to minimize draw calls (e.g. if going back-and-forth between multiple
+--- clipping rectangles, prefer to append into separate channels then merge at the end).
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(splitter, 'ImGui_DrawListSplitter*') then
+---       splitter = ImGui.CreateDrawListSplitter(draw_list)
+---     end
+---     ImGui.DrawListSplitter_Split(splitter, 2)
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 1)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- foreground
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_Merge(splitter)
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.7.1
+--- @param splitter ImGui_DrawListSplitter
+--- @param channel_idx integer
+function ImGui.DrawListSplitter_SetCurrentChannel(splitter, channel_idx) end
+
+--- **Draw List > Splitter > DrawListSplitter\_Split**
+---
+--- ---
+---
+--- **Draw List > Splitter**
+---
+--- Split/Merge functions are used to split the draw list into different layers
+--- which can be drawn into out of order (e.g. submit FG primitives before BG primitives).
+---
+--- Use to minimize draw calls (e.g. if going back-and-forth between multiple
+--- clipping rectangles, prefer to append into separate channels then merge at the end).
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(splitter, 'ImGui_DrawListSplitter*') then
+---       splitter = ImGui.CreateDrawListSplitter(draw_list)
+---     end
+---     ImGui.DrawListSplitter_Split(splitter, 2)
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 1)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- foreground
+---     ImGui.DrawListSplitter_SetCurrentChannel(splitter, 0)
+---     ImGui.DrawList_AddRectFilled(draw_list, ...) -- background
+---     ImGui.DrawListSplitter_Merge(splitter)
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.7.1
+--- @param splitter ImGui_DrawListSplitter
+--- @param count integer
+function ImGui.DrawListSplitter_Split(splitter, count) end
+
+--- **Draw List > Stateful Path > DrawList\_PathArcTo**
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param center_x number
+--- @param center_y number
+--- @param radius number
+--- @param a_min number
+--- @param a_max number
+--- @param num_segments? integer default value = `0`
+function ImGui.DrawList_PathArcTo(draw_list, center_x, center_y, radius, a_min, a_max, num_segments) end
+
+--- **Draw List > Stateful Path > DrawList\_PathArcToFast**
+---
+--- Use precomputed angles for a 12 steps circle.
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param center_x number
+--- @param center_y number
+--- @param radius number
+--- @param a_min_of_12 integer
+--- @param a_max_of_12 integer
+function ImGui.DrawList_PathArcToFast(draw_list, center_x, center_y, radius, a_min_of_12, a_max_of_12) end
+
+--- **Draw List > Stateful Path > DrawList\_PathBezierCubicCurveTo**
+---
+--- Cubic Bezier (4 control points)
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p2_x number
+--- @param p2_y number
+--- @param p3_x number
+--- @param p3_y number
+--- @param p4_x number
+--- @param p4_y number
+--- @param num_segments? integer default value = `0`
+function ImGui.DrawList_PathBezierCubicCurveTo(draw_list, p2_x, p2_y, p3_x, p3_y, p4_x, p4_y, num_segments) end
+
+--- **Draw List > Stateful Path > DrawList\_PathBezierQuadraticCurveTo**
+---
+--- Quadratic Bezier (3 control points)
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param p2_x number
+--- @param p2_y number
+--- @param p3_x number
+--- @param p3_y number
+--- @param num_segments? integer default value = `0`
+function ImGui.DrawList_PathBezierQuadraticCurveTo(draw_list, p2_x, p2_y, p3_x, p3_y, num_segments) end
+
+--- **Draw List > Stateful Path > DrawList\_PathClear**
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+function ImGui.DrawList_PathClear(draw_list) end
+
+--- **Draw List > Stateful Path > DrawList\_PathEllipticalArcTo**
+---
+--- Ellipse
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.9
+--- @param draw_list ImGui_DrawList
+--- @param center_x number
+--- @param center_y number
+--- @param radius_x number
+--- @param radius_y number
+--- @param rot number
+--- @param a_min number
+--- @param a_max number
+--- @param num_segments? integer default value = `0`
+function ImGui.DrawList_PathEllipticalArcTo(draw_list, center_x, center_y, radius_x, radius_y, rot, a_min, a_max, num_segments) end
+
+--- **Draw List > Stateful Path > DrawList\_PathFillConcave**
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.9
+--- @param draw_list ImGui_DrawList
+--- @param col_rgba integer
+function ImGui.DrawList_PathFillConcave(draw_list, col_rgba) end
+
+--- **Draw List > Stateful Path > DrawList\_PathFillConvex**
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.5.1
+--- @param draw_list ImGui_DrawList
+--- @param col_rgba integer
+function ImGui.DrawList_PathFillConvex(draw_list, col_rgba) end
+
+--- **Draw List > Stateful Path > DrawList\_PathLineTo**
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param pos_x number
+--- @param pos_y number
+function ImGui.DrawList_PathLineTo(draw_list, pos_x, pos_y) end
+
+--- **Draw List > Stateful Path > DrawList\_PathRect**
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.1
+--- @param draw_list ImGui_DrawList
+--- @param rect_min_x number
+--- @param rect_min_y number
+--- @param rect_max_x number
+--- @param rect_max_y number
+--- @param rounding? number default value = `0.0`
+--- @param flags? integer default value = `DrawFlags_None`
+function ImGui.DrawList_PathRect(draw_list, rect_min_x, rect_min_y, rect_max_x, rect_max_y, rounding, flags) end
+
+--- **Draw List > Stateful Path > DrawList\_PathStroke**
+---
+--- ---
+---
+--- **Draw List > Stateful Path**
+---
+--- Stateful path API, add points then finish with PathFillConvex() or PathStroke().
+---
+--- ---
+---
+--- **Draw List**
+---
+--- This is the low-level list of polygons that ImGui functions are filling.
+--- At the end of the frame, all draw lists are passed to the GPU for rendering.
+---
+--- Each dear imgui window contains its own Draw List.
+--- You can use GetWindowDrawList() to access the current window draw list and draw
+--- custom primitives.
+---
+--- The Draw List API uses absolute coordinates (0,0 is the top-left corner of the
+--- primary monitor, not of your window!). See GetCursorScreenPos.
+---
+--- ---
+---
+--- @since 0.2
+--- @param draw_list ImGui_DrawList
+--- @param col_rgba integer
+--- @param flags? integer default value = `DrawFlags_None`
+--- @param thickness? number default value = `1.0`
+function ImGui.DrawList_PathStroke(draw_list, col_rgba, flags, thickness) end
+
+--- **Font > CreateFont**
+---
+--- Load a font matching a font family name or from a font file.
+--- The font will remain valid while it's attached to a context. See Attach.
+---
+--- The family name can be an installed font or one of the generic fonts:
+--- sans-serif, serif, monospace, cursive, fantasy.
+---
+--- If 'family_or_file' specifies a path to a font file (contains a / or \\):
+--- - The first byte of 'flags' is used as the font index within the file
+--- - The font styles in 'flags' are simulated by the font renderer
+---
+--- ---
+---
+--- **Font**
+---
+--- Supports loading fonts from the system by family name or from a file.
+--- Glyphs may contain colors in COLR/CPAL format.
+---
+--- This API currently has multiple limitations (v1.0 blockers):
+--- - ReaImGui rasterizes glyphs only from the Basic Latin and Latin Supplement
+---   Unicode blocks (U+0020 to U+00FF). UTF-8 is fully supported internally,
+---   however characters outside those blocks are displayed as '?'.
+---   See [issue #5](https://github.com/cfillion/reaimgui/issues/5).
+--- - Dear ImGui does not support using new fonts in the middle of a frame.
+---   Because of this, fonts must first be registered using Attach before any
+---   other context functions are used in the same defer cycle.
+---   (Attaching a font is a heavy operation and should ideally be done outside
+---   of the defer loop.)
+---
+--- ---
+---
+--- @since 0.9
+--- @param family_or_file string
+--- @param size integer
+--- @param flags? integer default value = `FontFlags_None`
+--- @nodiscard
+--- @return ImGui_Font retval
+function ImGui.CreateFont(family_or_file, size, flags) end
+
+--- **Font > GetFont**
+---
+--- Get the current font
+---
+--- ---
+---
+--- **Font**
+---
+--- Supports loading fonts from the system by family name or from a file.
+--- Glyphs may contain colors in COLR/CPAL format.
+---
+--- This API currently has multiple limitations (v1.0 blockers):
+--- - ReaImGui rasterizes glyphs only from the Basic Latin and Latin Supplement
+---   Unicode blocks (U+0020 to U+00FF). UTF-8 is fully supported internally,
+---   however characters outside those blocks are displayed as '?'.
+---   See [issue #5](https://github.com/cfillion/reaimgui/issues/5).
+--- - Dear ImGui does not support using new fonts in the middle of a frame.
+---   Because of this, fonts must first be registered using Attach before any
+---   other context functions are used in the same defer cycle.
+---   (Attaching a font is a heavy operation and should ideally be done outside
+---   of the defer loop.)
+---
+--- ---
+---
+--- @since 0.4
+--- @param ctx ImGui_Context
+--- @return ImGui_Font retval
+function ImGui.GetFont(ctx) end
+
+--- **Font > GetFontSize**
+---
+--- Get current font size (= height in pixels) of current font with current scale
+--- applied.
+---
+--- ---
+---
+--- **Font**
+---
+--- Supports loading fonts from the system by family name or from a file.
+--- Glyphs may contain colors in COLR/CPAL format.
+---
+--- This API currently has multiple limitations (v1.0 blockers):
+--- - ReaImGui rasterizes glyphs only from the Basic Latin and Latin Supplement
+---   Unicode blocks (U+0020 to U+00FF). UTF-8 is fully supported internally,
+---   however characters outside those blocks are displayed as '?'.
+---   See [issue #5](https://github.com/cfillion/reaimgui/issues/5).
+--- - Dear ImGui does not support using new fonts in the middle of a frame.
+---   Because of this, fonts must first be registered using Attach before any
+---   other context functions are used in the same defer cycle.
+---   (Attaching a font is a heavy operation and should ideally be done outside
+---   of the defer loop.)
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetFontSize(ctx) end
+
+--- **Font > PopFont**
+---
+--- See PushFont.
+---
+--- ---
+---
+--- **Font**
+---
+--- Supports loading fonts from the system by family name or from a file.
+--- Glyphs may contain colors in COLR/CPAL format.
+---
+--- This API currently has multiple limitations (v1.0 blockers):
+--- - ReaImGui rasterizes glyphs only from the Basic Latin and Latin Supplement
+---   Unicode blocks (U+0020 to U+00FF). UTF-8 is fully supported internally,
+---   however characters outside those blocks are displayed as '?'.
+---   See [issue #5](https://github.com/cfillion/reaimgui/issues/5).
+--- - Dear ImGui does not support using new fonts in the middle of a frame.
+---   Because of this, fonts must first be registered using Attach before any
+---   other context functions are used in the same defer cycle.
+---   (Attaching a font is a heavy operation and should ideally be done outside
+---   of the defer loop.)
+---
+--- ---
+---
+--- @since 0.4
+--- @param ctx ImGui_Context
+function ImGui.PopFont(ctx) end
+
+--- **Font > PushFont**
+---
+--- Change the current font. Use nil to push the default font.
+--- The font object must have been registered using Attach. See PopFont.
+---
+--- ---
+---
+--- **Font**
+---
+--- Supports loading fonts from the system by family name or from a file.
+--- Glyphs may contain colors in COLR/CPAL format.
+---
+--- This API currently has multiple limitations (v1.0 blockers):
+--- - ReaImGui rasterizes glyphs only from the Basic Latin and Latin Supplement
+---   Unicode blocks (U+0020 to U+00FF). UTF-8 is fully supported internally,
+---   however characters outside those blocks are displayed as '?'.
+---   See [issue #5](https://github.com/cfillion/reaimgui/issues/5).
+--- - Dear ImGui does not support using new fonts in the middle of a frame.
+---   Because of this, fonts must first be registered using Attach before any
+---   other context functions are used in the same defer cycle.
+---   (Attaching a font is a heavy operation and should ideally be done outside
+---   of the defer loop.)
+---
+--- ---
+---
+--- @since 0.4
+--- @param ctx ImGui_Context
+--- @param font ImGui_Font|nil
+function ImGui.PushFont(ctx, font) end
+
+--- **Function > CreateFunctionFromEEL**
+---
+--- Compile an EEL program.
+---
+--- Standard EEL [math](https://www.reaper.fm/sdk/js/basiccode.php#js_basicfunc)
+--- and [string](https://www.reaper.fm/sdk/js/strings.php#js_string_funcs)
+--- functions are available in addition to callback-specific functions
+--- (see InputTextCallback_*).
+---
+--- ---
+---
+--- **Function**
+---
+--- Create reusable programs that can passed to and called back from functions
+--- such as InputText* and SetNextWindowSizeConstraints.
+---
+--- They can also be used standalone with Function_Execute
+--- (eg. faster-than-Lua DSP processing).
+---
+--- ---
+---
+--- @since 0.9
+--- @param code string
+--- @nodiscard
+--- @return ImGui_Function retval
+function ImGui.CreateFunctionFromEEL(code) end
+
+--- **Function > Function\_Execute**
+---
+--- ---
+---
+--- **Function**
+---
+--- Create reusable programs that can passed to and called back from functions
+--- such as InputText* and SetNextWindowSizeConstraints.
+---
+--- They can also be used standalone with Function_Execute
+--- (eg. faster-than-Lua DSP processing).
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param func ImGui_Function
+function ImGui.Function_Execute(func) end
+
+--- **Function > Function\_GetValue**
+---
+--- ---
+---
+--- **Function**
+---
+--- Create reusable programs that can passed to and called back from functions
+--- such as InputText* and SetNextWindowSizeConstraints.
+---
+--- They can also be used standalone with Function_Execute
+--- (eg. faster-than-Lua DSP processing).
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param func ImGui_Function
+--- @param name string
+--- @return number retval
+function ImGui.Function_GetValue(func, name) end
+
+--- **Function > Function\_GetValue\_Array**
+---
+--- Copy the values in the function's memory starting at the address stored
+--- in the given variable into the array.
+---
+--- ---
+---
+--- **Function**
+---
+--- Create reusable programs that can passed to and called back from functions
+--- such as InputText* and SetNextWindowSizeConstraints.
+---
+--- They can also be used standalone with Function_Execute
+--- (eg. faster-than-Lua DSP processing).
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param func ImGui_Function
+--- @param name string
+--- @param values reaper.array
+function ImGui.Function_GetValue_Array(func, name, values) end
+
+--- **Function > Function\_GetValue\_String**
+---
+--- Read from a string slot or a named string (when name starts with a `#`).
+---
+--- ---
+---
+--- **Function**
+---
+--- Create reusable programs that can passed to and called back from functions
+--- such as InputText* and SetNextWindowSizeConstraints.
+---
+--- They can also be used standalone with Function_Execute
+--- (eg. faster-than-Lua DSP processing).
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param func ImGui_Function
+--- @param name string
+--- @return string value
+function ImGui.Function_GetValue_String(func, name) end
+
+--- **Function > Function\_SetValue**
+---
+--- ---
+---
+--- **Function**
+---
+--- Create reusable programs that can passed to and called back from functions
+--- such as InputText* and SetNextWindowSizeConstraints.
+---
+--- They can also be used standalone with Function_Execute
+--- (eg. faster-than-Lua DSP processing).
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param func ImGui_Function
+--- @param name string
+--- @param value number
+function ImGui.Function_SetValue(func, name, value) end
+
+--- **Function > Function\_SetValue\_Array**
+---
+--- Copy the values in the array to the function's memory at the address stored
+--- in the given variable.
+---
+--- ---
+---
+--- **Function**
+---
+--- Create reusable programs that can passed to and called back from functions
+--- such as InputText* and SetNextWindowSizeConstraints.
+---
+--- They can also be used standalone with Function_Execute
+--- (eg. faster-than-Lua DSP processing).
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param func ImGui_Function
+--- @param name string
+--- @param values reaper.array
+function ImGui.Function_SetValue_Array(func, name, values) end
+
+--- **Function > Function\_SetValue\_String**
+---
+--- Write to a string slot or a named string (when name starts with a `#`).
+---
+--- ---
+---
+--- **Function**
+---
+--- Create reusable programs that can passed to and called back from functions
+--- such as InputText* and SetNextWindowSizeConstraints.
+---
+--- They can also be used standalone with Function_Execute
+--- (eg. faster-than-Lua DSP processing).
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param func ImGui_Function
+--- @param name string
+--- @param value string
+function ImGui.Function_SetValue_String(func, name, value) end
+
+--- **Image > CreateImage**
+---
+--- The returned object is valid as long as it is used in each defer cycle
+--- unless attached to a context (see Attach).
+---
+--- ('flags' currently unused and reserved for future expansion)
+---
+--- ---
+---
+--- **Image**
+---
+--- ReaImGui currently supports loading PNG and JPEG bitmap images.
+--- Flat vector images may be loaded as fonts, see CreateFont.
+---
+--- UV parameters are texture coordinates in a scale of 0.0 (top/left) to 1.0
+--- (bottom/right). Use values below 0.0 or above 1.0 to tile the image.
+---
+--- Width/height are limited to 8192 pixels.
+---
+--- There are also image functions in the DrawList API such as
+--- DrawList_AddImageQuad and DrawList_AddImageRounded.
+---
+--- ---
+---
+--- @since 0.9
+--- @param file string
+--- @param flags? integer default value = `nil`
+--- @nodiscard
+--- @return ImGui_Image retval
+function ImGui.CreateImage(file, flags) end
+
+--- **Image > CreateImageFromMem**
+---
+--- Requires REAPER v6.44 or newer for EEL and Lua. Load from a file using
+--- CreateImage or explicitely specify data_sz if supporting older versions.
+---
+--- ---
+---
+--- **Image**
+---
+--- ReaImGui currently supports loading PNG and JPEG bitmap images.
+--- Flat vector images may be loaded as fonts, see CreateFont.
+---
+--- UV parameters are texture coordinates in a scale of 0.0 (top/left) to 1.0
+--- (bottom/right). Use values below 0.0 or above 1.0 to tile the image.
+---
+--- Width/height are limited to 8192 pixels.
+---
+--- There are also image functions in the DrawList API such as
+--- DrawList_AddImageQuad and DrawList_AddImageRounded.
+---
+--- ---
+---
+--- @since 0.9
+--- @param data string
+--- @nodiscard
+--- @return ImGui_Image retval
+function ImGui.CreateImageFromMem(data) end
+
+--- **Image > Image**
+---
+--- Adds 2.0 to the provided size if a border is visible.
+---
+--- ---
+---
+--- **Image**
+---
+--- ReaImGui currently supports loading PNG and JPEG bitmap images.
+--- Flat vector images may be loaded as fonts, see CreateFont.
+---
+--- UV parameters are texture coordinates in a scale of 0.0 (top/left) to 1.0
+--- (bottom/right). Use values below 0.0 or above 1.0 to tile the image.
+---
+--- Width/height are limited to 8192 pixels.
+---
+--- There are also image functions in the DrawList API such as
+--- DrawList_AddImageQuad and DrawList_AddImageRounded.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+--- @param image ImGui_Image
+--- @param image_size_w number
+--- @param image_size_h number
+--- @param uv0_x? number default value = `0.0`
+--- @param uv0_y? number default value = `0.0`
+--- @param uv1_x? number default value = `1.0`
+--- @param uv1_y? number default value = `1.0`
+--- @param tint_col_rgba? integer default value = `0xFFFFFFFF`
+--- @param border_col_rgba? integer default value = `0x00000000`
+function ImGui.Image(ctx, image, image_size_w, image_size_h, uv0_x, uv0_y, uv1_x, uv1_y, tint_col_rgba, border_col_rgba) end
+
+--- **Image > ImageButton**
+---
+--- Adds StyleVar_FramePadding*2.0 to provided size.
+---
+--- ---
+---
+--- **Image**
+---
+--- ReaImGui currently supports loading PNG and JPEG bitmap images.
+--- Flat vector images may be loaded as fonts, see CreateFont.
+---
+--- UV parameters are texture coordinates in a scale of 0.0 (top/left) to 1.0
+--- (bottom/right). Use values below 0.0 or above 1.0 to tile the image.
+---
+--- Width/height are limited to 8192 pixels.
+---
+--- There are also image functions in the DrawList API such as
+--- DrawList_AddImageQuad and DrawList_AddImageRounded.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param image ImGui_Image
+--- @param image_size_w number
+--- @param image_size_h number
+--- @param uv0_x? number default value = `0.0`
+--- @param uv0_y? number default value = `0.0`
+--- @param uv1_x? number default value = `1.0`
+--- @param uv1_y? number default value = `1.0`
+--- @param bg_col_rgba? integer default value = `0x00000000`
+--- @param tint_col_rgba? integer default value = `0xFFFFFFFF`
+--- @return boolean retval
+function ImGui.ImageButton(ctx, str_id, image, image_size_w, image_size_h, uv0_x, uv0_y, uv1_x, uv1_y, bg_col_rgba, tint_col_rgba) end
+
+--- **Image > Image\_GetSize**
+---
+--- ---
+---
+--- **Image**
+---
+--- ReaImGui currently supports loading PNG and JPEG bitmap images.
+--- Flat vector images may be loaded as fonts, see CreateFont.
+---
+--- UV parameters are texture coordinates in a scale of 0.0 (top/left) to 1.0
+--- (bottom/right). Use values below 0.0 or above 1.0 to tile the image.
+---
+--- Width/height are limited to 8192 pixels.
+---
+--- There are also image functions in the DrawList API such as
+--- DrawList_AddImageQuad and DrawList_AddImageRounded.
+---
+--- ---
+---
+--- @since 0.8
+--- @param image ImGui_Image
+--- @return number w
+--- @return number h
+function ImGui.Image_GetSize(image) end
+
+--- **Image > Image Set > CreateImageSet**
+---
+--- ---
+---
+--- **Image > Image Set**
+---
+--- Helper to automatically select and scale an image to the DPI scale of
+--- the current window upon usage.
+---
+--- ImGui_ImageSet objects can be given to any function that expect an image as
+--- parameter.
+---
+--- Usage:
+---
+---     local set = ImGui.CreateImageSet()
+---     ImGui.ImageSet_Add(set, 1.0, ImGui.CreateImage('32x32.png'))
+---     ImGui.ImageSet_Add(set, 2.0, ImGui.CreateImage('64x64.png'))
+---
+---     local function frame()
+---       ImGui.Image(ctx, set, ImGui.Image_GetSize(set))
+---       -- ...
+---     end
+---
+--- ---
+---
+--- **Image**
+---
+--- ReaImGui currently supports loading PNG and JPEG bitmap images.
+--- Flat vector images may be loaded as fonts, see CreateFont.
+---
+--- UV parameters are texture coordinates in a scale of 0.0 (top/left) to 1.0
+--- (bottom/right). Use values below 0.0 or above 1.0 to tile the image.
+---
+--- Width/height are limited to 8192 pixels.
+---
+--- There are also image functions in the DrawList API such as
+--- DrawList_AddImageQuad and DrawList_AddImageRounded.
+---
+--- ---
+---
+--- @since 0.9
+--- @nodiscard
+--- @return ImGui_ImageSet retval
+function ImGui.CreateImageSet() end
+
+--- **Image > Image Set > ImageSet\_Add**
+---
+--- 'img' cannot be another ImageSet.
+---
+--- ---
+---
+--- **Image > Image Set**
+---
+--- Helper to automatically select and scale an image to the DPI scale of
+--- the current window upon usage.
+---
+--- ImGui_ImageSet objects can be given to any function that expect an image as
+--- parameter.
+---
+--- Usage:
+---
+---     local set = ImGui.CreateImageSet()
+---     ImGui.ImageSet_Add(set, 1.0, ImGui.CreateImage('32x32.png'))
+---     ImGui.ImageSet_Add(set, 2.0, ImGui.CreateImage('64x64.png'))
+---
+---     local function frame()
+---       ImGui.Image(ctx, set, ImGui.Image_GetSize(set))
+---       -- ...
+---     end
+---
+--- ---
+---
+--- **Image**
+---
+--- ReaImGui currently supports loading PNG and JPEG bitmap images.
+--- Flat vector images may be loaded as fonts, see CreateFont.
+---
+--- UV parameters are texture coordinates in a scale of 0.0 (top/left) to 1.0
+--- (bottom/right). Use values below 0.0 or above 1.0 to tile the image.
+---
+--- Width/height are limited to 8192 pixels.
+---
+--- There are also image functions in the DrawList API such as
+--- DrawList_AddImageQuad and DrawList_AddImageRounded.
+---
+--- ---
+---
+--- @since 0.8
+--- @param set ImGui_ImageSet
+--- @param scale number
+--- @param image ImGui_Image
+function ImGui.ImageSet_Add(set, scale, image) end
+
+--- **Item \& Status > BeginDisabled**
+---
+--- Disable all user interactions and dim items visuals
+--- (applying StyleVar_DisabledAlpha over current colors).
+---
+--- BeginDisabled(false) essentially does nothing useful but is provided to
+--- facilitate use of boolean expressions.
+--- If you can avoid calling BeginDisabled(false)/EndDisabled() best to avoid it.
+---
+--- ---
+---
+--- @since 0.5.5
+--- @param ctx ImGui_Context
+--- @param disabled? boolean default value = `true`
+function ImGui.BeginDisabled(ctx, disabled) end
+
+--- **Item \& Status > DebugStartItemPicker**
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+function ImGui.DebugStartItemPicker(ctx) end
+
+--- **Item \& Status > EndDisabled**
+---
+--- See BeginDisabled.
+---
+--- ---
+---
+--- @since 0.5.5
+--- @param ctx ImGui_Context
+function ImGui.EndDisabled(ctx) end
+
+--- **Item \& Status > SetNextItemAllowOverlap**
+---
+--- Allow next item to be overlapped by a subsequent item.
+--- Useful with invisible buttons, selectable, treenode covering an area where
+--- subsequent items may need to be added. Note that both Selectable() and TreeNode()
+--- have dedicated flags doing this.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+function ImGui.SetNextItemAllowOverlap(ctx) end
+
+--- **Item \& Status > Dimensions > CalcItemWidth**
+---
+--- Width of item given pushed settings and current cursor position.
+--- NOT necessarily the width of last item unlike most 'Item' functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.CalcItemWidth(ctx) end
+
+--- **Item \& Status > Dimensions > GetItemRectMax**
+---
+--- Get lower-right bounding rectangle of the last item (screen space)
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetItemRectMax(ctx) end
+
+--- **Item \& Status > Dimensions > GetItemRectMin**
+---
+--- Get upper-left bounding rectangle of the last item (screen space)
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetItemRectMin(ctx) end
+
+--- **Item \& Status > Dimensions > GetItemRectSize**
+---
+--- Get size of last item
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number w
+--- @return number h
+function ImGui.GetItemRectSize(ctx) end
+
+--- **Item \& Status > Dimensions > PopItemWidth**
+---
+--- See PushItemWidth
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.PopItemWidth(ctx) end
+
+--- **Item \& Status > Dimensions > PushItemWidth**
+---
+--- Push width of items for common large "item+label" widgets.
+---
+--- - \>0.0: width in pixels
+--- - <0.0 align xx pixels to the right of window
+---   (so -FLT_MIN always align width to the right side)
+--- - 0.0 = default to ~2/3 of windows width.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param item_width number
+function ImGui.PushItemWidth(ctx, item_width) end
+
+--- **Item \& Status > Dimensions > SetNextItemWidth**
+---
+--- Set width of the _next_ common large "item+label" widget.
+---
+--- - \>0.0: width in pixels
+--- - <0.0 align xx pixels to the right of window
+---   (so -FLT_MIN always align width to the right side)
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param item_width number
+function ImGui.SetNextItemWidth(ctx, item_width) end
+
+--- **Item \& Status > Focus \& Activation > PopTabStop**
+---
+--- See PushTabStop
+---
+--- ---
+---
+--- **Item \& Status > Focus \& Activation**
+---
+--- Prefer using "SetItemDefaultFocus()" over
+--- "if(IsWindowAppearing()) SetScrollHereY()" when applicable to signify
+--- "this is the default item".
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param ctx ImGui_Context
+function ImGui.PopTabStop(ctx) end
+
+--- **Item \& Status > Focus \& Activation > PushTabStop**
+---
+--- Allow focusing using TAB/Shift-TAB, enabled by default but you can disable it
+--- for certain widgets
+---
+--- ---
+---
+--- **Item \& Status > Focus \& Activation**
+---
+--- Prefer using "SetItemDefaultFocus()" over
+--- "if(IsWindowAppearing()) SetScrollHereY()" when applicable to signify
+--- "this is the default item".
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param ctx ImGui_Context
+--- @param tab_stop boolean
+function ImGui.PushTabStop(ctx, tab_stop) end
+
+--- **Item \& Status > Focus \& Activation > SetItemDefaultFocus**
+---
+--- Make last item the default focused item of a window.
+---
+--- ---
+---
+--- **Item \& Status > Focus \& Activation**
+---
+--- Prefer using "SetItemDefaultFocus()" over
+--- "if(IsWindowAppearing()) SetScrollHereY()" when applicable to signify
+--- "this is the default item".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.SetItemDefaultFocus(ctx) end
+
+--- **Item \& Status > Focus \& Activation > SetKeyboardFocusHere**
+---
+--- Focus keyboard on the next widget. Use positive 'offset' to access sub
+--- components of a multiple component widget. Use -1 to access previous widget.
+---
+--- ---
+---
+--- **Item \& Status > Focus \& Activation**
+---
+--- Prefer using "SetItemDefaultFocus()" over
+--- "if(IsWindowAppearing()) SetScrollHereY()" when applicable to signify
+--- "this is the default item".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param offset? integer default value = `0`
+function ImGui.SetKeyboardFocusHere(ctx, offset) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsAnyItemActive**
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsAnyItemActive(ctx) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsAnyItemFocused**
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsAnyItemFocused(ctx) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsAnyItemHovered**
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsAnyItemHovered(ctx) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsItemActivated**
+---
+--- Was the last item just made active (item was previously inactive).
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsItemActivated(ctx) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsItemActive**
+---
+--- Is the last item active? (e.g. button being held, text field being edited.
+--- This will continuously return true while holding mouse button on an item.
+--- Items that don't interact will always return false.
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsItemActive(ctx) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsItemClicked**
+---
+--- Is the last item clicked? (e.g. button/node just clicked on)
+--- == IsMouseClicked(mouse_button) && IsItemHovered().
+---
+--- This is NOT equivalent to the behavior of e.g. Button.
+--- Most widgets have specific reactions based on mouse-up/down state, mouse position etc.
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param mouse_button? integer default value = `MouseButton_Left`
+--- @return boolean retval
+function ImGui.IsItemClicked(ctx, mouse_button) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsItemDeactivated**
+---
+--- Was the last item just made inactive (item was previously active).
+--- Useful for Undo/Redo patterns with widgets that require continuous editing.
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsItemDeactivated(ctx) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsItemDeactivatedAfterEdit**
+---
+--- Was the last item just made inactive and made a value change when it was
+--- active? (e.g. Slider/Drag moved).
+---
+--- Useful for Undo/Redo patterns with widgets that require continuous editing. Note
+--- that you may get false positives (some widgets such as Combo/ListBox/Selectable
+--- will return true even when clicking an already selected item).
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsItemDeactivatedAfterEdit(ctx) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsItemEdited**
+---
+--- Did the last item modify its underlying value this frame? or was pressed?
+--- This is generally the same as the "bool" return value of many widgets.
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsItemEdited(ctx) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsItemFocused**
+---
+--- Is the last item focused for keyboard/gamepad navigation?
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsItemFocused(ctx) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsItemHovered**
+---
+--- Is the last item hovered? (and usable, aka not blocked by a popup, etc.).
+--- See HoveredFlags_* for more options.
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param flags? integer default value = `HoveredFlags_None`
+--- @return boolean retval
+function ImGui.IsItemHovered(ctx, flags) end
+
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions > IsItemVisible**
+---
+--- Is the last item visible? (items may be out of sight because of clipping/scrolling)
+---
+--- ---
+---
+--- **Item \& Status > Item\/Widgets Utilities and Query Functions**
+---
+--- Most of the functions are referring to the previous Item that has been submitted.
+---
+--- See Demo Window under "Widgets->Querying Item Status" for an interactive
+--- visualization of most of those functions.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsItemVisible(ctx) end
+
+--- **Keyboard \& Mouse > Keyboard > GetInputQueueCharacter**
+---
+--- Read from ImGui's character input queue.
+--- Call with increasing idx until false is returned.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param idx integer
+--- @return boolean retval
+--- @return integer unicode_char
+function ImGui.GetInputQueueCharacter(ctx, idx) end
+
+--- **Keyboard \& Mouse > Keyboard > GetKeyDownDuration**
+---
+--- Duration the keyboard key has been down (0.0 == just pressed)
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param key integer
+--- @return number retval
+function ImGui.GetKeyDownDuration(ctx, key) end
+
+--- **Keyboard \& Mouse > Keyboard > GetKeyMods**
+---
+--- Flags for the Ctrl/Shift/Alt/Super keys. Uses Mod_* values.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+--- @return integer retval
+function ImGui.GetKeyMods(ctx) end
+
+--- **Keyboard \& Mouse > Keyboard > GetKeyPressedAmount**
+---
+--- Uses provided repeat rate/delay. Return a count, most often 0 or 1 but might
+--- be >1 if ConfigVar_RepeatRate is small enough that GetDeltaTime > RepeatRate.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param key integer
+--- @param repeat_delay number
+--- @param rate number
+--- @return integer retval
+function ImGui.GetKeyPressedAmount(ctx, key, repeat_delay, rate) end
+
+--- **Keyboard \& Mouse > Keyboard > IsKeyChordPressed**
+---
+--- Was key chord (mods + key) pressed? You can pass e.g. `Mod_Shortcut | Key_S`
+--- as a key chord.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param key_chord integer
+--- @return boolean retval
+function ImGui.IsKeyChordPressed(ctx, key_chord) end
+
+--- **Keyboard \& Mouse > Keyboard > IsKeyDown**
+---
+--- Is key being held.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param key integer
+--- @return boolean retval
+function ImGui.IsKeyDown(ctx, key) end
+
+--- **Keyboard \& Mouse > Keyboard > IsKeyPressed**
+---
+--- Was key pressed (went from !Down to Down)?
+--- If repeat=true, uses ConfigVar_KeyRepeatDelay / ConfigVar_KeyRepeatRate.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param key integer
+--- @param repeat? boolean default value = `true`
+--- @return boolean retval
+function ImGui.IsKeyPressed(ctx, key, repeat) end
+
+--- **Keyboard \& Mouse > Keyboard > IsKeyReleased**
+---
+--- Was key released (went from Down to !Down)?
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param key integer
+--- @return boolean retval
+function ImGui.IsKeyReleased(ctx, key) end
+
+--- **Keyboard \& Mouse > Keyboard > SetNextFrameWantCaptureKeyboard**
+---
+--- Request capture of keyboard shortcuts in REAPER's global scope for the next frame.
+---
+--- ---
+---
+--- @since 0.7
+--- @param ctx ImGui_Context
+--- @param want_capture_keyboard boolean
+function ImGui.SetNextFrameWantCaptureKeyboard(ctx, want_capture_keyboard) end
+
+--- **Keyboard \& Mouse > Mouse > GetMouseClickedCount**
+---
+--- Return the number of successive mouse-clicks at the time where a click happen (otherwise 0).
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.5.10
+--- @param ctx ImGui_Context
+--- @param button integer
+--- @return integer retval
+function ImGui.GetMouseClickedCount(ctx, button) end
+
+--- **Keyboard \& Mouse > Mouse > GetMouseClickedPos**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param button integer
+--- @return number x
+--- @return number y
+function ImGui.GetMouseClickedPos(ctx, button) end
+
+--- **Keyboard \& Mouse > Mouse > GetMouseDelta**
+---
+--- Mouse delta. Note that this is zero if either current or previous position
+--- are invalid (-FLT_MAX,-FLT_MAX), so a disappearing/reappearing mouse won't have
+--- a huge delta.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetMouseDelta(ctx) end
+
+--- **Keyboard \& Mouse > Mouse > GetMouseDownDuration**
+---
+--- Duration the mouse button has been down (0.0 == just clicked)
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param button integer
+--- @return number retval
+function ImGui.GetMouseDownDuration(ctx, button) end
+
+--- **Keyboard \& Mouse > Mouse > GetMouseDragDelta**
+---
+--- Return the delta from the initial clicking position while the mouse button is
+--- pressed or was just released. This is locked and return 0.0 until the mouse
+--- moves past a distance threshold at least once (if lock_threshold < -1.0, uses
+--- ConfigVar_MouseDragThreshold).
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param _1? nil​
+--- @param _2? nil​
+--- @param button? integer default value = `MouseButton_Left`
+--- @param lock_threshold? number default value = `-1.0`
+--- @return number x
+--- @return number y
+function ImGui.GetMouseDragDelta(ctx, _1, _2, button, lock_threshold) end
+
+--- **Keyboard \& Mouse > Mouse > GetMousePos**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetMousePos(ctx) end
+
+--- **Keyboard \& Mouse > Mouse > GetMousePosOnOpeningCurrentPopup**
+---
+--- Retrieve mouse position at the time of opening popup we have BeginPopup()
+--- into (helper to avoid user backing that value themselves).
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetMousePosOnOpeningCurrentPopup(ctx) end
+
+--- **Keyboard \& Mouse > Mouse > GetMouseWheel**
+---
+--- Vertical: 1 unit scrolls about 5 lines text. >0 scrolls Up, <0 scrolls Down.
+--- Hold SHIFT to turn vertical scroll into horizontal scroll
+---
+--- Horizontal: >0 scrolls Left, <0 scrolls Right.
+--- Most users don't have a mouse with a horizontal wheel.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number vertical
+--- @return number horizontal
+function ImGui.GetMouseWheel(ctx) end
+
+--- **Keyboard \& Mouse > Mouse > IsAnyMouseDown**
+---
+--- Is any mouse button held?
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsAnyMouseDown(ctx) end
+
+--- **Keyboard \& Mouse > Mouse > IsMouseClicked**
+---
+--- Did mouse button clicked? (went from !Down to Down).
+--- Same as GetMouseClickedCount() == 1.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param button integer
+--- @param repeat? boolean default value = `false`
+--- @return boolean retval
+function ImGui.IsMouseClicked(ctx, button, repeat) end
+
+--- **Keyboard \& Mouse > Mouse > IsMouseDoubleClicked**
+---
+--- Did mouse button double-clicked? Same as GetMouseClickedCount() == 2.
+--- (Note that a double-click will also report IsMouseClicked() == true)
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param button integer
+--- @return boolean retval
+function ImGui.IsMouseDoubleClicked(ctx, button) end
+
+--- **Keyboard \& Mouse > Mouse > IsMouseDown**
+---
+--- Is mouse button held?
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param button integer
+--- @return boolean retval
+function ImGui.IsMouseDown(ctx, button) end
+
+--- **Keyboard \& Mouse > Mouse > IsMouseDragging**
+---
+--- Is mouse dragging? (if lock_threshold < -1.0, uses ConfigVar_MouseDragThreshold)
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param button integer
+--- @param lock_threshold? number default value = `-1.0`
+--- @return boolean retval
+function ImGui.IsMouseDragging(ctx, button, lock_threshold) end
+
+--- **Keyboard \& Mouse > Mouse > IsMouseHoveringRect**
+---
+--- Is mouse hovering given bounding rect (in screen space).
+--- Clipped by current clipping settings, but disregarding of other consideration
+--- of focus/window ordering/popup-block.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param r_min_x number
+--- @param r_min_y number
+--- @param r_max_x number
+--- @param r_max_y number
+--- @param clip? boolean default value = `true`
+--- @return boolean retval
+function ImGui.IsMouseHoveringRect(ctx, r_min_x, r_min_y, r_max_x, r_max_y, clip) end
+
+--- **Keyboard \& Mouse > Mouse > IsMousePosValid**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param mouse_pos_x? number default value = `nil`
+--- @param mouse_pos_y? number default value = `nil`
+--- @return boolean retval
+function ImGui.IsMousePosValid(ctx, mouse_pos_x, mouse_pos_y) end
+
+--- **Keyboard \& Mouse > Mouse > IsMouseReleased**
+---
+--- Did mouse button released? (went from Down to !Down)
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param button integer
+--- @return boolean retval
+function ImGui.IsMouseReleased(ctx, button) end
+
+--- **Keyboard \& Mouse > Mouse > ResetMouseDragDelta**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param button? integer default value = `MouseButton_Left`
+function ImGui.ResetMouseDragDelta(ctx, button) end
+
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > GetMouseCursor**
+---
+--- Get desired mouse cursor shape, reset every frame. This is updated during the frame.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return integer retval
+function ImGui.GetMouseCursor(ctx) end
+
+--- **Keyboard \& Mouse > Mouse > Mouse Cursor > SetMouseCursor**
+---
+--- Set desired mouse cursor shape. See MouseCursor_* for possible values.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Mouse**
+---
+--- To refer to a mouse button, you may use named enums in your code e.g.
+--- MouseButton_Left, MouseButton_Right.
+---
+--- You can also use regular integer: it is forever guaranteed that
+--- 0=Left, 1=Right, 2=Middle. Buttons 3 and 4 do not have a named enum.
+---
+--- Dragging operations are only reported after mouse has moved a certain distance
+--- away from the initial clicking position (see 'lock_threshold' parameters and
+--- 'ConfigVar_MouseDragThreshold').
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param cursor_type integer
+function ImGui.SetMouseCursor(ctx, cursor_type) end
+
+--- **Layout > BeginGroup**
+---
+--- Lock horizontal starting position. See EndGroup.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.BeginGroup(ctx) end
+
+--- **Layout > Dummy**
+---
+--- Add a dummy item of given size. unlike InvisibleButton, Dummy() won't take the
+--- mouse click or be navigable into.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param size_w number
+--- @param size_h number
+function ImGui.Dummy(ctx, size_w, size_h) end
+
+--- **Layout > EndGroup**
+---
+--- Unlock horizontal starting position + capture the whole group bounding box
+--- into one "item" (so you can use IsItemHovered or layout primitives such as
+--- SameLine on whole group, etc.).
+---
+--- See BeginGroup.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+function ImGui.EndGroup(ctx) end
+
+--- **Layout > Indent**
+---
+--- Move content position toward the right, by 'indent_w', or
+--- StyleVar_IndentSpacing if 'indent_w' <= 0. See Unindent.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param indent_w? number default value = `0.0`
+function ImGui.Indent(ctx, indent_w) end
+
+--- **Layout > NewLine**
+---
+--- Undo a SameLine() or force a new line when in a horizontal-layout context.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.NewLine(ctx) end
+
+--- **Layout > SameLine**
+---
+--- Call between widgets or groups to layout them horizontally.
+--- X position given in window coordinates.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param offset_from_start_x? number default value = `0.0`
+--- @param spacing? number default value = `-1.0`
+function ImGui.SameLine(ctx, offset_from_start_x, spacing) end
+
+--- **Layout > Separator**
+---
+--- Separator, generally horizontal. inside a menu bar or in horizontal layout
+--- mode, this becomes a vertical separator.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.Separator(ctx) end
+
+--- **Layout > SeparatorText**
+---
+--- Text formatted with an horizontal line
+---
+--- ---
+---
+--- @since 0.8.4
+--- @param ctx ImGui_Context
+--- @param label string
+function ImGui.SeparatorText(ctx, label) end
+
+--- **Layout > Spacing**
+---
+--- Add vertical spacing.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.Spacing(ctx) end
+
+--- **Layout > Unindent**
+---
+--- Move content position back to the left, by 'indent_w', or
+--- StyleVar_IndentSpacing if 'indent_w' <= 0
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param indent_w? number default value = `0.0`
+function ImGui.Unindent(ctx, indent_w) end
+
+--- **Layout > Clipping > IsRectVisible**
+---
+--- Test if rectangle (of given size, starting from cursor position) is
+--- visible / not clipped.
+---
+--- ---
+---
+--- **Layout > Clipping**
+---
+--- Mouse hovering is affected by PushClipRect() calls, unlike direct calls to
+--- DrawList_PushClipRect() which are render only. Coordinates are in screen space.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param size_w number
+--- @param size_h number
+--- @return boolean retval
+function ImGui.IsRectVisible(ctx, size_w, size_h) end
+
+--- **Layout > Clipping > IsRectVisibleEx**
+---
+--- Test if rectangle (in screen space) is visible / not clipped. to perform
+--- coarse clipping on user's side.
+---
+--- ---
+---
+--- **Layout > Clipping**
+---
+--- Mouse hovering is affected by PushClipRect() calls, unlike direct calls to
+--- DrawList_PushClipRect() which are render only. Coordinates are in screen space.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param rect_min_x number
+--- @param rect_min_y number
+--- @param rect_max_x number
+--- @param rect_max_y number
+--- @return boolean retval
+function ImGui.IsRectVisibleEx(ctx, rect_min_x, rect_min_y, rect_max_x, rect_max_y) end
+
+--- **Layout > Clipping > PopClipRect**
+---
+--- See PushClipRect
+---
+--- ---
+---
+--- **Layout > Clipping**
+---
+--- Mouse hovering is affected by PushClipRect() calls, unlike direct calls to
+--- DrawList_PushClipRect() which are render only. Coordinates are in screen space.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.PopClipRect(ctx) end
+
+--- **Layout > Clipping > PushClipRect**
+---
+--- ---
+---
+--- **Layout > Clipping**
+---
+--- Mouse hovering is affected by PushClipRect() calls, unlike direct calls to
+--- DrawList_PushClipRect() which are render only. Coordinates are in screen space.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param clip_rect_min_x number
+--- @param clip_rect_min_y number
+--- @param clip_rect_max_x number
+--- @param clip_rect_max_y number
+--- @param intersect_with_current_clip_rect boolean
+function ImGui.PushClipRect(ctx, clip_rect_min_x, clip_rect_min_y, clip_rect_max_x, clip_rect_max_y, intersect_with_current_clip_rect) end
+
+--- **Layout > Layout Cursor Positioning > GetCursorPos**
+---
+--- Cursor position in window
+---
+--- ---
+---
+--- **Layout > Layout Cursor Positioning**
+---
+--- By "cursor" we mean the current output position.
+--- The typical widget behavior is to output themselves at the current cursor
+--- position, then move the cursor one line down.
+---
+--- You can call SameLine() between widgets to undo the last carriage return and
+--- output at the right of the preceding widget.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetCursorPos(ctx) end
+
+--- **Layout > Layout Cursor Positioning > GetCursorPosX**
+---
+--- Cursor X position in window
+---
+--- ---
+---
+--- **Layout > Layout Cursor Positioning**
+---
+--- By "cursor" we mean the current output position.
+--- The typical widget behavior is to output themselves at the current cursor
+--- position, then move the cursor one line down.
+---
+--- You can call SameLine() between widgets to undo the last carriage return and
+--- output at the right of the preceding widget.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetCursorPosX(ctx) end
+
+--- **Layout > Layout Cursor Positioning > GetCursorPosY**
+---
+--- Cursor Y position in window
+---
+--- ---
+---
+--- **Layout > Layout Cursor Positioning**
+---
+--- By "cursor" we mean the current output position.
+--- The typical widget behavior is to output themselves at the current cursor
+--- position, then move the cursor one line down.
+---
+--- You can call SameLine() between widgets to undo the last carriage return and
+--- output at the right of the preceding widget.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetCursorPosY(ctx) end
+
+--- **Layout > Layout Cursor Positioning > GetCursorScreenPos**
+---
+--- Cursor position in absolute screen coordinates (useful to work with the DrawList API).
+---
+--- ---
+---
+--- **Layout > Layout Cursor Positioning**
+---
+--- By "cursor" we mean the current output position.
+--- The typical widget behavior is to output themselves at the current cursor
+--- position, then move the cursor one line down.
+---
+--- You can call SameLine() between widgets to undo the last carriage return and
+--- output at the right of the preceding widget.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetCursorScreenPos(ctx) end
+
+--- **Layout > Layout Cursor Positioning > GetCursorStartPos**
+---
+--- Initial cursor position in window coordinates.
+---
+--- ---
+---
+--- **Layout > Layout Cursor Positioning**
+---
+--- By "cursor" we mean the current output position.
+--- The typical widget behavior is to output themselves at the current cursor
+--- position, then move the cursor one line down.
+---
+--- You can call SameLine() between widgets to undo the last carriage return and
+--- output at the right of the preceding widget.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetCursorStartPos(ctx) end
+
+--- **Layout > Layout Cursor Positioning > SetCursorPos**
+---
+--- Cursor position in window
+---
+--- ---
+---
+--- **Layout > Layout Cursor Positioning**
+---
+--- By "cursor" we mean the current output position.
+--- The typical widget behavior is to output themselves at the current cursor
+--- position, then move the cursor one line down.
+---
+--- You can call SameLine() between widgets to undo the last carriage return and
+--- output at the right of the preceding widget.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param local_pos_x number
+--- @param local_pos_y number
+function ImGui.SetCursorPos(ctx, local_pos_x, local_pos_y) end
+
+--- **Layout > Layout Cursor Positioning > SetCursorPosX**
+---
+--- Cursor X position in window
+---
+--- ---
+---
+--- **Layout > Layout Cursor Positioning**
+---
+--- By "cursor" we mean the current output position.
+--- The typical widget behavior is to output themselves at the current cursor
+--- position, then move the cursor one line down.
+---
+--- You can call SameLine() between widgets to undo the last carriage return and
+--- output at the right of the preceding widget.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param local_x number
+function ImGui.SetCursorPosX(ctx, local_x) end
+
+--- **Layout > Layout Cursor Positioning > SetCursorPosY**
+---
+--- Cursor Y position in window
+---
+--- ---
+---
+--- **Layout > Layout Cursor Positioning**
+---
+--- By "cursor" we mean the current output position.
+--- The typical widget behavior is to output themselves at the current cursor
+--- position, then move the cursor one line down.
+---
+--- You can call SameLine() between widgets to undo the last carriage return and
+--- output at the right of the preceding widget.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param local_y number
+function ImGui.SetCursorPosY(ctx, local_y) end
+
+--- **Layout > Layout Cursor Positioning > SetCursorScreenPos**
+---
+--- Cursor position in absolute screen coordinates.
+---
+--- ---
+---
+--- **Layout > Layout Cursor Positioning**
+---
+--- By "cursor" we mean the current output position.
+--- The typical widget behavior is to output themselves at the current cursor
+--- position, then move the cursor one line down.
+---
+--- You can call SameLine() between widgets to undo the last carriage return and
+--- output at the right of the preceding widget.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param pos_x number
+--- @param pos_y number
+function ImGui.SetCursorScreenPos(ctx, pos_x, pos_y) end
+
+--- **List Clipper > CreateListClipper**
+---
+--- The returned clipper object is only valid for the given context and is valid
+--- as long as it is used in each defer cycle unless attached (see Attach).
+---
+--- ---
+---
+--- **List Clipper**
+---
+--- Helper to manually clip large list of items.
+---
+--- If you have lots evenly spaced items and you have random access to the list,
+--- you can perform coarse clipping based on visibility to only submit items that
+--- are in view.
+---
+--- The clipper calculates the range of visible items and advance the cursor to
+--- compensate for the non-visible items we have skipped.
+--- (Dear ImGui already clip items based on their bounds but: it needs to first
+--- layout the item to do so, and generally fetching/submitting your own data incurs
+--- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- scale using lists with tens of thousands of items without a problem.)
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(clipper, 'ImGui_ListClipper*') then
+---       clipper = ImGui.CreateListClipper(ctx)
+---     end
+---     ImGui.ListClipper_Begin(clipper, 1000) -- We have 1000 elements, evenly spaced
+---     while ImGui.ListClipper_Step(clipper) do
+---       local display_start, display_end = ImGui.ListClipper_GetDisplayRange(clipper)
+---       for row = display_start, display_end - 1 do
+---         ImGui.Text(ctx, ("line number %d"):format(row))
+---       end
+---     end
+---
+--- Generally what happens is:
+--- - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1)
+---   regardless of it being visible or not.
+--- - User code submit that one element.
+--- - Clipper can measure the height of the first element
+--- - Clipper calculate the actual range of elements to display based on the current
+---   clipping rectangle, position the cursor before the first visible element.
+--- - User code submit visible elements.
+--- - The clipper also handles various subtleties related to keyboard/gamepad
+---   navigation, wrapping etc.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @nodiscard
+--- @return ImGui_ListClipper retval
+function ImGui.CreateListClipper(ctx) end
+
+--- **List Clipper > ListClipper\_Begin**
+---
+--- - items_count: Use INT_MAX if you don't know how many items you have
+--- (in which case the cursor won't be advanced in the final step)
+--- - items_height: Use -1.0 to be calculated automatically on first step.
+---   Otherwise pass in the distance between your items, typically
+---   GetTextLineHeightWithSpacing or GetFrameHeightWithSpacing.
+---
+--- ---
+---
+--- **List Clipper**
+---
+--- Helper to manually clip large list of items.
+---
+--- If you have lots evenly spaced items and you have random access to the list,
+--- you can perform coarse clipping based on visibility to only submit items that
+--- are in view.
+---
+--- The clipper calculates the range of visible items and advance the cursor to
+--- compensate for the non-visible items we have skipped.
+--- (Dear ImGui already clip items based on their bounds but: it needs to first
+--- layout the item to do so, and generally fetching/submitting your own data incurs
+--- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- scale using lists with tens of thousands of items without a problem.)
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(clipper, 'ImGui_ListClipper*') then
+---       clipper = ImGui.CreateListClipper(ctx)
+---     end
+---     ImGui.ListClipper_Begin(clipper, 1000) -- We have 1000 elements, evenly spaced
+---     while ImGui.ListClipper_Step(clipper) do
+---       local display_start, display_end = ImGui.ListClipper_GetDisplayRange(clipper)
+---       for row = display_start, display_end - 1 do
+---         ImGui.Text(ctx, ("line number %d"):format(row))
+---       end
+---     end
+---
+--- Generally what happens is:
+--- - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1)
+---   regardless of it being visible or not.
+--- - User code submit that one element.
+--- - Clipper can measure the height of the first element
+--- - Clipper calculate the actual range of elements to display based on the current
+---   clipping rectangle, position the cursor before the first visible element.
+--- - User code submit visible elements.
+--- - The clipper also handles various subtleties related to keyboard/gamepad
+---   navigation, wrapping etc.
+---
+--- ---
+---
+--- @since 0.1
+--- @param clipper ImGui_ListClipper
+--- @param items_count integer
+--- @param items_height? number default value = `-1.0`
+function ImGui.ListClipper_Begin(clipper, items_count, items_height) end
+
+--- **List Clipper > ListClipper\_End**
+---
+--- Automatically called on the last call of ListClipper_Step that returns false.
+---
+--- ---
+---
+--- **List Clipper**
+---
+--- Helper to manually clip large list of items.
+---
+--- If you have lots evenly spaced items and you have random access to the list,
+--- you can perform coarse clipping based on visibility to only submit items that
+--- are in view.
+---
+--- The clipper calculates the range of visible items and advance the cursor to
+--- compensate for the non-visible items we have skipped.
+--- (Dear ImGui already clip items based on their bounds but: it needs to first
+--- layout the item to do so, and generally fetching/submitting your own data incurs
+--- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- scale using lists with tens of thousands of items without a problem.)
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(clipper, 'ImGui_ListClipper*') then
+---       clipper = ImGui.CreateListClipper(ctx)
+---     end
+---     ImGui.ListClipper_Begin(clipper, 1000) -- We have 1000 elements, evenly spaced
+---     while ImGui.ListClipper_Step(clipper) do
+---       local display_start, display_end = ImGui.ListClipper_GetDisplayRange(clipper)
+---       for row = display_start, display_end - 1 do
+---         ImGui.Text(ctx, ("line number %d"):format(row))
+---       end
+---     end
+---
+--- Generally what happens is:
+--- - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1)
+---   regardless of it being visible or not.
+--- - User code submit that one element.
+--- - Clipper can measure the height of the first element
+--- - Clipper calculate the actual range of elements to display based on the current
+---   clipping rectangle, position the cursor before the first visible element.
+--- - User code submit visible elements.
+--- - The clipper also handles various subtleties related to keyboard/gamepad
+---   navigation, wrapping etc.
+---
+--- ---
+---
+--- @since 0.1
+--- @param clipper ImGui_ListClipper
+function ImGui.ListClipper_End(clipper) end
+
+--- **List Clipper > ListClipper\_GetDisplayRange**
+---
+--- ---
+---
+--- **List Clipper**
+---
+--- Helper to manually clip large list of items.
+---
+--- If you have lots evenly spaced items and you have random access to the list,
+--- you can perform coarse clipping based on visibility to only submit items that
+--- are in view.
+---
+--- The clipper calculates the range of visible items and advance the cursor to
+--- compensate for the non-visible items we have skipped.
+--- (Dear ImGui already clip items based on their bounds but: it needs to first
+--- layout the item to do so, and generally fetching/submitting your own data incurs
+--- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- scale using lists with tens of thousands of items without a problem.)
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(clipper, 'ImGui_ListClipper*') then
+---       clipper = ImGui.CreateListClipper(ctx)
+---     end
+---     ImGui.ListClipper_Begin(clipper, 1000) -- We have 1000 elements, evenly spaced
+---     while ImGui.ListClipper_Step(clipper) do
+---       local display_start, display_end = ImGui.ListClipper_GetDisplayRange(clipper)
+---       for row = display_start, display_end - 1 do
+---         ImGui.Text(ctx, ("line number %d"):format(row))
+---       end
+---     end
+---
+--- Generally what happens is:
+--- - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1)
+---   regardless of it being visible or not.
+--- - User code submit that one element.
+--- - Clipper can measure the height of the first element
+--- - Clipper calculate the actual range of elements to display based on the current
+---   clipping rectangle, position the cursor before the first visible element.
+--- - User code submit visible elements.
+--- - The clipper also handles various subtleties related to keyboard/gamepad
+---   navigation, wrapping etc.
+---
+--- ---
+---
+--- @since 0.3
+--- @param clipper ImGui_ListClipper
+--- @return integer display_start
+--- @return integer display_end
+function ImGui.ListClipper_GetDisplayRange(clipper) end
+
+--- **List Clipper > ListClipper\_IncludeItemByIndex**
+---
+--- Call ListClipper_IncludeItemByIndex or ListClipper_IncludeItemsByIndex before
+--- the first call to ListClipper_Step if you need a range of items to be displayed
+--- regardless of visibility.
+---
+--- (Due to alignment / padding of certain items it is possible that an extra item
+--- may be included on either end of the display range).
+---
+--- ---
+---
+--- **List Clipper**
+---
+--- Helper to manually clip large list of items.
+---
+--- If you have lots evenly spaced items and you have random access to the list,
+--- you can perform coarse clipping based on visibility to only submit items that
+--- are in view.
+---
+--- The clipper calculates the range of visible items and advance the cursor to
+--- compensate for the non-visible items we have skipped.
+--- (Dear ImGui already clip items based on their bounds but: it needs to first
+--- layout the item to do so, and generally fetching/submitting your own data incurs
+--- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- scale using lists with tens of thousands of items without a problem.)
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(clipper, 'ImGui_ListClipper*') then
+---       clipper = ImGui.CreateListClipper(ctx)
+---     end
+---     ImGui.ListClipper_Begin(clipper, 1000) -- We have 1000 elements, evenly spaced
+---     while ImGui.ListClipper_Step(clipper) do
+---       local display_start, display_end = ImGui.ListClipper_GetDisplayRange(clipper)
+---       for row = display_start, display_end - 1 do
+---         ImGui.Text(ctx, ("line number %d"):format(row))
+---       end
+---     end
+---
+--- Generally what happens is:
+--- - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1)
+---   regardless of it being visible or not.
+--- - User code submit that one element.
+--- - Clipper can measure the height of the first element
+--- - Clipper calculate the actual range of elements to display based on the current
+---   clipping rectangle, position the cursor before the first visible element.
+--- - User code submit visible elements.
+--- - The clipper also handles various subtleties related to keyboard/gamepad
+---   navigation, wrapping etc.
+---
+--- ---
+---
+--- @since 0.9
+--- @param clipper ImGui_ListClipper
+--- @param item_index integer
+function ImGui.ListClipper_IncludeItemByIndex(clipper, item_index) end
+
+--- **List Clipper > ListClipper\_IncludeItemsByIndex**
+---
+--- See ListClipper_IncludeItemByIndex.
+---
+--- item_end is exclusive e.g. use (42, 42+1) to make item 42 never clipped.
+---
+--- ---
+---
+--- **List Clipper**
+---
+--- Helper to manually clip large list of items.
+---
+--- If you have lots evenly spaced items and you have random access to the list,
+--- you can perform coarse clipping based on visibility to only submit items that
+--- are in view.
+---
+--- The clipper calculates the range of visible items and advance the cursor to
+--- compensate for the non-visible items we have skipped.
+--- (Dear ImGui already clip items based on their bounds but: it needs to first
+--- layout the item to do so, and generally fetching/submitting your own data incurs
+--- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- scale using lists with tens of thousands of items without a problem.)
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(clipper, 'ImGui_ListClipper*') then
+---       clipper = ImGui.CreateListClipper(ctx)
+---     end
+---     ImGui.ListClipper_Begin(clipper, 1000) -- We have 1000 elements, evenly spaced
+---     while ImGui.ListClipper_Step(clipper) do
+---       local display_start, display_end = ImGui.ListClipper_GetDisplayRange(clipper)
+---       for row = display_start, display_end - 1 do
+---         ImGui.Text(ctx, ("line number %d"):format(row))
+---       end
+---     end
+---
+--- Generally what happens is:
+--- - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1)
+---   regardless of it being visible or not.
+--- - User code submit that one element.
+--- - Clipper can measure the height of the first element
+--- - Clipper calculate the actual range of elements to display based on the current
+---   clipping rectangle, position the cursor before the first visible element.
+--- - User code submit visible elements.
+--- - The clipper also handles various subtleties related to keyboard/gamepad
+---   navigation, wrapping etc.
+---
+--- ---
+---
+--- @since 0.9
+--- @param clipper ImGui_ListClipper
+--- @param item_begin integer
+--- @param item_end integer
+function ImGui.ListClipper_IncludeItemsByIndex(clipper, item_begin, item_end) end
+
+--- **List Clipper > ListClipper\_Step**
+---
+--- Call until it returns false. The display_start/display_end fields from
+--- ListClipper_GetDisplayRange will be set and you can process/draw those items.
+---
+--- ---
+---
+--- **List Clipper**
+---
+--- Helper to manually clip large list of items.
+---
+--- If you have lots evenly spaced items and you have random access to the list,
+--- you can perform coarse clipping based on visibility to only submit items that
+--- are in view.
+---
+--- The clipper calculates the range of visible items and advance the cursor to
+--- compensate for the non-visible items we have skipped.
+--- (Dear ImGui already clip items based on their bounds but: it needs to first
+--- layout the item to do so, and generally fetching/submitting your own data incurs
+--- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- scale using lists with tens of thousands of items without a problem.)
+---
+--- Usage:
+---
+---     if not ImGui.ValidatePtr(clipper, 'ImGui_ListClipper*') then
+---       clipper = ImGui.CreateListClipper(ctx)
+---     end
+---     ImGui.ListClipper_Begin(clipper, 1000) -- We have 1000 elements, evenly spaced
+---     while ImGui.ListClipper_Step(clipper) do
+---       local display_start, display_end = ImGui.ListClipper_GetDisplayRange(clipper)
+---       for row = display_start, display_end - 1 do
+---         ImGui.Text(ctx, ("line number %d"):format(row))
+---       end
+---     end
+---
+--- Generally what happens is:
+--- - Clipper lets you process the first element (DisplayStart = 0, DisplayEnd = 1)
+---   regardless of it being visible or not.
+--- - User code submit that one element.
+--- - Clipper can measure the height of the first element
+--- - Clipper calculate the actual range of elements to display based on the current
+---   clipping rectangle, position the cursor before the first visible element.
+--- - User code submit visible elements.
+--- - The clipper also handles various subtleties related to keyboard/gamepad
+---   navigation, wrapping etc.
+---
+--- ---
+---
+--- @since 0.1
+--- @param clipper ImGui_ListClipper
+--- @return boolean retval
+function ImGui.ListClipper_Step(clipper) end
+
+--- **Menu > BeginMenu**
+---
+--- Create a sub-menu entry. only call EndMenu if this returns true!
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param enabled? boolean default value = `true`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginMenu(ctx, label, enabled) end
+
+--- **Menu > BeginMenuBar**
+---
+--- Append to menu-bar of current window (requires WindowFlags_MenuBar flag set
+--- on parent window). See EndMenuBar.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginMenuBar(ctx) end
+
+--- **Menu > EndMenu**
+---
+--- Only call EndMenu() if BeginMenu returns true!
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.EndMenu(ctx) end
+
+--- **Menu > EndMenuBar**
+---
+--- Only call EndMenuBar if BeginMenuBar returns true!
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.EndMenuBar(ctx) end
+
+--- **Menu > MenuItem**
+---
+--- Return true when activated. Shortcuts are displayed for convenience but not
+--- processed by ImGui at the moment. Toggle state is written to 'selected' when
+--- provided.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param shortcut? string default value = `nil`
+--- @param p_selected? boolean default value = `nil`
+--- @param enabled? boolean default value = `true`
+--- @return boolean retval
+--- @return boolean p_selected
+function ImGui.MenuItem(ctx, label, shortcut, p_selected, enabled) end
+
+--- **Plot > PlotHistogram**
+---
+--- ---
+---
+--- **Plot**
+---
+--- Simple data plotting using reaper_array as data source.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param values reaper.array
+--- @param values_offset? integer default value = `0`
+--- @param overlay_text? string default value = `nil`
+--- @param scale_min? number default value = `FLT_MAX`
+--- @param scale_max? number default value = `FLT_MAX`
+--- @param graph_size_w? number default value = `0.0`
+--- @param graph_size_h? number default value = `0.0`
+function ImGui.PlotHistogram(ctx, label, values, values_offset, overlay_text, scale_min, scale_max, graph_size_w, graph_size_h) end
+
+--- **Plot > PlotLines**
+---
+--- ---
+---
+--- **Plot**
+---
+--- Simple data plotting using reaper_array as data source.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param values reaper.array
+--- @param values_offset? integer default value = `0`
+--- @param overlay_text? string default value = `nil`
+--- @param scale_min? number default value = `FLT_MAX`
+--- @param scale_max? number default value = `FLT_MAX`
+--- @param graph_size_w? number default value = `0.0`
+--- @param graph_size_h? number default value = `0.0`
+function ImGui.PlotLines(ctx, label, values, values_offset, overlay_text, scale_min, scale_max, graph_size_w, graph_size_h) end
+
+--- **Popup \& Modal > BeginPopup**
+---
+--- Query popup state, if open start appending into the window. Call EndPopup
+--- afterwards if returned true. WindowFlags* are forwarded to the window.
+---
+--- Return true if the popup is open, and you can start outputting to it.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param flags? integer default value = `WindowFlags_None`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginPopup(ctx, str_id, flags) end
+
+--- **Popup \& Modal > BeginPopupModal**
+---
+--- Block every interaction behind the window, cannot be closed by user, add a
+--- dimming background, has a title bar. Return true if the modal is open, and you
+--- can start outputting to it. See BeginPopup.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param name string
+--- @param p_open? boolean default value = `nil`
+--- @param flags? integer default value = `WindowFlags_None`
+--- @nodiscard
+--- @return boolean retval
+--- @return boolean p_open
+function ImGui.BeginPopupModal(ctx, name, p_open, flags) end
+
+--- **Popup \& Modal > CloseCurrentPopup**
+---
+--- Manually close the popup we have begin-ed into.
+--- Use inside the BeginPopup/EndPopup scope to close manually.
+---
+--- CloseCurrentPopup() is called by default by Selectable/MenuItem when activated.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.CloseCurrentPopup(ctx) end
+
+--- **Popup \& Modal > EndPopup**
+---
+--- Only call EndPopup() if BeginPopup*() returns true!
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+function ImGui.EndPopup(ctx) end
+
+--- **Popup \& Modal > IsPopupOpen**
+---
+--- Return true if the popup is open at the current BeginPopup level of the
+--- popup stack.
+---
+--- - With PopupFlags_AnyPopupId: return true if any popup is open at the current
+---   BeginPopup() level of the popup stack.
+--- - With PopupFlags_AnyPopupId + PopupFlags_AnyPopupLevel: return true if any
+---   popup is open.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param flags? integer default value = `PopupFlags_None`
+--- @return boolean retval
+function ImGui.IsPopupOpen(ctx, str_id, flags) end
+
+--- **Popup \& Modal > OpenPopup**
+---
+--- Set popup state to open (don't call every frame!).
+--- ImGuiPopupFlags are available for opening options.
+---
+--- If not modal: they can be closed by clicking anywhere outside them, or by
+--- pressing ESCAPE.
+---
+--- Use PopupFlags_NoOpenOverExistingPopup to avoid opening a popup if there's
+--- already one at the same level.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param popup_flags? integer default value = `PopupFlags_None`
+function ImGui.OpenPopup(ctx, str_id, popup_flags) end
+
+--- **Popup \& Modal > OpenPopupOnItemClick**
+---
+--- Helper to open popup when clicked on last item. return true when just opened.
+--- (Note: actually triggers on the mouse _released_ event to be consistent with
+--- popup behaviors.)
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id? string default value = `nil`
+--- @param popup_flags? integer default value = `PopupFlags_MouseButtonRight`
+function ImGui.OpenPopupOnItemClick(ctx, str_id, popup_flags) end
+
+--- **Popup \& Modal > Open\+Begin Combined Helpers > BeginPopupContextItem**
+---
+--- This is a helper to handle the simplest case of associating one named popup
+--- to one given widget. You can pass a nil str_id to use the identifier of the last
+--- item. This is essentially the same as calling OpenPopupOnItemClick + BeginPopup
+--- but written to avoid computing the ID twice because BeginPopupContext*
+--- functions may be called very frequently.
+---
+--- If you want to use that on a non-interactive item such as Text you need to pass
+--- in an explicit ID here.
+---
+--- ---
+---
+--- **Popup \& Modal > Open\+Begin Combined Helpers**
+---
+---
+--- Helpers to do OpenPopup+BeginPopup where the Open action is triggered by e.g.
+--- hovering an item and right-clicking. They are convenient to easily create
+--- context menus, hence the name.
+---
+--- Notice that BeginPopupContext* takes PopupFlags_* just like OpenPopup and
+--- unlike BeginPopup.
+---
+--- We exceptionally default their flags to 1 (== PopupFlags_MouseButtonRight) for
+--- backward compatibility with older API taking 'int mouse_button = 1' parameter,
+--- so if you add other flags remember to re-add the PopupFlags_MouseButtonRight.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id? string default value = `nil`
+--- @param popup_flags? integer default value = `PopupFlags_MouseButtonRight`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginPopupContextItem(ctx, str_id, popup_flags) end
+
+--- **Popup \& Modal > Open\+Begin Combined Helpers > BeginPopupContextWindow**
+---
+--- Open+begin popup when clicked on current window.
+---
+--- ---
+---
+--- **Popup \& Modal > Open\+Begin Combined Helpers**
+---
+---
+--- Helpers to do OpenPopup+BeginPopup where the Open action is triggered by e.g.
+--- hovering an item and right-clicking. They are convenient to easily create
+--- context menus, hence the name.
+---
+--- Notice that BeginPopupContext* takes PopupFlags_* just like OpenPopup and
+--- unlike BeginPopup.
+---
+--- We exceptionally default their flags to 1 (== PopupFlags_MouseButtonRight) for
+--- backward compatibility with older API taking 'int mouse_button = 1' parameter,
+--- so if you add other flags remember to re-add the PopupFlags_MouseButtonRight.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id? string default value = `nil`
+--- @param popup_flags? integer default value = `PopupFlags_MouseButtonRight`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginPopupContextWindow(ctx, str_id, popup_flags) end
+
+--- **Popup \& Modal > Tooltips > BeginItemTooltip**
+---
+--- Begin/append a tooltip window if preceding item was hovered. Shortcut for
+--- `IsItemHovered(HoveredFlags_ForTooltip) && BeginTooltip()`.
+---
+--- ---
+---
+--- **Popup \& Modal > Tooltips**
+---
+--- Tooltips are windows following the mouse. They do not take focus away.
+--- A tooltip window can contain items of any type.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginItemTooltip(ctx) end
+
+--- **Popup \& Modal > Tooltips > BeginTooltip**
+---
+--- Begin/append a tooltip window.
+---
+--- ---
+---
+--- **Popup \& Modal > Tooltips**
+---
+--- Tooltips are windows following the mouse. They do not take focus away.
+--- A tooltip window can contain items of any type.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginTooltip(ctx) end
+
+--- **Popup \& Modal > Tooltips > EndTooltip**
+---
+--- Only call EndTooltip() if BeginTooltip()/BeginItemTooltip() returns true.
+---
+--- ---
+---
+--- **Popup \& Modal > Tooltips**
+---
+--- Tooltips are windows following the mouse. They do not take focus away.
+--- A tooltip window can contain items of any type.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+function ImGui.EndTooltip(ctx) end
+
+--- **Popup \& Modal > Tooltips > SetItemTooltip**
+---
+--- Set a text-only tooltip if preceeding item was hovered.
+--- Override any previous call to SetTooltip(). Shortcut for
+--- `if (IsItemHovered(HoveredFlags_ForTooltip)) { SetTooltip(...); }`.
+---
+--- ---
+---
+--- **Popup \& Modal > Tooltips**
+---
+--- Tooltips are windows following the mouse. They do not take focus away.
+--- A tooltip window can contain items of any type.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param text string
+function ImGui.SetItemTooltip(ctx, text) end
+
+--- **Popup \& Modal > Tooltips > SetTooltip**
+---
+--- Set a text-only tooltip. Often used after a IsItemHovered() check.
+--- Override any previous call to SetTooltip.
+---
+--- Shortcut for `if (BeginTooltip()) { Text(...); EndTooltip(); }`.
+---
+--- ---
+---
+--- **Popup \& Modal > Tooltips**
+---
+--- Tooltips are windows following the mouse. They do not take focus away.
+--- A tooltip window can contain items of any type.
+---
+--- ---
+---
+--- **Popup \& Modal**
+---
+--- - They block normal mouse hovering detection (and therefore most mouse
+---   interactions) behind them.
+--- - If not modal: they can be closed by clicking anywhere outside them, or by
+---   pressing ESCAPE.
+--- - Their visibility state (~bool) is held internally instead of being held by the
+---   programmer as we are used to with regular Begin*() calls.
+---
+--- The 3 properties above are related: we need to retain popup visibility state in
+--- the library because popups may be closed as any time.
+---
+--- You can bypass the hovering restriction by using
+--- HoveredFlags_AllowWhenBlockedByPopup when calling IsItemHovered or IsWindowHovered.
+---
+--- IMPORTANT: Popup identifiers are relative to the current ID stack, so OpenPopup
+--- and BeginPopup generally needs to be at the same level of the stack.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param text string
+function ImGui.SetTooltip(ctx, text) end
+
+--- **Style > Colors > DebugFlashStyleColor**
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param idx integer
+function ImGui.DebugFlashStyleColor(ctx, idx) end
+
+--- **Style > Colors > GetColor**
+---
+--- Retrieve given style color with style alpha applied and optional extra alpha
+--- multiplier, packed as a 32-bit value (RGBA). See Col_* for available style colors.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param idx integer
+--- @param alpha_mul? number default value = `1.0`
+--- @return integer retval
+function ImGui.GetColor(ctx, idx, alpha_mul) end
+
+--- **Style > Colors > GetColorEx**
+---
+--- Retrieve given color with style alpha applied, packed as a 32-bit value (RGBA).
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param col_rgba integer
+--- @param alpha_mul? number default value = `1.0`
+--- @return integer retval
+function ImGui.GetColorEx(ctx, col_rgba, alpha_mul) end
+
+--- **Style > Colors > GetStyleColor**
+---
+--- Retrieve style color as stored in ImGuiStyle structure.
+--- Use to feed back into PushStyleColor, Otherwise use GetColor to get style color
+--- with style alpha baked in. See Col_* for available style colors.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param idx integer
+--- @return integer retval
+function ImGui.GetStyleColor(ctx, idx) end
+
+--- **Style > Colors > PopStyleColor**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param count? integer default value = `1`
+function ImGui.PopStyleColor(ctx, count) end
+
+--- **Style > Colors > PushStyleColor**
+---
+--- Temporarily modify a style color.
+--- Call PopStyleColor to undo after use (before the end of the frame).
+--- See Col_* for available style colors.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param idx integer
+--- @param col_rgba integer
+function ImGui.PushStyleColor(ctx, idx, col_rgba) end
+
+--- **Style > Variables > GetStyleVar**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param var_idx integer
+--- @return number val1
+--- @return number val2
+function ImGui.GetStyleVar(ctx, var_idx) end
+
+--- **Style > Variables > PopStyleVar**
+---
+--- Reset a style variable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param count? integer default value = `1`
+function ImGui.PopStyleVar(ctx, count) end
+
+--- **Style > Variables > PushStyleVar**
+---
+--- Temporarily modify a style variable.
+--- Call PopStyleVar to undo after use (before the end of the frame).
+--- See StyleVar_* for possible values of 'var_idx'.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param var_idx integer
+--- @param val1 number
+--- @param val2? number default value = `nil`
+function ImGui.PushStyleVar(ctx, var_idx, val1, val2) end
+
+--- **Tab Bar > BeginTabBar**
+---
+--- Create and append into a TabBar.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param flags? integer default value = `TabBarFlags_None`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginTabBar(ctx, str_id, flags) end
+
+--- **Tab Bar > EndTabBar**
+---
+--- Only call EndTabBar() if BeginTabBar() returns true!
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.EndTabBar(ctx) end
+
+--- **Tab Bar > Tab Item > BeginTabItem**
+---
+--- Create a Tab. Returns true if the Tab is selected.
+--- Set 'p_open' to true to enable the close button.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param p_open? boolean default value = `nil`
+--- @param flags? integer default value = `TabItemFlags_None`
+--- @nodiscard
+--- @return boolean retval
+--- @return boolean p_open
+function ImGui.BeginTabItem(ctx, label, p_open, flags) end
+
+--- **Tab Bar > Tab Item > EndTabItem**
+---
+--- Only call EndTabItem() if BeginTabItem() returns true!
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.EndTabItem(ctx) end
+
+--- **Tab Bar > Tab Item > SetTabItemClosed**
+---
+--- Notify TabBar or Docking system of a closed tab/window ahead
+--- (useful to reduce visual flicker on reorderable tab bars).
+--- For tab-bar: call after BeginTabBar and before Tab submissions.
+--- Otherwise call with a window name.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param tab_or_docked_window_label string
+function ImGui.SetTabItemClosed(ctx, tab_or_docked_window_label) end
+
+--- **Tab Bar > Tab Item > TabItemButton**
+---
+--- Create a Tab behaving like a button. Return true when clicked.
+--- Cannot be selected in the tab bar.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param flags? integer default value = `TabItemFlags_None`
+--- @return boolean retval
+function ImGui.TabItemButton(ctx, label, flags) end
+
+--- **Table > BeginTable**
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param column integer
+--- @param flags? integer default value = `TableFlags_None`
+--- @param outer_size_w? number default value = `0.0`
+--- @param outer_size_h? number default value = `0.0`
+--- @param inner_width? number default value = `0.0`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginTable(ctx, str_id, column, flags, outer_size_w, outer_size_h, inner_width) end
+
+--- **Table > EndTable**
+---
+--- Only call EndTable() if BeginTable() returns true!
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+function ImGui.EndTable(ctx) end
+
+--- **Table > TableGetColumnCount**
+---
+--- Return number of columns (value passed to BeginTable).
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return integer retval
+function ImGui.TableGetColumnCount(ctx) end
+
+--- **Table > TableGetColumnIndex**
+---
+--- Return current column index.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return integer retval
+function ImGui.TableGetColumnIndex(ctx) end
+
+--- **Table > TableGetRowIndex**
+---
+--- Return current row index.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return integer retval
+function ImGui.TableGetRowIndex(ctx) end
+
+--- **Table > TableNextColumn**
+---
+--- Append into the next column (or first column of next row if currently in
+--- last column). Return true when column is visible.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.TableNextColumn(ctx) end
+
+--- **Table > TableNextRow**
+---
+--- Append into the first cell of a new row.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param row_flags? integer default value = `TableRowFlags_None`
+--- @param min_row_height? number default value = `0.0`
+function ImGui.TableNextRow(ctx, row_flags, min_row_height) end
+
+--- **Table > TableSetColumnIndex**
+---
+--- Append into the specified column. Return true when column is visible.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+--- @param column_n integer
+--- @return boolean retval
+function ImGui.TableSetColumnIndex(ctx, column_n) end
+
+--- **Table > Background > TableSetBgColor**
+---
+--- Change the color of a cell, row, or column.
+--- See TableBgTarget_* flags for details.
+---
+--- ---
+---
+--- **Table > Background**
+---
+--- Background colors are rendering in 3 layers:
+---
+--- - Layer 0: draw with RowBg0 color if set, otherwise draw with ColumnBg0 if set.
+--- - Layer 1: draw with RowBg1 color if set, otherwise draw with ColumnBg1 if set.
+--- - Layer 2: draw with CellBg color if set.
+---
+--- The purpose of the two row/columns layers is to let you decide if a background
+--- color change should override or blend with the existing color.
+--- When using TableFlags_RowBg on the table, each row has the RowBg0 color
+--- automatically set for odd/even rows.
+--- If you set the color of RowBg0 target, your color will override the existing
+--- RowBg0 color.
+--- If you set the color of RowBg1 or ColumnBg1 target, your color will blend over
+--- the RowBg0 color.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param target integer
+--- @param color_rgba integer
+--- @param column_n? integer default value = `-1`
+function ImGui.TableSetBgColor(ctx, target, color_rgba, column_n) end
+
+--- **Table > Header \& Columns > TableAngledHeadersRow**
+---
+--- Submit a row with angled headers for every column with the
+--- TableColumnFlags_AngledHeader flag. Must be the first row.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.TableAngledHeadersRow(ctx) end
+
+--- **Table > Header \& Columns > TableGetColumnFlags**
+---
+--- Return column flags so you can query their Enabled/Visible/Sorted/Hovered
+--- status flags. Pass -1 to use current column.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param column_n? integer default value = `-1`
+--- @return integer retval
+function ImGui.TableGetColumnFlags(ctx, column_n) end
+
+--- **Table > Header \& Columns > TableGetColumnName**
+---
+--- Return "" if column didn't have a name declared by TableSetupColumn.
+--- Pass -1 to use current column.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param column_n? integer default value = `-1`
+--- @return string retval
+function ImGui.TableGetColumnName(ctx, column_n) end
+
+--- **Table > Header \& Columns > TableHeader**
+---
+--- Submit one header cell manually (rarely used). See TableSetupColumn.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+function ImGui.TableHeader(ctx, label) end
+
+--- **Table > Header \& Columns > TableHeadersRow**
+---
+--- Submit a row with headers cells based on data provided to TableSetupColumn
+--- + submit context menu.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.TableHeadersRow(ctx) end
+
+--- **Table > Header \& Columns > TableSetColumnEnabled**
+---
+--- Change user-accessible enabled/disabled state of a column, set to false to
+--- hide the column. Note that end-user can use the context menu to change this
+--- themselves (right-click in headers, or right-click in columns body with
+--- TableFlags_ContextMenuInBody).
+---
+--- - Require table to have the TableFlags_Hideable flag because we are manipulating
+---   user accessible state.
+--- - Request will be applied during next layout, which happens on the first call to
+---   TableNextRow after Begin_Table.
+--- - For the getter you can test
+---   (TableGetColumnFlags() & TableColumnFlags_IsEnabled) != 0.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.4.1
+--- @param ctx ImGui_Context
+--- @param column_n integer
+--- @param v boolean
+function ImGui.TableSetColumnEnabled(ctx, column_n, v) end
+
+--- **Table > Header \& Columns > TableSetupColumn**
+---
+--- Use to specify label, resizing policy, default width/weight, id,
+--- various other flags etc.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param flags? integer default value = `TableColumnFlags_None`
+--- @param init_width_or_weight? number default value = `0.0`
+--- @param user_id? integer default value = `0`
+function ImGui.TableSetupColumn(ctx, label, flags, init_width_or_weight, user_id) end
+
+--- **Table > Header \& Columns > TableSetupScrollFreeze**
+---
+--- Lock columns/rows so they stay visible when scrolled.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param cols integer
+--- @param rows integer
+function ImGui.TableSetupScrollFreeze(ctx, cols, rows) end
+
+--- **Table > Sorting > TableGetColumnSortSpecs**
+---
+--- Sorting specification for one column of a table.
+--- Call while incrementing 'id' from 0 until false is returned.
+---
+--- - id:             Index of the sorting specification (always stored in order
+---   starting from 0, tables sorted on a single criteria will always have a 0 here)
+--- - column_index:   Index of the column
+--- - column_user_id: User ID of the column (if specified by a TableSetupColumn call)
+--- - sort_direction: SortDirection_Ascending or SortDirection_Descending
+---
+--- See TableNeedSort.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param id integer
+--- @return boolean retval
+--- @return integer column_index
+--- @return integer column_user_id
+--- @return integer sort_direction
+function ImGui.TableGetColumnSortSpecs(ctx, id) end
+
+--- **Table > Sorting > TableNeedSort**
+---
+--- Return true once when sorting specs have changed since last call,
+--- or the first time. 'has_specs' is false when not sorting.
+---
+--- See TableGetColumnSortSpecs.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+--- @return boolean has_specs
+function ImGui.TableNeedSort(ctx) end
+
+--- **Text > AlignTextToFramePadding**
+---
+--- Vertically align upcoming text baseline to StyleVar_FramePadding.y so that it
+--- will align properly to regularly framed items (call if you have text on a line
+--- before a framed item).
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.AlignTextToFramePadding(ctx) end
+
+--- **Text > Bullet**
+---
+--- Draw a small circle + keep the cursor on the same line.
+--- Advance cursor x position by GetTreeNodeToLabelSpacing,
+--- same distance that TreeNode uses.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.Bullet(ctx) end
+
+--- **Text > BulletText**
+---
+--- Shortcut for Bullet + Text.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param text string
+function ImGui.BulletText(ctx, text) end
+
+--- **Text > CalcTextSize**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param text string
+--- @param _1? nil​
+--- @param _2? nil​
+--- @param hide_text_after_double_hash? boolean default value = `false`
+--- @param wrap_width? number default value = `-1.0`
+--- @return number w
+--- @return number h
+function ImGui.CalcTextSize(ctx, text, _1, _2, hide_text_after_double_hash, wrap_width) end
+
+--- **Text > DebugTextEncoding**
+---
+--- Helper tool to diagnose between text encoding issues and font loading issues.
+--- Pass your UTF-8 string and verify that there are correct.
+---
+--- ---
+---
+--- @since 0.7
+--- @param ctx ImGui_Context
+--- @param text string
+function ImGui.DebugTextEncoding(ctx, text) end
+
+--- **Text > GetFrameHeight**
+---
+--- GetFontSize + StyleVar_FramePadding.y * 2
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetFrameHeight(ctx) end
+
+--- **Text > GetFrameHeightWithSpacing**
+---
+--- GetFontSize + StyleVar_FramePadding.y * 2 + StyleVar_ItemSpacing.y
+--- (distance in pixels between 2 consecutive lines of framed widgets).
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetFrameHeightWithSpacing(ctx) end
+
+--- **Text > GetTextLineHeight**
+---
+--- Same as GetFontSize
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetTextLineHeight(ctx) end
+
+--- **Text > GetTextLineHeightWithSpacing**
+---
+--- GetFontSize + StyleVar_ItemSpacing.y
+--- (distance in pixels between 2 consecutive lines of text).
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetTextLineHeightWithSpacing(ctx) end
+
+--- **Text > LabelText**
+---
+--- Display text+label aligned the same way as value+label widgets
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param text string
+function ImGui.LabelText(ctx, label, text) end
+
+--- **Text > PopTextWrapPos**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.PopTextWrapPos(ctx) end
+
+--- **Text > PushTextWrapPos**
+---
+--- Push word-wrapping position for Text*() commands.
+---
+--- -  < 0.0: no wrapping
+--- -  = 0.0: wrap to end of window (or column)
+--- - \> 0.0: wrap at 'wrap_pos_x' position in window local space.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param wrap_local_pos_x? number default value = `0.0`
+function ImGui.PushTextWrapPos(ctx, wrap_local_pos_x) end
+
+--- **Text > Text**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param text string
+function ImGui.Text(ctx, text) end
+
+--- **Text > TextColored**
+---
+--- Shortcut for PushStyleColor(Col_Text, color); Text(text); PopStyleColor();
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param col_rgba integer
+--- @param text string
+function ImGui.TextColored(ctx, col_rgba, text) end
+
+--- **Text > TextDisabled**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param text string
+function ImGui.TextDisabled(ctx, text) end
+
+--- **Text > TextWrapped**
+---
+--- Shortcut for PushTextWrapPos(0.0); Text(text); PopTextWrapPos();.
+--- Note that this won't work on an auto-resizing window if there's no other
+--- widgets to extend the window width, yoy may need to set a size using
+--- SetNextWindowSize.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param text string
+function ImGui.TextWrapped(ctx, text) end
+
+--- **Text \& Scalar Input > InputDouble**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v number
+--- @param step? number default value = `0.0`
+--- @param step_fast? number default value = `0.0`
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @return boolean retval
+--- @return number v
+function ImGui.InputDouble(ctx, label, v, step, step_fast, format, flags) end
+
+--- **Text \& Scalar Input > InputDouble2**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 number
+--- @param v2 number
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @return boolean retval
+--- @return number v1
+--- @return number v2
+function ImGui.InputDouble2(ctx, label, v1, v2, format, flags) end
+
+--- **Text \& Scalar Input > InputDouble3**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 number
+--- @param v2 number
+--- @param v3 number
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @return boolean retval
+--- @return number v1
+--- @return number v2
+--- @return number v3
+function ImGui.InputDouble3(ctx, label, v1, v2, v3, format, flags) end
+
+--- **Text \& Scalar Input > InputDouble4**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 number
+--- @param v2 number
+--- @param v3 number
+--- @param v4 number
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @return boolean retval
+--- @return number v1
+--- @return number v2
+--- @return number v3
+--- @return number v4
+function ImGui.InputDouble4(ctx, label, v1, v2, v3, v4, format, flags) end
+
+--- **Text \& Scalar Input > InputDoubleN**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param values reaper.array
+--- @param step? number default value = `nil`
+--- @param step_fast? number default value = `nil`
+--- @param format? string default value = `"%.3f"`
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @return boolean retval
+function ImGui.InputDoubleN(ctx, label, values, step, step_fast, format, flags) end
+
+--- **Text \& Scalar Input > InputInt**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v integer
+--- @param step? integer default value = `1`
+--- @param step_fast? integer default value = `100`
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @return boolean retval
+--- @return integer v
+function ImGui.InputInt(ctx, label, v, step, step_fast, flags) end
+
+--- **Text \& Scalar Input > InputInt2**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 integer
+--- @param v2 integer
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @return boolean retval
+--- @return integer v1
+--- @return integer v2
+function ImGui.InputInt2(ctx, label, v1, v2, flags) end
+
+--- **Text \& Scalar Input > InputInt3**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 integer
+--- @param v2 integer
+--- @param v3 integer
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @return boolean retval
+--- @return integer v1
+--- @return integer v2
+--- @return integer v3
+function ImGui.InputInt3(ctx, label, v1, v2, v3, flags) end
+
+--- **Text \& Scalar Input > InputInt4**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param v1 integer
+--- @param v2 integer
+--- @param v3 integer
+--- @param v4 integer
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @return boolean retval
+--- @return integer v1
+--- @return integer v2
+--- @return integer v3
+--- @return integer v4
+function ImGui.InputInt4(ctx, label, v1, v2, v3, v4, flags) end
+
+--- **Text \& Scalar Input > InputText**
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param buf string
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @param callback? ImGui_Function default value = `nil`
+--- @return boolean retval
+--- @return string buf
+function ImGui.InputText(ctx, label, buf, flags, callback) end
+
+--- **Text \& Scalar Input > InputTextMultiline**
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param buf string
+--- @param size_w? number default value = `0.0`
+--- @param size_h? number default value = `0.0`
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @param callback? ImGui_Function default value = `nil`
+--- @return boolean retval
+--- @return string buf
+function ImGui.InputTextMultiline(ctx, label, buf, size_w, size_h, flags, callback) end
+
+--- **Text \& Scalar Input > InputTextWithHint**
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param hint string
+--- @param buf string
+--- @param flags? integer default value = `InputTextFlags_None`
+--- @param callback? ImGui_Function default value = `nil`
+--- @return boolean retval
+--- @return string buf
+function ImGui.InputTextWithHint(ctx, label, hint, buf, flags, callback) end
+
+--- **Text Filter > CreateTextFilter**
+---
+--- Valid while used every frame unless attached to a context (see Attach).
+---
+--- ---
+---
+--- **Text Filter**
+---
+--- Helper to perform simple filtering on text strings.
+--- In format "aaaaa[,bbbb][,ccccc]".
+---
+--- Filter usage:
+--- - ""         display all lines
+--- - "xxx"      display lines containing "xxx"
+--- - "xxx,yyy"  display lines containing "xxx" or "yyy"
+--- - "-xxx"     hide lines containing "xxx"
+---
+--- ---
+---
+--- @since 0.9
+--- @param default_filter? string default value = `""`
+--- @nodiscard
+--- @return ImGui_TextFilter retval
+function ImGui.CreateTextFilter(default_filter) end
+
+--- **Text Filter > TextFilter\_Clear**
+---
+--- ---
+---
+--- **Text Filter**
+---
+--- Helper to perform simple filtering on text strings.
+--- In format "aaaaa[,bbbb][,ccccc]".
+---
+--- Filter usage:
+--- - ""         display all lines
+--- - "xxx"      display lines containing "xxx"
+--- - "xxx,yyy"  display lines containing "xxx" or "yyy"
+--- - "-xxx"     hide lines containing "xxx"
+---
+--- ---
+---
+--- @since 0.5.6
+--- @param filter ImGui_TextFilter
+function ImGui.TextFilter_Clear(filter) end
+
+--- **Text Filter > TextFilter\_Draw**
+---
+--- Helper calling InputText+TextFilter_Set
+---
+--- ---
+---
+--- **Text Filter**
+---
+--- Helper to perform simple filtering on text strings.
+--- In format "aaaaa[,bbbb][,ccccc]".
+---
+--- Filter usage:
+--- - ""         display all lines
+--- - "xxx"      display lines containing "xxx"
+--- - "xxx,yyy"  display lines containing "xxx" or "yyy"
+--- - "-xxx"     hide lines containing "xxx"
+---
+--- ---
+---
+--- @since 0.5.6
+--- @param filter ImGui_TextFilter
+--- @param ctx ImGui_Context
+--- @param label? string default value = `"Filter (inc,-exc)"`
+--- @param width? number default value = `0.0`
+--- @return boolean retval
+function ImGui.TextFilter_Draw(filter, ctx, label, width) end
+
+--- **Text Filter > TextFilter\_Get**
+---
+--- ---
+---
+--- **Text Filter**
+---
+--- Helper to perform simple filtering on text strings.
+--- In format "aaaaa[,bbbb][,ccccc]".
+---
+--- Filter usage:
+--- - ""         display all lines
+--- - "xxx"      display lines containing "xxx"
+--- - "xxx,yyy"  display lines containing "xxx" or "yyy"
+--- - "-xxx"     hide lines containing "xxx"
+---
+--- ---
+---
+--- @since 0.5.6
+--- @param filter ImGui_TextFilter
+--- @return string retval
+function ImGui.TextFilter_Get(filter) end
+
+--- **Text Filter > TextFilter\_IsActive**
+---
+--- ---
+---
+--- **Text Filter**
+---
+--- Helper to perform simple filtering on text strings.
+--- In format "aaaaa[,bbbb][,ccccc]".
+---
+--- Filter usage:
+--- - ""         display all lines
+--- - "xxx"      display lines containing "xxx"
+--- - "xxx,yyy"  display lines containing "xxx" or "yyy"
+--- - "-xxx"     hide lines containing "xxx"
+---
+--- ---
+---
+--- @since 0.5.6
+--- @param filter ImGui_TextFilter
+--- @return boolean retval
+function ImGui.TextFilter_IsActive(filter) end
+
+--- **Text Filter > TextFilter\_PassFilter**
+---
+--- ---
+---
+--- **Text Filter**
+---
+--- Helper to perform simple filtering on text strings.
+--- In format "aaaaa[,bbbb][,ccccc]".
+---
+--- Filter usage:
+--- - ""         display all lines
+--- - "xxx"      display lines containing "xxx"
+--- - "xxx,yyy"  display lines containing "xxx" or "yyy"
+--- - "-xxx"     hide lines containing "xxx"
+---
+--- ---
+---
+--- @since 0.5.6
+--- @param filter ImGui_TextFilter
+--- @param text string
+--- @return boolean retval
+function ImGui.TextFilter_PassFilter(filter, text) end
+
+--- **Text Filter > TextFilter\_Set**
+---
+--- ---
+---
+--- **Text Filter**
+---
+--- Helper to perform simple filtering on text strings.
+--- In format "aaaaa[,bbbb][,ccccc]".
+---
+--- Filter usage:
+--- - ""         display all lines
+--- - "xxx"      display lines containing "xxx"
+--- - "xxx,yyy"  display lines containing "xxx" or "yyy"
+--- - "-xxx"     hide lines containing "xxx"
+---
+--- ---
+---
+--- @since 0.5.6
+--- @param filter ImGui_TextFilter
+--- @param filter_text string
+function ImGui.TextFilter_Set(filter, filter_text) end
+
+--- **Tree Node > CollapsingHeader**
+---
+--- Returns true when opened but do not indent nor push into the ID stack
+--- (because of the TreeNodeFlags_NoTreePushOnOpen flag).
+---
+--- This is basically the same as calling TreeNode(label, TreeNodeFlags_CollapsingHeader).
+--- You can remove the _NoTreePushOnOpen flag if you want behavior closer to normal
+--- TreeNode.
+---
+--- When 'visible' is provided: if 'true' display an additional small close button
+--- on upper right of the header which will set the bool to false when clicked,
+--- if 'false' don't display the header.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param p_visible? boolean default value = `nil`
+--- @param flags? integer default value = `TreeNodeFlags_None`
+--- @return boolean retval
+--- @return boolean p_visible
+function ImGui.CollapsingHeader(ctx, label, p_visible, flags) end
+
+--- **Tree Node > GetTreeNodeToLabelSpacing**
+---
+--- Horizontal distance preceding label when using TreeNode*() or Bullet()
+--- == (GetFontSize + StyleVar_FramePadding.x*2) for a regular unframed TreeNode.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetTreeNodeToLabelSpacing(ctx) end
+
+--- **Tree Node > IsItemToggledOpen**
+---
+--- Was the last item open state toggled? Set by TreeNode.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsItemToggledOpen(ctx) end
+
+--- **Tree Node > SetNextItemOpen**
+---
+--- Set next TreeNode/CollapsingHeader open state.
+--- Can also be done with the TreeNodeFlags_DefaultOpen flag.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param is_open boolean
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetNextItemOpen(ctx, is_open, cond) end
+
+--- **Tree Node > TreeNode**
+---
+--- TreeNode functions return true when the node is open, in which case you need
+--- to also call TreePop when you are finished displaying the tree node contents.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param label string
+--- @param flags? integer default value = `TreeNodeFlags_None`
+--- @return boolean retval
+function ImGui.TreeNode(ctx, label, flags) end
+
+--- **Tree Node > TreeNodeEx**
+---
+--- Helper variation to easily decorelate the id from the displayed string.
+--- Read the [FAQ](https://dearimgui.com/faq) about why and how to use ID.
+--- To align arbitrary text at the same level as a TreeNode you can use Bullet.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param label string
+--- @param flags? integer default value = `TreeNodeFlags_None`
+--- @return boolean retval
+function ImGui.TreeNodeEx(ctx, str_id, label, flags) end
+
+--- **Tree Node > TreePop**
+---
+--- Unindent()+PopID()
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.TreePop(ctx) end
+
+--- **Tree Node > TreePush**
+---
+--- Indent()+PushID(). Already called by TreeNode when returning true,
+--- but you can call TreePush/TreePop yourself if desired.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id string
+function ImGui.TreePush(ctx, str_id) end
+
+--- **Utility > GetBuiltinPath**
+---
+--- Returns the path to the directory containing imgui.lua, imgui.py and gfx2imgui.lua.
+---
+--- ---
+---
+--- @since 0.9
+--- @return string retval
+function ImGui.GetBuiltinPath() end
+
+--- **Utility > GetVersion**
+---
+--- ---
+---
+--- @since 0.7
+--- @return string imgui_version
+--- @return integer imgui_version_num
+--- @return string reaimgui_version
+function ImGui.GetVersion() end
+
+--- **Utility > NumericLimits\_Double**
+---
+--- Returns DBL_MIN and DBL_MAX for this system.
+---
+--- ---
+---
+--- @since 0.8.4
+--- @return number min
+--- @return number max
+function ImGui.NumericLimits_Double() end
+
+--- **Utility > NumericLimits\_Float**
+---
+--- Returns FLT_MIN and FLT_MAX for this system.
+---
+--- ---
+---
+--- @since 0.4
+--- @return number min
+--- @return number max
+function ImGui.NumericLimits_Float() end
+
+--- **Utility > NumericLimits\_Int**
+---
+--- Returns INT_MIN and INT_MAX for this system.
+---
+--- ---
+---
+--- @since 0.8.4
+--- @return integer min
+--- @return integer max
+function ImGui.NumericLimits_Int() end
+
+--- **Utility > PointConvertNative**
+---
+--- Convert a position from the current platform's native coordinate position
+--- system to ReaImGui global coordinates (or vice versa).
+---
+--- This effectively flips the Y coordinate on macOS and applies HiDPI scaling on
+--- Windows and Linux.
+---
+--- ---
+---
+--- @since 0.5.1
+--- @param ctx ImGui_Context
+--- @param x number
+--- @param y number
+--- @param to_native? boolean default value = `false`
+--- @return number x
+--- @return number y
+function ImGui.PointConvertNative(ctx, x, y, to_native) end
+
+--- **Utility > ProgressBar**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param fraction number
+--- @param size_arg_w? number default value = `-FLT_MIN`
+--- @param size_arg_h? number default value = `0.0`
+--- @param overlay? string default value = `nil`
+function ImGui.ProgressBar(ctx, fraction, size_arg_w, size_arg_h, overlay) end
+
+--- **Utility > ValidatePtr**
+---
+--- Return whether the given pointer is a valid instance of one of the following
+--- types (indentation represents inheritance):
+---
+--- - ImGui_Context*
+--- - ImGui_DrawList*
+--- - ImGui_DrawListSplitter*
+--- - ImGui_Font*
+--- - ImGui_Function*
+--- - ImGui_Image*
+---   - ImGui_ImageSet*
+--- - ImGui_ListClipper*
+--- - ImGui_TextFilter*
+--- - ImGui_Viewport*
+---
+--- ---
+---
+--- @since 0.3
+--- @param pointer userdata
+--- @param type string
+--- @return boolean retval
+function ImGui.ValidatePtr(pointer, type) end
+
+--- **Utility > Clipboard > GetClipboardText**
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return string retval
+function ImGui.GetClipboardText(ctx) end
+
+--- **Utility > Clipboard > SetClipboardText**
+---
+--- See also the LogToClipboard function to capture GUI into clipboard,
+--- or easily output text data to the clipboard.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param text string
+function ImGui.SetClipboardText(ctx, text) end
+
+--- **Utility > Color Conversion > ColorConvertDouble4ToU32**
+---
+--- Pack 0..1 RGBA values into a 32-bit integer (0xRRGGBBAA).
+---
+--- ---
+---
+--- @since 0.7
+--- @param r number
+--- @param g number
+--- @param b number
+--- @param a number
+--- @return integer retval
+function ImGui.ColorConvertDouble4ToU32(r, g, b, a) end
+
+--- **Utility > Color Conversion > ColorConvertHSVtoRGB**
+---
+--- Convert HSV values (0..1) into RGB (0..1).
+---
+--- ---
+---
+--- @since 0.7
+--- @param h number
+--- @param s number
+--- @param v number
+--- @return number r
+--- @return number g
+--- @return number b
+function ImGui.ColorConvertHSVtoRGB(h, s, v) end
+
+--- **Utility > Color Conversion > ColorConvertNative**
+---
+--- Convert a native color coming from REAPER or 0xRRGGBB to native.
+--- This swaps the red and blue channels on Windows.
+---
+--- ---
+---
+--- @since 0.3
+--- @param rgb integer
+--- @return integer retval
+function ImGui.ColorConvertNative(rgb) end
+
+--- **Utility > Color Conversion > ColorConvertRGBtoHSV**
+---
+--- Convert RGB values (0..1) into HSV (0..1).
+---
+--- ---
+---
+--- @since 0.7
+--- @param r number
+--- @param g number
+--- @param b number
+--- @return number h
+--- @return number s
+--- @return number v
+function ImGui.ColorConvertRGBtoHSV(r, g, b) end
+
+--- **Utility > Color Conversion > ColorConvertU32ToDouble4**
+---
+--- Unpack a 32-bit integer (0xRRGGBBAA) into separate RGBA values (0..1).
+---
+--- ---
+---
+--- @since 0.7
+--- @param rgba integer
+--- @return number r
+--- @return number g
+--- @return number b
+--- @return number a
+function ImGui.ColorConvertU32ToDouble4(rgba) end
+
+--- **Utility > ID Stack\/Scope > PopID**
+---
+--- Pop from the ID stack.
+---
+--- ---
+---
+--- **Utility > ID Stack\/Scope**
+---
+--- Read the [FAQ](https://dearimgui.com/faq) for more details about how IDs are
+--- handled in dear imgui.
+---
+--- - Those questions are answered and impacted by understanding of the ID stack system:
+---   - "Q: Why is my widget not reacting when I click on it?"
+---   - "Q: How can I have widgets with an empty label?"
+---   - "Q: How can I have multiple widgets with the same label?"
+--- - Short version: ID are hashes of the entire ID stack. If you are creating widgets
+---   in a loop you most likely want to push a unique identifier (e.g. object pointer,
+---   loop index) to uniquely differentiate them.
+--- - You can also use the "Label##foobar" syntax within widget label to distinguish
+---   them from each others.
+--- - We use the "label"/"name" terminology to denote a string that will be
+---   displayed + used as an ID, whereas "str_id" denote a string that is only used
+---   as an ID and not normally displayed.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.PopID(ctx) end
+
+--- **Utility > ID Stack\/Scope > PushID**
+---
+--- Push string into the ID stack.
+---
+--- ---
+---
+--- **Utility > ID Stack\/Scope**
+---
+--- Read the [FAQ](https://dearimgui.com/faq) for more details about how IDs are
+--- handled in dear imgui.
+---
+--- - Those questions are answered and impacted by understanding of the ID stack system:
+---   - "Q: Why is my widget not reacting when I click on it?"
+---   - "Q: How can I have widgets with an empty label?"
+---   - "Q: How can I have multiple widgets with the same label?"
+--- - Short version: ID are hashes of the entire ID stack. If you are creating widgets
+---   in a loop you most likely want to push a unique identifier (e.g. object pointer,
+---   loop index) to uniquely differentiate them.
+--- - You can also use the "Label##foobar" syntax within widget label to distinguish
+---   them from each others.
+--- - We use the "label"/"name" terminology to denote a string that will be
+---   displayed + used as an ID, whereas "str_id" denote a string that is only used
+---   as an ID and not normally displayed.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param str_id string
+function ImGui.PushID(ctx, str_id) end
+
+--- **Utility > Logging\/Capture > LogFinish**
+---
+--- Stop logging (close file, etc.)
+---
+--- ---
+---
+--- **Utility > Logging\/Capture**
+---
+--- All text output from the interface can be captured into tty/file/clipboard.
+--- By default, tree nodes are automatically opened during logging.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.LogFinish(ctx) end
+
+--- **Utility > Logging\/Capture > LogText**
+---
+--- Pass text data straight to log (without being displayed)
+---
+--- ---
+---
+--- **Utility > Logging\/Capture**
+---
+--- All text output from the interface can be captured into tty/file/clipboard.
+--- By default, tree nodes are automatically opened during logging.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param text string
+function ImGui.LogText(ctx, text) end
+
+--- **Utility > Logging\/Capture > LogToClipboard**
+---
+--- Start logging all text output from the interface to the OS clipboard.
+--- See also SetClipboardText.
+---
+--- ---
+---
+--- **Utility > Logging\/Capture**
+---
+--- All text output from the interface can be captured into tty/file/clipboard.
+--- By default, tree nodes are automatically opened during logging.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param auto_open_depth? integer default value = `-1`
+function ImGui.LogToClipboard(ctx, auto_open_depth) end
+
+--- **Utility > Logging\/Capture > LogToFile**
+---
+--- Start logging all text output from the interface to a file.
+--- The data is saved to $resource_path/imgui_log.txt if filename is nil.
+---
+--- ---
+---
+--- **Utility > Logging\/Capture**
+---
+--- All text output from the interface can be captured into tty/file/clipboard.
+--- By default, tree nodes are automatically opened during logging.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param auto_open_depth? integer default value = `-1`
+--- @param filename? string default value = `nil`
+function ImGui.LogToFile(ctx, auto_open_depth, filename) end
+
+--- **Utility > Logging\/Capture > LogToTTY**
+---
+--- Start logging all text output from the interface to the TTY (stdout).
+---
+--- ---
+---
+--- **Utility > Logging\/Capture**
+---
+--- All text output from the interface can be captured into tty/file/clipboard.
+--- By default, tree nodes are automatically opened during logging.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param auto_open_depth? integer default value = `-1`
+function ImGui.LogToTTY(ctx, auto_open_depth) end
+
+--- **Viewport > GetMainViewport**
+---
+--- Currently represents REAPER's main window (arrange view).
+--- WARNING: This may change or be removed in the future.
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return ImGui_Viewport retval
+function ImGui.GetMainViewport(ctx) end
+
+--- **Viewport > GetWindowViewport**
+---
+--- Get viewport currently associated to the current window.
+---
+--- ---
+---
+--- @since 0.7
+--- @param ctx ImGui_Context
+--- @return ImGui_Viewport retval
+function ImGui.GetWindowViewport(ctx) end
+
+--- **Viewport > Viewport\_GetCenter**
+---
+--- Center of the viewport.
+---
+--- ---
+---
+--- @since 0.1
+--- @param viewport ImGui_Viewport
+--- @return number x
+--- @return number y
+function ImGui.Viewport_GetCenter(viewport) end
+
+--- **Viewport > Viewport\_GetPos**
+---
+--- Main Area: Position of the viewport
+---
+--- ---
+---
+--- @since 0.1
+--- @param viewport ImGui_Viewport
+--- @return number x
+--- @return number y
+function ImGui.Viewport_GetPos(viewport) end
+
+--- **Viewport > Viewport\_GetSize**
+---
+--- Main Area: Size of the viewport.
+---
+--- ---
+---
+--- @since 0.1
+--- @param viewport ImGui_Viewport
+--- @return number w
+--- @return number h
+function ImGui.Viewport_GetSize(viewport) end
+
+--- **Viewport > Work Area > Viewport\_GetWorkCenter**
+---
+--- Center of the viewport's work area.
+---
+--- ---
+---
+--- **Viewport > Work Area**
+---
+--- Viewport minus task bars, menu bars, status bars
+---
+--- ---
+---
+--- @since 0.1
+--- @param viewport ImGui_Viewport
+--- @return number x
+--- @return number y
+function ImGui.Viewport_GetWorkCenter(viewport) end
+
+--- **Viewport > Work Area > Viewport\_GetWorkPos**
+---
+--- >= Viewport_GetPos
+---
+--- ---
+---
+--- **Viewport > Work Area**
+---
+--- Viewport minus task bars, menu bars, status bars
+---
+--- ---
+---
+--- @since 0.1
+--- @param viewport ImGui_Viewport
+--- @return number x
+--- @return number y
+function ImGui.Viewport_GetWorkPos(viewport) end
+
+--- **Viewport > Work Area > Viewport\_GetWorkSize**
+---
+--- <= Viewport_GetSize
+---
+--- ---
+---
+--- **Viewport > Work Area**
+---
+--- Viewport minus task bars, menu bars, status bars
+---
+--- ---
+---
+--- @since 0.1
+--- @param viewport ImGui_Viewport
+--- @return number w
+--- @return number h
+function ImGui.Viewport_GetWorkSize(viewport) end
+
+--- **Window > Begin**
+---
+--- Push window to the stack and start appending to it.
+---
+--- - Passing true to 'p_open' shows a window-closing widget in the upper-right
+---   corner of the window, which clicking will set the boolean to false when returned.
+--- - You may append multiple times to the same window during the same frame by
+---   calling Begin()/End() pairs multiple times. Some information such as 'flags'
+---   or 'p_open' will only be considered by the first call to Begin().
+--- - Begin() return false to indicate the window is collapsed or fully clipped,
+---   so you may early out and omit submitting anything to the window.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @param name string
+--- @param p_open? boolean default value = `nil`
+--- @param flags? integer default value = `WindowFlags_None`
+--- @nodiscard
+--- @return boolean retval
+--- @return boolean p_open
+function ImGui.Begin(ctx, name, p_open, flags) end
+
+--- **Window > End**
+---
+--- Pop window from the stack. See Begin.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+function ImGui.End(ctx) end
+
+--- **Window > Child Windows > BeginChild**
+---
+--- Manual sizing (each axis can use a different setting e.g. ImVec2(0.0f, 400.0f)):
+--- - = 0.0: use remaining parent window size for this axis
+--- - \> 0.0: use specified size for this axis
+--- - < 0.0: right/bottom-align to specified distance from available content boundaries
+---
+--- Specifying ChildFlags_AutoResizeX or ChildFlags_AutoResizeY makes the sizing
+--- automatic based on child contents.
+---
+--- Combining both ChildFlags_AutoResizeX _and_ ChildFlags_AutoResizeY defeats
+--- purpose of a scrolling region and is NOT recommended.
+---
+--- Returns false to indicate the window is collapsed or fully clipped.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param str_id string
+--- @param size_w? number default value = `0.0`
+--- @param size_h? number default value = `0.0`
+--- @param child_flags? integer default value = `ChildFlags_None`
+--- @param window_flags? integer default value = `WindowFlags_None`
+--- @nodiscard
+--- @return boolean retval
+function ImGui.BeginChild(ctx, str_id, size_w, size_h, child_flags, window_flags) end
+
+--- **Window > Child Windows > EndChild**
+---
+--- See BeginChild.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.8
+--- @param ctx ImGui_Context
+function ImGui.EndChild(ctx) end
+
+--- **Window > Content Region > GetContentRegionAvail**
+---
+--- == GetContentRegionMax() - GetCursorPos()
+---
+--- ---
+---
+--- **Window > Content Region**
+---
+--- Retrieve available space from a given point.
+--- GetContentRegionAvail() is frequently useful.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetContentRegionAvail(ctx) end
+
+--- **Window > Content Region > GetContentRegionMax**
+---
+--- Current content boundaries (typically window boundaries including scrolling,
+--- or current column boundaries), in windows coordinates.
+---
+--- ---
+---
+--- **Window > Content Region**
+---
+--- Retrieve available space from a given point.
+--- GetContentRegionAvail() is frequently useful.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetContentRegionMax(ctx) end
+
+--- **Window > Content Region > GetWindowContentRegionMax**
+---
+--- Content boundaries max (roughly (0,0)+Size-Scroll) where Size can be
+--- overridden with SetNextWindowContentSize, in window coordinates.
+---
+--- ---
+---
+--- **Window > Content Region**
+---
+--- Retrieve available space from a given point.
+--- GetContentRegionAvail() is frequently useful.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetWindowContentRegionMax(ctx) end
+
+--- **Window > Content Region > GetWindowContentRegionMin**
+---
+--- Content boundaries min (roughly (0,0)-Scroll), in window coordinates.
+---
+--- ---
+---
+--- **Window > Content Region**
+---
+--- Retrieve available space from a given point.
+--- GetContentRegionAvail() is frequently useful.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetWindowContentRegionMin(ctx) end
+
+--- **Window > Debug Windows > ShowAboutWindow**
+---
+--- Create About window.
+--- Display ReaImGui version, Dear ImGui version, credits and build/system information.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5.4
+--- @param ctx ImGui_Context
+--- @param p_open? boolean default value = `nil`
+--- @return boolean p_open
+function ImGui.ShowAboutWindow(ctx, p_open) end
+
+--- **Window > Debug Windows > ShowDebugLogWindow**
+---
+--- Create Debug Log window. display a simplified log of important dear imgui events.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.7
+--- @param ctx ImGui_Context
+--- @param p_open? boolean default value = `nil`
+--- @return boolean p_open
+function ImGui.ShowDebugLogWindow(ctx, p_open) end
+
+--- **Window > Debug Windows > ShowIDStackToolWindow**
+---
+--- Create Stack Tool window. Hover items with mouse to query information about
+--- the source of their unique ID.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param p_open? boolean default value = `nil`
+--- @return boolean p_open
+function ImGui.ShowIDStackToolWindow(ctx, p_open) end
+
+--- **Window > Debug Windows > ShowMetricsWindow**
+---
+--- Create Metrics/Debugger window.
+--- Display Dear ImGui internals: windows, draw commands, various internal state, etc.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param p_open? boolean default value = `nil`
+--- @return boolean p_open
+function ImGui.ShowMetricsWindow(ctx, p_open) end
+
+--- **Window > Docking > GetWindowDockID**
+---
+--- ---
+---
+--- **Window > Docking**
+---
+--- Dock windows into other windows or in REAPER dockers.
+---
+--- Dock IDs are:
+--- - 0 = undocked
+--- - -1 to -16 = REAPER docker index
+--- - \> 0 = Dear ImGui dockspace ID (when the user docked the window into another one).
+---
+--- Drag from window title bar or their tab to dock/undock. Hold SHIFT to disable docking.
+--- Drag from window menu button (upper-left button) to undock an entire node (all windows).
+--- DockingWithShift == true, you instead need to hold SHIFT to _enable_ docking.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @return integer retval
+function ImGui.GetWindowDockID(ctx) end
+
+--- **Window > Docking > IsWindowDocked**
+---
+--- Is current window docked into another window or a REAPER docker?
+---
+--- ---
+---
+--- **Window > Docking**
+---
+--- Dock windows into other windows or in REAPER dockers.
+---
+--- Dock IDs are:
+--- - 0 = undocked
+--- - -1 to -16 = REAPER docker index
+--- - \> 0 = Dear ImGui dockspace ID (when the user docked the window into another one).
+---
+--- Drag from window title bar or their tab to dock/undock. Hold SHIFT to disable docking.
+--- Drag from window menu button (upper-left button) to undock an entire node (all windows).
+--- DockingWithShift == true, you instead need to hold SHIFT to _enable_ docking.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsWindowDocked(ctx) end
+
+--- **Window > Docking > SetNextWindowDockID**
+---
+--- ---
+---
+--- **Window > Docking**
+---
+--- Dock windows into other windows or in REAPER dockers.
+---
+--- Dock IDs are:
+--- - 0 = undocked
+--- - -1 to -16 = REAPER docker index
+--- - \> 0 = Dear ImGui dockspace ID (when the user docked the window into another one).
+---
+--- Drag from window title bar or their tab to dock/undock. Hold SHIFT to disable docking.
+--- Drag from window menu button (upper-left button) to undock an entire node (all windows).
+--- DockingWithShift == true, you instead need to hold SHIFT to _enable_ docking.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @param dock_id integer
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetNextWindowDockID(ctx, dock_id, cond) end
+
+--- **Window > Properties > GetWindowDpiScale**
+---
+--- Get DPI scale currently associated to the current window's viewport
+--- (1.0 = 96 DPI).
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.7.2
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetWindowDpiScale(ctx) end
+
+--- **Window > Properties > GetWindowHeight**
+---
+--- Get current window height (shortcut for (GetWindowSize().h).
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetWindowHeight(ctx) end
+
+--- **Window > Properties > GetWindowPos**
+---
+--- Get current window position in screen space (note: it is unlikely you need to
+--- use this. Consider using current layout pos instead, GetCursorScreenPos()).
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number x
+--- @return number y
+function ImGui.GetWindowPos(ctx) end
+
+--- **Window > Properties > GetWindowSize**
+---
+--- Get current window size (note: it is unlikely you need to use this.
+--- Consider using GetCursorScreenPos() and e.g. GetContentRegionAvail() instead)
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number w
+--- @return number h
+function ImGui.GetWindowSize(ctx) end
+
+--- **Window > Properties > GetWindowWidth**
+---
+--- Get current window width (shortcut for (GetWindowSize().w).
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetWindowWidth(ctx) end
+
+--- **Window > Properties > IsWindowAppearing**
+---
+--- Use after Begin/BeginPopup/BeginPopupModal to tell if a window just opened.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return boolean retval
+function ImGui.IsWindowAppearing(ctx) end
+
+--- **Window > Properties > IsWindowFocused**
+---
+--- Is current window focused? or its root/child, depending on flags.
+--- See flags for options.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param flags? integer default value = `FocusedFlags_None`
+--- @return boolean retval
+function ImGui.IsWindowFocused(ctx, flags) end
+
+--- **Window > Properties > IsWindowHovered**
+---
+--- Is current window hovered and hoverable (e.g. not blocked by a popup/modal)?
+--- See HoveredFlags_* for options.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param flags? integer default value = `HoveredFlags_None`
+--- @return boolean retval
+function ImGui.IsWindowHovered(ctx, flags) end
+
+--- **Window > Properties > SetNextWindowBgAlpha**
+---
+--- Set next window background color alpha. Helper to easily override the Alpha
+--- component of Col_WindowBg/Col_ChildBg/Col_PopupBg.
+--- You may also use WindowFlags_NoBackground for a fully transparent window.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param alpha number
+function ImGui.SetNextWindowBgAlpha(ctx, alpha) end
+
+--- **Window > Properties > SetNextWindowCollapsed**
+---
+--- Set next window collapsed state.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param collapsed boolean
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetNextWindowCollapsed(ctx, collapsed, cond) end
+
+--- **Window > Properties > SetNextWindowContentSize**
+---
+--- Set next window content size (~ scrollable client area, which enforce the
+--- range of scrollbars). Not including window decorations (title bar, menu bar,
+--- etc.) nor StyleVar_WindowPadding. set an axis to 0.0 to leave it automatic.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param size_w number
+--- @param size_h number
+function ImGui.SetNextWindowContentSize(ctx, size_w, size_h) end
+
+--- **Window > Properties > SetNextWindowFocus**
+---
+--- Set next window to be focused / top-most.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+function ImGui.SetNextWindowFocus(ctx) end
+
+--- **Window > Properties > SetNextWindowPos**
+---
+--- Set next window position. Use pivot=(0.5,0.5) to center on given point, etc.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param pos_x number
+--- @param pos_y number
+--- @param cond? integer default value = `Cond_Always`
+--- @param pivot_x? number default value = `0.0`
+--- @param pivot_y? number default value = `0.0`
+function ImGui.SetNextWindowPos(ctx, pos_x, pos_y, cond, pivot_x, pivot_y) end
+
+--- **Window > Properties > SetNextWindowScroll**
+---
+--- Set next window scrolling value (use < 0.0 to not affect a given axis).
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param scroll_x number
+--- @param scroll_y number
+function ImGui.SetNextWindowScroll(ctx, scroll_x, scroll_y) end
+
+--- **Window > Properties > SetNextWindowSize**
+---
+--- Set next window size. set axis to 0.0 to force an auto-fit on this axis.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param size_w number
+--- @param size_h number
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetNextWindowSize(ctx, size_w, size_h, cond) end
+
+--- **Window > Properties > SetNextWindowSizeConstraints**
+---
+--- Set next window size limits. Use 0.0 or FLT_MAX (second return value of
+--- NumericLimits_Float) if you don't want limits.
+---
+--- Use -1 for both min and max of same axis to preserve current size (which itself
+--- is a constraint).
+---
+--- Use callback to apply non-trivial programmatic constraints.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.8.5
+--- @param ctx ImGui_Context
+--- @param size_min_w number
+--- @param size_min_h number
+--- @param size_max_w number
+--- @param size_max_h number
+--- @param custom_callback? ImGui_Function default value = `nil`
+function ImGui.SetNextWindowSizeConstraints(ctx, size_min_w, size_min_h, size_max_w, size_max_h, custom_callback) end
+
+--- **Window > Properties > SetWindowCollapsed**
+---
+--- (Not recommended) Set current window collapsed state.
+--- Prefer using SetNextWindowCollapsed.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @param collapsed boolean
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetWindowCollapsed(ctx, collapsed, cond) end
+
+--- **Window > Properties > SetWindowCollapsedEx**
+---
+--- Set named window collapsed state.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @param name string
+--- @param collapsed boolean
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetWindowCollapsedEx(ctx, name, collapsed, cond) end
+
+--- **Window > Properties > SetWindowFocus**
+---
+--- (Not recommended) Set current window to be focused / top-most.
+--- Prefer using SetNextWindowFocus.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+function ImGui.SetWindowFocus(ctx) end
+
+--- **Window > Properties > SetWindowFocusEx**
+---
+--- Set named window to be focused / top-most. Use an empty name to remove focus.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @param name string
+function ImGui.SetWindowFocusEx(ctx, name) end
+
+--- **Window > Properties > SetWindowPos**
+---
+--- (Not recommended) Set current window position - call within Begin/End.
+--- Prefer using SetNextWindowPos, as this may incur tearing and minor side-effects.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @param pos_x number
+--- @param pos_y number
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetWindowPos(ctx, pos_x, pos_y, cond) end
+
+--- **Window > Properties > SetWindowPosEx**
+---
+--- Set named window position.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @param name string
+--- @param pos_x number
+--- @param pos_y number
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetWindowPosEx(ctx, name, pos_x, pos_y, cond) end
+
+--- **Window > Properties > SetWindowSize**
+---
+--- (Not recommended) Set current window size - call within Begin/End.
+--- Set size_w and size_h to 0 to force an auto-fit.
+--- Prefer using SetNextWindowSize, as this may incur tearing and minor side-effects.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @param size_w number
+--- @param size_h number
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetWindowSize(ctx, size_w, size_h, cond) end
+
+--- **Window > Properties > SetWindowSizeEx**
+---
+--- Set named window size. Set axis to 0.0 to force an auto-fit on this axis.
+---
+--- ---
+---
+--- **Window > Properties**
+---
+--- Prefer using SetNextWindow* functions (before Begin) rather that SetWindow* functions
+--- (after Begin).
+---
+--- 'Current window' = the window we are appending into while inside a Begin()/End()
+--- block. 'Next window' = next window we will Begin() into.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.5
+--- @param ctx ImGui_Context
+--- @param name string
+--- @param size_w number
+--- @param size_h number
+--- @param cond? integer default value = `Cond_Always`
+function ImGui.SetWindowSizeEx(ctx, name, size_w, size_h, cond) end
+
+--- **Window > Scrolling > GetScrollMaxX**
+---
+--- Get maximum scrolling amount ~~ ContentSize.x - WindowSize.x - DecorationsSize.x
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetScrollMaxX(ctx) end
+
+--- **Window > Scrolling > GetScrollMaxY**
+---
+--- Get maximum scrolling amount ~~ ContentSize.y - WindowSize.y - DecorationsSize.y
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetScrollMaxY(ctx) end
+
+--- **Window > Scrolling > GetScrollX**
+---
+--- Get scrolling amount [0 .. GetScrollMaxX()]
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetScrollX(ctx) end
+
+--- **Window > Scrolling > GetScrollY**
+---
+--- Get scrolling amount [0 .. GetScrollMaxY()]
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @return number retval
+function ImGui.GetScrollY(ctx) end
+
+--- **Window > Scrolling > SetScrollFromPosX**
+---
+--- Adjust scrolling amount to make given position visible.
+--- Generally GetCursorStartPos() + offset to compute a valid position.
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param local_x number
+--- @param center_x_ratio? number default value = `0.5`
+function ImGui.SetScrollFromPosX(ctx, local_x, center_x_ratio) end
+
+--- **Window > Scrolling > SetScrollFromPosY**
+---
+--- Adjust scrolling amount to make given position visible.
+--- Generally GetCursorStartPos() + offset to compute a valid position.
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param local_y number
+--- @param center_y_ratio? number default value = `0.5`
+function ImGui.SetScrollFromPosY(ctx, local_y, center_y_ratio) end
+
+--- **Window > Scrolling > SetScrollHereX**
+---
+--- Adjust scrolling amount to make current cursor position visible.
+--- center_x_ratio=0.0: left, 0.5: center, 1.0: right.
+--- When using to make a "default/current item" visible,
+--- consider using SetItemDefaultFocus instead.
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param center_x_ratio? number default value = `0.5`
+function ImGui.SetScrollHereX(ctx, center_x_ratio) end
+
+--- **Window > Scrolling > SetScrollHereY**
+---
+--- Adjust scrolling amount to make current cursor position visible.
+--- center_y_ratio=0.0: top, 0.5: center, 1.0: bottom.
+--- When using to make a "default/current item" visible,
+--- consider using SetItemDefaultFocus instead.
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param center_y_ratio? number default value = `0.5`
+function ImGui.SetScrollHereY(ctx, center_y_ratio) end
+
+--- **Window > Scrolling > SetScrollX**
+---
+--- Set scrolling amount [0 .. GetScrollMaxX()]
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param scroll_x number
+function ImGui.SetScrollX(ctx, scroll_x) end
+
+--- **Window > Scrolling > SetScrollY**
+---
+--- Set scrolling amount [0 .. GetScrollMaxY()]
+---
+--- ---
+---
+--- **Window > Scrolling**
+---
+--- Any change of Scroll will be applied at the beginning of next frame in the
+--- first call to Begin().
+---
+--- You may instead use SetNextWindowScroll() prior to calling Begin() to avoid this
+--- delay, as an alternative to using SetScrollX()/SetScrollY().
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.1
+--- @param ctx ImGui_Context
+--- @param scroll_y number
+function ImGui.SetScrollY(ctx, scroll_y) end
+
+--- @param api_version string
+--- @return ImGui
+return function(api_version) end

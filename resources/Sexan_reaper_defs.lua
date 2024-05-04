@@ -1864,8 +1864,8 @@ function reaper.GetSetProjectInfo(project, desc, value, is_set) end
 ---RENDER_STATS : (read-only) semicolon separated list of statistics for the most recently rendered files. call with valuestr="XXX" to run an action (for example, "42437"=dry run render selected items) before returning statistics.<br>
 ---RENDER_FORMAT : base64-encoded sink configuration (see project files, etc). Callers can also pass a simple 4-byte string (non-base64-encoded), e.g. "evaw" or "l3pm", to use default settings for that sink type.<br>
 ---RENDER_FORMAT2 : base64-encoded secondary sink configuration. Callers can also pass a simple 4-byte string (non-base64-encoded), e.g. "evaw" or "l3pm", to use default settings for that sink type, or "" to disable secondary render.<br>
----    Formats available on this machine:<br>
----    <code>"wave" "aiff" "caff" "raw " "iso " "ddp " "flac" "mp3l" "oggv" "OggS" "FFMP" "WMF " "GIF " "LCF " "wvpk" </code>
+---    Formats available on this machine:<br>
+---    <code>"wave" "aiff" "caff" "raw " "iso " "ddp " "flac" "mp3l" "oggv" "OggS" "FFMP" "WMF " "GIF " "LCF " "wvpk" </code>
 ---@param project ReaProject|nil|0
 ---@param desc string
 ---@param valuestrNeedBig string
@@ -3120,6 +3120,10 @@ function reaper.MuteAllTracks(mute) end
 ---@param sr_right integer
 ---@param sr_bot integer
 ---@param wantWorkArea boolean
+---@return integer left
+---@return integer top
+---@return integer right
+---@return integer bottom
 function reaper.my_getViewport(r_left, r_top, r_right, r_bot, sr_left, sr_top, sr_right, sr_bot, wantWorkArea) end
 
 ---Get the command ID number for named command that was registered by an extension such as "_SWS_ABOUT" or "_113088d11ae641c193a2b7ede3041ad5" for a ReaScript or a custom action.
@@ -10117,4 +10121,3 @@ function reaper_array.resize(size) end
 ---@param size? integer
 ---@return table new_table
 function reaper_array.table(offset, size) end
-

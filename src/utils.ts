@@ -176,6 +176,14 @@ export const updateWorkspaceSettings = () => {
           1024,
           vscode.ConfigurationTarget.Workspace
         )
+        /** 
+         * Disable LuaPanda LS capability (sumneko is primary LS), use it only as debugger (workspace only)
+         * */        
+        workspace_configuration.update(
+          "lua_analyzer.codeLinting.enable",
+          false,
+          vscode.ConfigurationTarget.Workspace
+        )
 
         // use the corresponding imgui version types file, and the reascript api types file.
         const reaperDefsPath = `${extensionContext.extensionPath}/resources/Sexan_reaper_defs.lua`;

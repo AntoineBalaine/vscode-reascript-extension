@@ -18,7 +18,8 @@
     "sumneko.lua"
   ],
   "categories": [
-    "Other"
+    "Other",
+    "Snippets"
   ],
   "activationEvents": [
     "onLanguage:lua",
@@ -42,6 +43,12 @@
         }
       }
     },
+    "snippets": [
+			{
+			  "language": "lua",
+			  "path": "./debug_snippet.json"
+			}
+		  ],
     "languages": [
       {
         "id": "lua",

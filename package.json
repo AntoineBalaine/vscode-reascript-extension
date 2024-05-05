@@ -1,7 +1,7 @@
 {
   "name": "reascript-docs",
   "displayName": "REAPER ReaScript",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "publisher": "antoinebalaine",
   "icon": "reaperlogo.png",
   "repository": {
@@ -15,7 +15,8 @@
     "vscode": "^1.32.0"
   },
   "extensionDependencies": [
-    "sumneko.lua"
+    "sumneko.lua",
+    "stuartwang.luapanda"
   ],
   "categories": [
     "Other",

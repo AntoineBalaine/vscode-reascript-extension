@@ -2,7 +2,7 @@
 	"VSDEBUG": {
 	"prefix": "VSDEBUG",
 	"scope": "lua",
-	"body": "local VSDEBUG = dofile(('%s'):format(os.getenv'USERPROFILE' or os.getenv'HOME') .. [[/.vscode/extensions/antoinebalaine.reascript-docs-0.1.3/debugger/LoadDebug.lua]])",
+	"body": "local VSDEBUG = dofile(('%s'):format(os.getenv'USERPROFILE' or os.getenv'HOME') .. [[/.vscode/extensions/antoinebalaine.reascript-docs-0.1.4/debugger/LoadDebug.lua]])",
 	"description": "Add LuaPand Debugger for debugging scripts.\n\n"
 	}
 }

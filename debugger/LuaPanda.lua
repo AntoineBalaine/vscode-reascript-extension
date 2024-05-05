@@ -42,6 +42,8 @@
 --         2. 把连接时间放长: connectTimeoutSec 设置为 0.5 或者 1。首次尝试真机调试时这个值可以设置大一点，之后再根据自己的网络状况向下调整。
 --         调试方法可以参考 github 文档
 
+
+-- Table from which user globals will be filtered
 local IGNORE_G = {["LuaPanda"] = true}
 for k in pairs(_G) do
     IGNORE_G[k] = true
@@ -1638,7 +1640,10 @@ end
 -----------------------------------------------------------------------------
 
 ------------------------堆栈管理-------------------------
-local function ExtractFunctionNameFromLine(src_path, linedefined)
+---Extract stack call names for vscode preview from file
+--@param src_path string
+--@param linedefined string
+function this.ExtractFunctionNameFromLine(src_path, linedefined)
     local c_line = 1
     -- EXTRACT NAME OF THE FUNCTION
     for line in io.lines(src_path) do
@@ -1666,12 +1671,13 @@ function this.getStackTable( level )
         if info == nil then
             break;
         end
+        -- IGNORE STACK CALLS FROM LUAPANDA (WE GENERALLY ARE NOT INTERESTED IN THAT STACK)
         if info.source ~= "=[C]" and not info.source:match("LuaPanda.lua") then
             local ss = {};
             ss.file = this.getPath(info);
             local oPathFormated = this.formatOpath(info.source) ; --从lua虚拟机获得的原始路径, 它用于帮助定位VScode端原始lua文件的位置(存在重名文件的情况)。
             ss.oPath = this.truncatedPath(oPathFormated, truncatedOPath);
-            ss.name = info.name or ExtractFunctionNameFromLine(oPathFormated, info.linedefined) --"文件名"; --这里要做截取
+            ss.name = info.name or this.ExtractFunctionNameFromLine(info.source:gsub("@","",1 ), info.linedefined) --"文件名"; --这里要做截取
             ss.line = tostring(info.currentline);
             --使用hookLib时，堆栈有偏移量，这里统一调用栈顶编号2
             local ssindex = functionLevel - 3;
@@ -1942,7 +1948,7 @@ function this.isHitBreakpoint(breakpointPath, opath, curLine)
                         -- log point
                         local expr = cur_node["logMessage"]:match('{(.-)}')
                         if expr then
-                            LogExpression(cur_node["logMessage"])
+                            this.LogExpression(cur_node["logMessage"])
                         else
                             this.printToVSCode("[LogPoint Output]: " .. cur_node["logMessage"], 2, 2);
                         end
@@ -1962,7 +1968,9 @@ function this.isHitBreakpoint(breakpointPath, opath, curLine)
 end
 local function Literalize(str) return str:gsub("[%(%)%.%%%+%-%*%?%[%]%^%$]", function(c) return "%" .. c end) end
 
-function LogExpression(msg)
+---Evaluate expression in Logpoint {x}
+--@param msg string
+function this.LogExpression(msg)
     local function eachLocals(level, search_above)
         level = level + 1
         local i = 1
@@ -2003,7 +2011,7 @@ function LogExpression(msg)
         local bol, res = pcall(eval(expr))
         new_msg = new_msg:gsub("{"..Literalize(expr) .."}", "{" .. tostring(res) .."}", 1)
     end
-    this.printToVSCode(new_msg, 2, 2)
+    this.printToVSCode("[LogPoint Output]: " .. new_msg, 2, 2)
 end
 
 -- 条件断点处理函数
@@ -2858,6 +2866,7 @@ function this.getGlobalVariable( ... )
     --成本比较高，这里只能遍历_G中的所有变量，并去除系统变量，再返回给客户端
     local varTab = {};
     for k,v in pairs(_G) do
+        -- IGNORE NON USER GLOBALS AND FUNCTIONS
         if not IGNORE_G[k] and type(v) ~="function" then
             local var = {};
             var.name = tostring(k);
@@ -3110,8 +3119,9 @@ function this.processWatchedExp(msgTable)
     table.insert(retTab ,var);
     return retTab;
 end
-
-function GotoCrashLine(e)
+---On error show error line in vscode
+--@param e string
+function this.GotoCrashLine(e)
     -- GET CRASH ERROR
     local byLine = "([^\r\n]*)\r?\n?"
     local trimPath = "[\\/]([^\\/]-:%d+:.+)$"
@@ -3141,13 +3151,13 @@ function GotoCrashLine(e)
     this.real_hook_process(info);
 end
 
--- REAPER
+---REAPER SPECIFIC
+---Add defer loop for debugger to catch errors
 local real_defer = reaper.defer
 this.defer = function (callback)
-  return real_defer(function() xpcall(callback, GotoCrashLine) end)
+  return real_defer(function() xpcall(callback, this.GotoCrashLine) end)
 end
 reaper.defer = this.defer
--- REAPER
 
 
 function tools.getFileSource()

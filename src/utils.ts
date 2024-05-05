@@ -59,7 +59,7 @@ type ExtensionUri = {
  * and also because the vscode API doesn't provide detailed types for it.
  * The most important property here is the packageJSON.
  * */
-type extensionContext = {
+export type extensionContext = {
   exports: Function;
   extensionKind: number;
   extensionPath: string;

@@ -3,7 +3,57 @@
 An extension for Reaper's ReaScript API methods in VS Code.
 Provides type-checking in lua, intellisense/Autocomplete, and doc-comments on hover for all functions.
 
+### How to use the debugger:
+
+1. Create a launch.json config, and include the following:
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lua",
+      "request": "attach",
+      "name": "LuaPanda",
+      "cwd": "${workspaceFolder}",
+      "connectionPort": 8818,
+      "stopOnEntry": false,
+      "useCHook": true,
+      "address": "localhost"
+    }
+  ]
+}
+```
+
+2. Start the debugger - it will list for incoming connections
+3. Include the REAPER-DEBUGGER snippet at the start of your script:
+
+```lua
+local VSDEBUG = dofile("<extensionPath>/debugger/LoadDebug.lua")
+```
+
+TIP: This snippet is auto-completed - if you type `DEBUG` in the editor, the auto-completion should trigger, and you’ll see the snippet called `REAPER DEBUGGER`. Also, the snippet will auto-fill the extensionPath with the correct path on your computer.
+
+4. run your script from reaper.
+
+If your script runs on a defer loop inside reaper, you may attach the debugger while it’s running.
+
+### Credits:
+
+[Sexan](https://github.com/GoranKovac) - integrated the debugger, created the parser we’re currently using to generate the reaper types.
+
+[Cfillion](https://github.com/cfillion) - provided the types for ImGui
+
+[Mespotine](https://github.com/mespotine) - Maintains the thorough reaper documentation that we initially used
+
+[Gavin Ray](https://github.com/GavinRay97) - initial creator of the extension
+
 ## Changelog
+
+- 0.1.5 (May 5th 2024)
+  - include Debugger capability using Sexan’s modded LuaPanda functionality
+  - include snippet to call LuaPanda debugger
+  - include LuaPanda as extension dependency
 - 0.1.4 (May 4rd 2024)
   - update reaper types
 - 0.1.3 (May 3rd 2024)
@@ -19,8 +69,8 @@ Provides type-checking in lua, intellisense/Autocomplete, and doc-comments on ho
   - fix some ReaImGui tyes
 - 0.0.10 (July 6th 2023)
   - fix optional parameters of functions
-  - rewrite lua keywords that were used as param names 
-  - add back ImGui function declaration 
+  - rewrite lua keywords that were used as param names
+  - add back ImGui function declaration
   - various bug fixes around types
 
 - 0.0.9 (July 6th 2023)
@@ -34,7 +84,7 @@ Provides type-checking in lua, intellisense/Autocomplete, and doc-comments on ho
 
 - 0.0.6 (July 5th 2023)
   - update extension credentials to activate only for lua/eel/jsfx/txt files
-  - declare extension dependency using [Lua-LSP](https://github.com/LuaLS/lua-language-server) 
+  - declare extension dependency using [Lua-LSP](https://github.com/LuaLS/lua-language-server)
   - create type declaration files for reaper-api, including reaImGui functions
   - update documentation to [ultraschall's api docs v.4.9](https://github.com/Ultraschall/ultraschall-lua-api-for-reaper/releases/tag/4.9)
   - bring type declaration files into workspace scope when the extension activates

@@ -50,6 +50,8 @@ If your script runs on a defer loop inside reaper, you may attach the debugger w
 
 ## Changelog
 
+- 0.1.7 (May 6th 2024)
+  - fix stack call structure in windows, update modules file structure
 - 0.1.6 (May 6th 2024)
   - fix windows paths on completion items
 - 0.1.5 (May 5th 2024)

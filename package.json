@@ -1,7 +1,7 @@
 {
   "name": "reascript-docs",
   "displayName": "REAPER ReaScript",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "publisher": "antoinebalaine",
   "icon": "reaperlogo.png",
   "repository": {

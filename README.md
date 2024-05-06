@@ -38,6 +38,47 @@ TIP: This snippet is auto-completed - if you type `DEBUG` in the editor, the aut
 
 If your script runs on a defer loop inside reaper, you may attach the debugger while it’s running.
 
+#### Sexan's debugger tutorial: 
+To add and start debugging is really simple, just on first line of your script write
+`DEBUGGER` and select `REAPER_DEBUGGER` and you are ready to go.
+
+![completion](./resources/images/completion.gif)
+
+1. Error Catching
+Debugger can only catch errors if the function is called by reaper.defer(func). Your function does not need to be in loop it just needs to be called with it. Looped defered scripts have this automatically
+
+![error](./resources/images/error.gif)
+
+2. Conditional break points.
+Normal breakpoints just halt the script when they are hit. Conditional do same but with as their name imply with condition:
+In the first run I've set condition to not be met so nothing happens. But on second part it halts the script since condition is met.
+
+![breakpoints](./resources/images/breakpoints.gif)
+
+
+3. LogPoints
+Unlike breakpoints which halt the script, LogPoints work while script is live.
+With them you can:
+1. Check is your function triggering (are we in the function)
+2. You can evaluate expressions by adding "{x}" in the line. Everything inside of it will be evaluated like check the value of variable, some condition etc.
+
+![logpoints](./resources/images/logpoints.gif)
+
+1. Setting/Changing variables in memory
+You can change any variable and it will change permanently in your script/memory while debugging. This can be also done via REPL
+
+![vars](./resources/images/vars.gif)
+
+1. REPL In Console
+Script needs to be halted in order to use it.
+
+![repl](./resources/images/repl2.gif)
+
+1. Watch Variable tab
+As it implies here you can set variables you like to watch, expressions etc. Script needs to be halted in order to see them
+
+![watch](./resources/images/watch.gif)
+
 ### Credits:
 
 [Sexan](https://github.com/GoranKovac) - integrated the debugger, created the parser we’re currently using to generate the reaper types.

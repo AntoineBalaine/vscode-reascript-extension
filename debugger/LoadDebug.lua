@@ -2,16 +2,16 @@ local info = debug.getinfo(1, 'S');
 local script_path = info.source:match [[^@?(.*[\/])[^\/]-$]];
 -- GET SOCKETS DLL
 local os = reaper.GetOS()
-local sub_path = "socket/"
+local sub_path = ""
 if os:match("Win") then
-    sub_path = sub_path.."Win/"
-    package.cpath = package.cpath .. ";" .. script_path .. sub_path .."core.dll;" -- Add current folder/socket module for looking at .so (need for loading basic luasocket)
+    sub_path = sub_path.."Modules/Win/"
+    package.cpath = package.cpath .. ";" .. script_path .. sub_path .."?.dll" -- Add current folder/socket module for looking at .so (need for loading basic luasocket)
 elseif os:match("Other") then
-    sub_path = sub_path .."Linux/"
-    package.cpath = package.cpath .. ";" .. script_path .. sub_path.. "core.so;" -- Add current folder/socket module for looking at .so (need for loading basic luasocket)
+    sub_path = sub_path .."Modules/Linux/"
+    package.cpath = package.cpath .. ";" .. script_path .. sub_path.. "?.so" -- Add current folder/socket module for looking at .so (need for loading basic luasocket)
 else
-    sub_path = sub_path .. "Mac/"
-    package.cpath = package.cpath .. ";" .. script_path .. sub_path.. "core.so;" -- Add current folder/socket module for looking at .so (need for loading basic luasocket)
+    sub_path = sub_path .. "Modules/Mac/"
+    package.cpath = package.cpath .. ";" .. script_path .. sub_path.. "?.so" -- Add current folder/socket module for looking at .so (need for loading basic luasocket)
 end
 -- {
 --     // Use IntelliSense to learn about possible attributes.

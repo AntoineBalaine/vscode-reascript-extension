@@ -15,7 +15,7 @@ export class DebugSnippetCompletionItemProvider implements vscode.CompletionItem
 
     let string_snippet;
     if (process.platform === 'win32') {
-      string_snippet = `local VSDEBUG = dofile("${this.extensionPath}\\debugger\\LoadDebug.lua")$1`
+      string_snippet = `local VSDEBUG = dofile("${this.extensionPath.replace(/\\/g, "/")}\\debugger\\LoadDebug.lua")$1`
     } else {
       string_snippet = `local VSDEBUG = dofile("${this.extensionPath}/debugger/LoadDebug.lua")$1`
     }

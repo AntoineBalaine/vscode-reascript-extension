@@ -34,9 +34,11 @@ end
 --         },
 --     ]
 -- }
-
---TERMINATE AND START SCRIPT IF DEBUGER STARTED (ALLOW SCRIPT STARTING AGAIN)
-reaper.set_action_options(1|2)
+-- Reaper V7 check (this option is only available in certain version of V7)
+if reaper.set_action_options then
+    --TERMINATE AND START SCRIPT IF DEBUGER STARTED (ALLOW SCRIPT STARTING AGAIN)
+    reaper.set_action_options(1|2)
+end
 -- PATH TO MODED LUAPANDA
 local DEBUG = dofile(script_path .."LuaPanda.lua")
 DEBUG.start("127.0.0.1", 8818)

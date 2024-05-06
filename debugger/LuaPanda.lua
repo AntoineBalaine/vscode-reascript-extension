@@ -3134,7 +3134,7 @@ function this.GotoCrashLine(e)
     this.printToVSCode("[Stack traceback]:\n\t" .. table.concat(stack_inner, "\n\t", 3) .. "\n\n", 2, 2);
 
     -- GET FUNCTION STACK LEVEL
-    local functionLevel, callerInfo = 1, nil
+    local functionLevel, callerInfo = 2, nil
     local selfInfo = debug.getinfo(functionLevel, 'SlLnf')
     repeat
         functionLevel = functionLevel + 1

@@ -1,6 +1,6 @@
 --- ReaImGui LuaCATS definitions
 ---
---- Generated for version 0.9.0.2-7-g0278540 - API version 0.9
+--- Generated for version 0.9.1 - API version 0.9.1
 ---
 --- @meta  imgui
 --- @class ImGui
@@ -4645,6 +4645,15 @@
 ---
 --- @since 0.9
 --- @field StyleVar_TableAngledHeadersAngle integer
+---
+--- **Style > Variables > StyleVar\_TableAngledHeadersTextAlign**
+---
+--- Alignment of angled headers within the cell
+---
+--- ---
+---
+--- @since 0.9.1
+--- @field StyleVar_TableAngledHeadersTextAlign integer
 ---
 --- **Style > Variables > StyleVar\_WindowBorderSize**
 ---
@@ -10452,6 +10461,21 @@
 --- @since 0.1
 --- @field TreeNodeFlags_SpanFullWidth integer
 ---
+--- **Tree Node > Flags > TreeNodeFlags\_SpanTextWidth**
+---
+--- Narrow hit box + narrow hovering highlight, will only cover the label text.
+---
+--- ---
+---
+--- **Tree Node > Flags**
+---
+--- For TreeNode, TreeNodeEx and CollapsingHeader.
+---
+--- ---
+---
+--- @since 0.9.1
+--- @field TreeNodeFlags_SpanTextWidth integer
+---
 --- **Utility > Conditions > Cond\_Always**
 ---
 --- No condition (always set the variable).
@@ -15980,8 +16004,7 @@ function ImGui.Image_GetSize(image) end
 --- Helper to automatically select and scale an image to the DPI scale of
 --- the current window upon usage.
 ---
---- ImGui_ImageSet objects can be given to any function that expect an image as
---- parameter.
+--- ImageSet objects may be used in any function that expect an image as parameter.
 ---
 --- Usage:
 ---
@@ -16027,8 +16050,7 @@ function ImGui.CreateImageSet() end
 --- Helper to automatically select and scale an image to the DPI scale of
 --- the current window upon usage.
 ---
---- ImGui_ImageSet objects can be given to any function that expect an image as
---- parameter.
+--- ImageSet objects may be used in any function that expect an image as parameter.
 ---
 --- Usage:
 ---
@@ -17567,7 +17589,7 @@ function ImGui.SetCursorScreenPos(ctx, pos_x, pos_y) end
 --- compensate for the non-visible items we have skipped.
 --- (Dear ImGui already clip items based on their bounds but: it needs to first
 --- layout the item to do so, and generally fetching/submitting your own data incurs
---- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- additional cost. Coarse clipping using a list clipper allows you to easily
 --- scale using lists with tens of thousands of items without a problem.)
 ---
 --- Usage:
@@ -17624,7 +17646,7 @@ function ImGui.CreateListClipper(ctx) end
 --- compensate for the non-visible items we have skipped.
 --- (Dear ImGui already clip items based on their bounds but: it needs to first
 --- layout the item to do so, and generally fetching/submitting your own data incurs
---- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- additional cost. Coarse clipping using a list clipper allows you to easily
 --- scale using lists with tens of thousands of items without a problem.)
 ---
 --- Usage:
@@ -17677,7 +17699,7 @@ function ImGui.ListClipper_Begin(clipper, items_count, items_height) end
 --- compensate for the non-visible items we have skipped.
 --- (Dear ImGui already clip items based on their bounds but: it needs to first
 --- layout the item to do so, and generally fetching/submitting your own data incurs
---- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- additional cost. Coarse clipping using a list clipper allows you to easily
 --- scale using lists with tens of thousands of items without a problem.)
 ---
 --- Usage:
@@ -17726,7 +17748,7 @@ function ImGui.ListClipper_End(clipper) end
 --- compensate for the non-visible items we have skipped.
 --- (Dear ImGui already clip items based on their bounds but: it needs to first
 --- layout the item to do so, and generally fetching/submitting your own data incurs
---- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- additional cost. Coarse clipping using a list clipper allows you to easily
 --- scale using lists with tens of thousands of items without a problem.)
 ---
 --- Usage:
@@ -17784,7 +17806,7 @@ function ImGui.ListClipper_GetDisplayRange(clipper) end
 --- compensate for the non-visible items we have skipped.
 --- (Dear ImGui already clip items based on their bounds but: it needs to first
 --- layout the item to do so, and generally fetching/submitting your own data incurs
---- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- additional cost. Coarse clipping using a list clipper allows you to easily
 --- scale using lists with tens of thousands of items without a problem.)
 ---
 --- Usage:
@@ -17838,7 +17860,7 @@ function ImGui.ListClipper_IncludeItemByIndex(clipper, item_index) end
 --- compensate for the non-visible items we have skipped.
 --- (Dear ImGui already clip items based on their bounds but: it needs to first
 --- layout the item to do so, and generally fetching/submitting your own data incurs
---- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- additional cost. Coarse clipping using a list clipper allows you to easily
 --- scale using lists with tens of thousands of items without a problem.)
 ---
 --- Usage:
@@ -17892,7 +17914,7 @@ function ImGui.ListClipper_IncludeItemsByIndex(clipper, item_begin, item_end) en
 --- compensate for the non-visible items we have skipped.
 --- (Dear ImGui already clip items based on their bounds but: it needs to first
 --- layout the item to do so, and generally fetching/submitting your own data incurs
---- additional cost. Coarse clipping using ImGui_ListClipper allows you to easily
+--- additional cost. Coarse clipping using a list clipper allows you to easily
 --- scale using lists with tens of thousands of items without a problem.)
 ---
 --- Usage:
@@ -20543,6 +20565,9 @@ function ImGui.NumericLimits_Int() end
 function ImGui.PointConvertNative(ctx, x, y, to_native) end
 
 --- **Utility > ProgressBar**
+---
+--- Fraction < 0.0 displays an indeterminate progress bar animation since v0.9.1.
+--- The value must be animated along with time, for example `-1.0 * ImGui.GetTime()`.
 ---
 --- ---
 ---

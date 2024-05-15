@@ -1432,23 +1432,31 @@ function this.dataProcess( dataStr )
     elseif dataTable.cmd == "getWatchedVariable" then
         local msgTab = this.getMsgTable("getWatchedVariable", this.getCallbackId());
         local stackId = tonumber(dataTable.info.stackId);
-        --loadstring系统函数, watch插件加载
-        if isUseLoadstring == 1 then
-            --使用loadstring
-            this.curStackId = stackId;
-            local retValue = this.processWatchedExp(dataTable.info);
-            msgTab.info = retValue
-            this.sendMsg(msgTab);
-            this.debugger_wait_msg();
-            return;
+
+        --!PROFILER HACK
+        if stackId == -999 then
+            this.start_profiler()
+        elseif stackId == -9999 then
+            reaper.defer = function(x) end
         else
-            --旧的查找方式
-            local wv =  this.getWatchedVariable(dataTable.info.varName, stackId, true);
-            if wv ~= nil then
-                msgTab.info = wv;
+        --loadstring系统函数, watch插件加载
+            if isUseLoadstring == 1 then
+                --使用loadstring
+                this.curStackId = stackId;
+                local retValue = this.processWatchedExp(dataTable.info);
+                msgTab.info = retValue
+                this.sendMsg(msgTab);
+                this.debugger_wait_msg();
+                return;
+            else
+                --旧的查找方式
+                local wv =  this.getWatchedVariable(dataTable.info.varName, stackId, true);
+                if wv ~= nil then
+                    msgTab.info = wv;
+                end
+                this.sendMsg(msgTab);
+                this.debugger_wait_msg();
             end
-            this.sendMsg(msgTab);
-            this.debugger_wait_msg();
         end
     elseif dataTable.cmd == "stopRun" then
         --停止hook，已不在处理任何断点信息，也就不会产生日志等。发送消息后等待前端主动断开连接
@@ -1574,6 +1582,7 @@ function this.receiveMessage( timeoutSec )
         return;
     end
     local response, err = sock:receive("*l");
+
     if response == nil then
         if err == "closed" then
             this.printToConsole("[debugger error]接收信息失败  |  reason:"..err, 2);
@@ -1672,7 +1681,7 @@ function this.getStackTable( level )
             break;
         end
         -- IGNORE STACK CALLS FROM LUAPANDA (WE GENERALLY ARE NOT INTERESTED IN THAT STACK)
-        if info.source ~= "=[C]" and not info.source:match("LuaPanda.lua") then
+        if info.source ~= "=[C]" and not info.source:match("LuaPanda.lua") and not info.source:match("cfillion_Lua profiler.lua")then
             local ss = {};
             ss.file = this.getPath(info);
             local oPathFormated = this.formatOpath(info.source) ; --从lua虚拟机获得的原始路径, 它用于帮助定位VScode端原始lua文件的位置(存在重名文件的情况)。
@@ -1947,7 +1956,10 @@ function this.isHitBreakpoint(breakpointPath, opath, curLine)
                     elseif cur_node["type"] == "1" then
                         -- log point
                         local expr = cur_node["logMessage"]:match('{(.-)}')
-                        if expr then
+                        local profile_expr = cur_node["logMessage"]:match("PROFILER")
+                        if profile_expr then
+                            this.LogProfiler(cur_node["logMessage"])
+                        elseif expr then
                             this.LogExpression(cur_node["logMessage"])
                         else
                             this.printToVSCode("[LogPoint Output]: " .. cur_node["logMessage"], 2, 2);
@@ -1966,6 +1978,27 @@ function this.isHitBreakpoint(breakpointPath, opath, curLine)
     end
     return false;
 end
+
+function this.LogProfiler(msg)
+
+    msg = msg:gsub("PROFILER ","")
+    local cmd, arg = msg:match("(%S+) (%S+)")
+    this.printToVSCode(msg, 2, 2);
+    if type(tonumber(arg)) == "number" then
+        --this.printToVSCode("JEJEJEJEJEJ", 2, 2);
+        this.profiler.auto_start = 60
+    else
+        this.printToVSCode("[LogPoint Output]: " .. this.profiler.auto_start, 2, 2);
+        --if cmd == "SHOW" then
+            if this.profiler.auto_start == 0 and not started then
+                started = true
+                this.profiler.run()
+            end
+        --end
+    end
+        
+end
+
 local function Literalize(str) return str:gsub("[%(%)%.%%%+%-%*%?%[%]%^%$]", function(c) return "%" .. c end) end
 
 ---Evaluate expression in Logpoint {x}
@@ -3122,6 +3155,7 @@ end
 ---On error show error line in vscode
 --@param e string
 function this.GotoCrashLine(e)
+    this.detach()
     -- GET CRASH ERROR
     local byLine = "([^\r\n]*)\r?\n?"
     local trimPath = "[\\/]([^\\/]-:%d+:.+)$"
@@ -3134,8 +3168,14 @@ function this.GotoCrashLine(e)
     this.printToVSCode("[Stack traceback]:\n\t" .. table.concat(stack_inner, "\n\t", 3) .. "\n\n", 2, 2);
 
     -- GET FUNCTION STACK LEVEL
-    local functionLevel, callerInfo = 2, nil
+    local functionLevel, callerInfo = 1, nil
     local selfInfo = debug.getinfo(functionLevel, 'SlLnf')
+    if selfInfo.source:match("LuaPanda.lua") then
+        functionLevel = functionLevel + 1
+    elseif selfInfo.source:match("cfillion_Lua profiler.lua") then
+        functionLevel = functionLevel + 2
+    end
+
     repeat
         functionLevel = functionLevel + 1
         callerInfo = debug.getinfo(functionLevel, 'SlLnf')
@@ -3150,7 +3190,6 @@ function this.GotoCrashLine(e)
     -- STOP SCRIPT
     this.real_hook_process(info);
 end
-
 ---REAPER SPECIFIC
 ---Add defer loop for debugger to catch errors
 local real_defer = reaper.defer
@@ -3741,7 +3780,9 @@ function tools.base64decode(data)
 end
 
 -- tools变量
-json = tools.createJson(); --json处理
+json = tools.createJson();
+-- EXPOSE JSON FOR FLAMEGRAPH ENCODE
+this.jsonEncode = json.encode
 this.printToConsole("load LuaPanda success", 1);
 this.replaceCoroutineFuncs()
 return this;

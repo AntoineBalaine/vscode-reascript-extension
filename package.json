@@ -30,6 +30,45 @@
     "workspaceContains:**/*.jsfx-in"
   ],
   "contributes": {
+    "customEditors": [
+      {
+        "viewType": "flamegraph.View",
+        "displayName": "Reaper FlameGraph",
+        "selector": [
+          {
+            "filenamePattern": "*.ReaProfile"
+          }
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "reaper.StartProfiler",
+        "title": "Take Script Profile",
+        "category": "Debug",
+        "icon": "$(record)"
+      },
+      {
+        "command": "reaper.KillScript",
+        "title": "Disconnect and Terminate Script",
+        "category": "Debug",
+        "icon": "$(close-all)"
+      }
+    ],
+    "menus": {
+			"debug/toolBar": [
+				{
+					"command": "reaper.StartProfiler",
+					"group": "navigation7",
+					"when": "debugType == lua"
+				},
+        {
+					"command": "reaper.KillScript",
+					"group": "navigation6",
+					"when": "debugType == lua"
+				}
+			]
+		},
     "configuration": {
       "title": "Reascript: ReaImGui version",
       "properties": {
@@ -44,6 +83,42 @@
         }
       }
     },
+    "debuggers": [
+			{
+				"type": "lua",
+        		"label": "Reaper Debug",
+				"languages": ["lua"],
+				"initialConfigurations": [
+					{
+						"type": "lua",
+						"request": "attach",
+						"name": "ReaperLuaDebug",
+						"cwd": "${workspaceFolder}",
+						"connectionPort": 8818,
+						"stopOnEntry": false,
+						"useCHook": true,
+						"autoPathMode": false,
+						"address": "localhost"
+					}
+				],
+        "configurationSnippets": [
+          {
+            "label": "Reaper Debug Configuration",
+            "description": "A new configuration for attaching to a running Reaper script program.",
+            "body": {
+              "type": "lua",
+              "request": "attach",
+              "name": "ReaperLuaDebug",
+              "cwd": "${workspaceFolder}",
+              "connectionPort": 8818,
+              "stopOnEntry": false,
+              "useCHook": true,
+              "autoPathMode": false,
+              "address": "localhost"
+            }
+          }
+        ]
+		}],
     "languages": [
       {
         "id": "lua",
@@ -113,7 +188,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.167",
-    "axios": "^0.21.1",
+    "axios": "^1.6.8",
     "jsdom": "^16.7.0",
     "ts-node": "^10.9.1",
     "xml2js": "^0.6.0"

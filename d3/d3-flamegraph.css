@@ -1,0 +1,67 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+  font-size: var(--vscode-font-size);
+  font-weight: var(--vscode-font-weight);
+  font-family: var(--vscode-font-family);
+  background-color: var(--vscode-editor-background);
+  /* display: table-cell; */
+}
+
+.d3-flame-graph rect {
+  stroke: var(--vscode-editor-background);
+  fill-opacity: .8;
+  color: white;
+}
+
+.d3-flame-graph rect:hover {
+  stroke: var(--vscode-editor-background);
+  stroke-width: 0.5;
+  cursor: pointer;
+  color: white;
+}
+
+.d3-flame-graph-label {
+  pointer-events: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+  font-family: Verdana;
+  margin-left: 4px;
+  margin-right: 4px;
+  line-height: 1.5;
+  padding: 0 0 0;
+  font-weight: 400;
+  color: white;
+  text-align: left;
+}
+
+.d3-flame-graph .fade {
+  opacity: 0.6 !important;
+  color: white;
+}
+
+.d3-flame-graph .title {
+  font-size: 20px;
+  font-family: Verdana;
+  color: white;	
+}
+
+.d3-flame-graph-tip {
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px 5px 10px;
+    min-width: 250px;
+    text-align: left;
+    color: white;
+    z-index: 10;
+}

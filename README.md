@@ -91,6 +91,8 @@ As it implies here you can set variables you like to watch, expressions etc. Scr
 
 ## Changelog
 
+- 0.1.8 (May 15th 2024)
+  - allow updating workspaces when extension settings change mid-session
 - 0.1.7 (May 6th 2024)
   - fix stack call structure in windows, update modules file structure
 - 0.1.6 (May 6th 2024)

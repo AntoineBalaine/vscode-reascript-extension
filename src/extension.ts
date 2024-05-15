@@ -20,6 +20,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   updateWorkspaceSettings()
 
+  vscode.workspace.onDidChangeConfiguration((event) => {
+    updateWorkspaceSettings()
+  })
+
   context.subscriptions.push(
     eelSignatureProvider,
     eelCompletionProvider,

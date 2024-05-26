@@ -1224,8 +1224,15 @@ function this.dataProcess( dataStr )
         end
 
     elseif dataTable.cmd == "getVariable" then
+        if currentRunState == runState.RUN then
+            if dataTable.info.varRef == "-20000" then
+                local msgTab = this.getMsgTable("getVariable", this.getCallbackId())
+                local varTable = this.getGlobalVariable()
+                msgTab.info = varTable
+                this.sendMsg(msgTab)
+            end
         --仅在停止时处理消息，其他时刻收到此消息，丢弃
-        if currentRunState == runState.STOP_ON_ENTRY or
+        elseif currentRunState == runState.STOP_ON_ENTRY or
         currentRunState == runState.HIT_BREAKPOINT or
         currentRunState == runState.STEPOVER_STOP or
         currentRunState == runState.STEPIN_STOP or
@@ -1432,23 +1439,30 @@ function this.dataProcess( dataStr )
     elseif dataTable.cmd == "getWatchedVariable" then
         local msgTab = this.getMsgTable("getWatchedVariable", this.getCallbackId());
         local stackId = tonumber(dataTable.info.stackId);
-        --loadstring系统函数, watch插件加载
-        if isUseLoadstring == 1 then
-            --使用loadstring
-            this.curStackId = stackId;
-            local retValue = this.processWatchedExp(dataTable.info);
-            msgTab.info = retValue
-            this.sendMsg(msgTab);
-            this.debugger_wait_msg();
-            return;
+        --!PROFILER HACK
+        if stackId == -999 then
+            --this.start_profiler()
+        elseif stackId == -9999 then
+            reaper.defer = function(x) end
         else
-            --旧的查找方式
-            local wv =  this.getWatchedVariable(dataTable.info.varName, stackId, true);
-            if wv ~= nil then
-                msgTab.info = wv;
+        --loadstring系统函数, watch插件加载
+            if isUseLoadstring == 1 then
+                --使用loadstring
+                this.curStackId = stackId;
+                local retValue = this.processWatchedExp(dataTable.info);
+                msgTab.info = retValue
+                this.sendMsg(msgTab);
+                this.debugger_wait_msg();
+                return;
+            else
+                --旧的查找方式
+                local wv =  this.getWatchedVariable(dataTable.info.varName, stackId, true);
+                if wv ~= nil then
+                    msgTab.info = wv;
+                end
+                this.sendMsg(msgTab);
+                this.debugger_wait_msg();
             end
-            this.sendMsg(msgTab);
-            this.debugger_wait_msg();
         end
     elseif dataTable.cmd == "stopRun" then
         --停止hook，已不在处理任何断点信息，也就不会产生日志等。发送消息后等待前端主动断开连接
@@ -2856,7 +2870,7 @@ function this.getVariableRef( refStr )
             end
         end
     end
-    table.sort(varTab, function(a,b) return a.name > b.name end)
+    --table.sort(varTab, function(a,b) return a.name > b.name end)
     return varTab;
 end
 

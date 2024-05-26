@@ -1,7 +1,7 @@
 {
   "name": "reascript-docs",
   "displayName": "REAPER ReaScript",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "publisher": "antoinebalaine",
   "icon": "reaperlogo.png",
   "repository": {
@@ -30,6 +30,69 @@
     "workspaceContains:**/*.jsfx-in"
   ],
   "contributes": {
+    "views": {
+      "debug": [
+        {
+          "id": "liveGlobalView",
+          "name": "Live Variables",
+          "when": "debugType == lua"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "reaper.KillScript",
+        "title": "Disconnect and Terminate Script",
+        "category": "Debug",
+        "icon": "$(close-all)"
+      }
+    ],
+    "menus": {
+			"debug/toolBar": [				
+        {
+					"command": "reaper.KillScript",
+					"group": "navigation6",
+					"when": "debugType == lua"
+				}
+			]
+		},
+    "debuggers": [
+      {
+        "type": "lua",
+        "label": "Reaper Debug",
+        "languages": [
+          "lua"
+        ],
+        "initialConfigurations": [
+          {
+            "type": "lua",
+            "request": "attach",
+            "name": "ReaperLuaDebug",
+            "cwd": "${workspaceFolder}",
+            "connectionPort": 8818,
+            "stopOnEntry": false,
+            "useCHook": true,
+            "address": "localhost"
+          }
+        ],
+        "configurationSnippets": [
+          {
+            "label": "Reaper Debug Configuration",
+            "description": "A new configuration for attaching to a running Reaper script program.",
+            "body": {
+              "type": "lua",
+              "request": "attach",
+              "name": "ReaperLuaDebug",
+              "cwd": "${workspaceFolder}",
+              "connectionPort": 8818,
+              "stopOnEntry": false,
+              "useCHook": true,
+              "address": "localhost"
+            }
+          }
+        ]
+      }
+    ],
     "configuration": {
       "title": "Reascript: ReaImGui version",
       "properties": {

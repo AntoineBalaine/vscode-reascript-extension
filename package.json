@@ -48,14 +48,14 @@
       }
     ],
     "menus": {
-			"debug/toolBar": [				
+      "debug/toolBar": [
         {
-					"command": "reaper.KillScript",
-					"group": "navigation6",
-					"when": "debugType == lua"
-				}
-			]
-		},
+          "command": "reaper.KillScript",
+          "group": "navigation6",
+          "when": "debugType == lua"
+        }
+      ]
+    },
     "debuggers": [
       {
         "type": "lua",
@@ -176,7 +176,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.167",
-    "axios": "^0.21.1",
+    "axios": "^1.7.2",
     "jsdom": "^16.7.0",
     "ts-node": "^10.9.1",
     "xml2js": "^0.6.0"

@@ -2,7 +2,7 @@ import * as vscode from "vscode"
 import * as defs from "./api-scraper/lua/results.json"
 const definitions = defs as ReaScriptUSDocML[]
 
-import { LiveGlobalView } from "./LiveGlobalView"
+import { LiveGlobalView } from "./liveglobalview"
 import { ReaScriptUSDocML } from "./api-scraper/typescript/reascript-USDocML.types"
 import { EelCompletionItemProvider } from "./providers/eel/completion"
 import { EelHoverProvider } from "./providers/eel/hover"

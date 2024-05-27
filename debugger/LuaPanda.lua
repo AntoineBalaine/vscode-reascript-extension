@@ -1244,7 +1244,10 @@ function this.dataProcess( dataStr )
             -- 1000~2000局部变量的查询，2000~3000全局，3000~4000upvalue
             local msgTab = this.getMsgTable("getVariable", this.getCallbackId());
             local varRefNum = tonumber(dataTable.info.varRef);
-            if varRefNum < 10000 then
+            if varRefNum == -20000 then
+                local varTable = this.getGlobalVariable()
+                msgTab.info = varTable
+            elseif varRefNum >= 0 and varRefNum < 10000 then
                 --查询变量, 此时忽略 stackId
                 local varTable = this.getVariableRef(dataTable.info.varRef, true);
                 msgTab.info = varTable;

@@ -2,16 +2,15 @@ import * as vscode from "vscode"
 import * as defs from "./api-scraper/lua/results.json"
 const definitions = defs as ReaScriptUSDocML[]
 
+import { LiveGlobalView } from "./LiveGlobalView"
 import { ReaScriptUSDocML } from "./api-scraper/typescript/reascript-USDocML.types"
 import { EelCompletionItemProvider } from "./providers/eel/completion"
 import { EelHoverProvider } from "./providers/eel/hover"
 import { EelSignatureHelpProvider } from "./providers/eel/signature"
 import { DebugSnippetCompletionItemProvider } from "./providers/lua/completion"
 import { updateWorkspaceSettings } from "./utils"
-import { liveGlobalView } from './liveglobalview';
-
 export function activate(context: vscode.ExtensionContext) {
-  const treeDataProvider = new liveGlobalView(context);
+  const treeDataProvider = new LiveGlobalView(context);
   vscode.window.registerTreeDataProvider('liveGlobalView', treeDataProvider);
 
   let updateLiveVariables = function() {

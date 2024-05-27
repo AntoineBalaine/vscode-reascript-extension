@@ -178,7 +178,7 @@ export const updateWorkspaceSettings = () => {
         )
         /** 
          * Disable LuaPanda LS capability (sumneko is primary LS), use it only as debugger (workspace only)
-         * */        
+         * */
         workspace_configuration.update(
           "lua_analyzer.codeLinting.enable",
           false,
@@ -199,4 +199,36 @@ export const updateWorkspaceSettings = () => {
       }
     }
   })
+}
+
+function isArray(a: unknown): a is unknown[] {
+  return Array.isArray(a)
+}
+
+function isRecord(a: unknown): a is Record<string, unknown> {
+  return a !== null && typeof a === "object";
+}
+
+function isFunction(a: unknown): a is Function {
+  return typeof a === "function";
+}
+
+export function deepEqual(a: unknown, b: unknown, excludeKeys: string[] = []): boolean {
+  if (typeof a !== typeof b) return false;
+  if (isArray(a) && isArray(b)) {
+    return (
+      a.length === b.length &&
+      a.every((item, index) => deepEqual(item, b[index], excludeKeys))
+    );
+  } else if (isRecord(a) && isRecord(b)) {
+    const keysA = Object.keys(a).filter((key) => !excludeKeys.includes(key))
+    const keysB = Object.keys(b).filter((key) => !excludeKeys.includes(key))
+    if (keysA.length !== keysB.length) return false;
+    return keysA.every((key) => deepEqual(a[key], b[key], excludeKeys))
+
+  } else if (isFunction(a) && isFunction(b)) {
+    return a.toString() === b.toString();
+  } else {
+    return a === b
+  }
 }

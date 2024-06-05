@@ -188,11 +188,12 @@ export const updateWorkspaceSettings = () => {
         // use the corresponding imgui version types file, and the reascript api types file.
         const reaperDefsPath = `${extensionContext.extensionPath}/resources/Sexan_reaper_defs.lua`;
         const imGuiDefsPath = `${extensionContext.extensionPath}/resources/imgui_defs_${imguiVersion}.lua`;
+        const reawwiseDefsPath = `${extensionContext.extensionPath}/resources/reawwise_defs.lua`;
 
         // merge all the pre-existing entries in the lua workspace with the reascript types we'll use
         workspace_configuration.update(
           "Lua.workspace.library",
-          [...otherEntries, reaperDefsPath, imGuiDefsPath],
+          [...otherEntries, reaperDefsPath, imGuiDefsPath, reawwiseDefsPath],
           vscode.ConfigurationTarget.Workspace
         )
 

@@ -1,9 +1,9 @@
----@diagnostic disable: keyword
----@meta
-
 -- This module provides bindings for the Audiokinetic ReaWwise Extension (https://github.com/Audiokinetic/Reaper-Tools/raw/main/index.xml) intended for use with the Wwise Authoring API (WAAPI).
 -- These functions allow you to manipulate JSON objects and interact with Wwise's authoring environment.
 -- For more information, go to the ReaWwise documentation: https://www.audiokinetic.com/en/library/reawwise/
+
+---@diagnostic disable: keyword
+---@meta
 
 ---@class AK_Array
 ---@class AK_Map

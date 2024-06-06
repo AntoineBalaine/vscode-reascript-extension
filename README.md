@@ -2,6 +2,9 @@
 
 An extension for Reaper's ReaScript API methods in VS Code.
 Provides type-checking in lua, intellisense/Autocomplete, and doc-comments on hover for all functions.
+Libraries that also have type-checking:
+- ReaImGui
+- Reawwise
 
 ### How to use the debugger:
 
@@ -45,7 +48,7 @@ To add and start debugging is really simple, just on first line of your script w
 ![completion](./resources/images/completion.gif)
 
 1. Error Catching
-Debugger can only catch errors if the function is called by reaper.defer(func). Your function does not need to be in loop it just needs to be called with it. Looped defered scripts have this automatically
+Debugger can only catch errors if the function is called by reaper.defer(func). Your function does not need to be in loop it just needs to be called with it. Looped deferred scripts have this automatically
 
 ![error](./resources/images/error.gif)
 
@@ -91,6 +94,8 @@ As it implies here you can set variables you like to watch, expressions etc. Scr
 
 ## Changelog
 
+- 0.1.9 (June 6th 2024)
+  - include ReaWwise types
 - 0.1.8 (May 15th 2024)
   - allow updating workspaces when extension settings change mid-session
 - 0.1.7 (May 6th 2024)

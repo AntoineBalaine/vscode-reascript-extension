@@ -1,6 +1,6 @@
 --- ReaImGui LuaCATS definitions
 ---
---- Generated for version 0.9.1 - API version 0.9.1
+--- Generated for version 0.9.2 - API version 0.9.2
 ---
 --- @meta  imgui
 --- @class ImGui
@@ -906,9 +906,25 @@
 --- @since 0.8
 --- @field ConfigFlags_NavNoCaptureKeyboard integer
 ---
+--- **Context > Flags > ConfigFlags\_NoKeyboard**
+---
+--- Instruct dear imgui to disable keyboard inputs and interactions.
+--- This is done by ignoring keyboard events and clearing existing states.
+---
+--- ---
+---
+--- **Context > Flags**
+---
+--- For CreateContext and SetConfigVar(ConfigVar_Flags()).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field ConfigFlags_NoKeyboard integer
+---
 --- **Context > Flags > ConfigFlags\_NoMouse**
 ---
---- Instruct imgui to ignore mouse position/buttons.
+--- Instruct dear imgui to disable mouse inputs and interactions
 ---
 --- ---
 ---
@@ -1140,10 +1156,11 @@
 ---
 --- **Context > Options > ConfigVar\_MacOSXBehaviors**
 ---
---- OS X style: Text editing cursor movement using Alt instead of Ctrl, Shortcuts
----    using Cmd/Super instead of Ctrl, Line/Text Start and End using Cmd+Arrows
----    instead of Home/End, Double click selects by word instead of selecting whole
----    text, Multi-selection in lists uses Cmd/Super instead of Ctrl.
+--- Enabled by default on macOS. Swap Cmd<>Ctrl keys, OS X style text editing
+---    cursor movement using Alt instead of Ctrl, Shortcuts using Cmd/Super instead
+---    of Ctrl, Line/Text Start and End using Cmd+Arrows instead of Home/End,
+---    Double click selects by word instead of selecting whole text, Multi-selection
+---    in lists uses Cmd/Super instead of Ctrl.
 ---
 --- ---
 ---
@@ -1337,6 +1354,34 @@
 --- @since 0.1
 --- @field DragDropFlags_AcceptPeekOnly integer
 ---
+--- **Drag \& Drop > Flags > Source > DragDropFlags\_PayloadAutoExpire**
+---
+--- Automatically expire the payload if the source cease to be submitted
+---    (otherwise payloads are persisting while being dragged).
+---
+--- ---
+---
+--- **Drag \& Drop > Flags > Source**
+---
+--- For BeginDragDropSource
+---
+--- ---
+---
+--- **Drag \& Drop**
+---
+--- On source items, call BeginDragDropSource(),
+--- if it returns true also call SetDragDropPayload() + EndDragDropSource().
+---
+--- On target candidates, call BeginDragDropTarget(),
+--- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
+---
+--- An item can be both a drag source and a drop target.
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field DragDropFlags_PayloadAutoExpire integer
+---
 --- **Drag \& Drop > Flags > Source > DragDropFlags\_SourceAllowNullID**
 ---
 --- Allow items such as Text, Image that have no unique identifier to be used as
@@ -1366,34 +1411,6 @@
 ---
 --- @since 0.1
 --- @field DragDropFlags_SourceAllowNullID integer
----
---- **Drag \& Drop > Flags > Source > DragDropFlags\_SourceAutoExpirePayload**
----
---- Automatically expire the payload if the source cease to be submitted
----    (otherwise payloads are persisting while being dragged).
----
---- ---
----
---- **Drag \& Drop > Flags > Source**
----
---- For BeginDragDropSource
----
---- ---
----
---- **Drag \& Drop**
----
---- On source items, call BeginDragDropSource(),
---- if it returns true also call SetDragDropPayload() + EndDragDropSource().
----
---- On target candidates, call BeginDragDropTarget(),
---- if it returns true also call AcceptDragDropPayload() + EndDragDropTarget().
----
---- An item can be both a drag source and a drop target.
----
---- ---
----
---- @since 0.1
---- @field DragDropFlags_SourceAutoExpirePayload integer
 ---
 --- **Drag \& Drop > Flags > Source > DragDropFlags\_SourceExtern**
 ---
@@ -1676,6 +1693,40 @@
 ---
 --- @since 0.1
 --- @field SliderFlags_None integer
+---
+--- **Drag \& Slider > Flags > SliderFlags\_WrapAround**
+---
+--- Enable wrapping around from max to min and from min to max
+---    (only supported by DragXXX() functions for now).
+---
+--- ---
+---
+--- **Drag \& Slider > Flags**
+---
+--- For DragDouble, DragInt, SliderDouble, SliderInt etc. (Those are per-item
+--- flags. There are shared flags in SetConfigVar: ConfigVar_DragClickToInputText
+---
+--- ---
+---
+--- **Drag \& Slider**
+---
+--- We use the same sets of flags for Drag*() and Slider*() functions as the
+--- features are the same and it makes it easier to swap them.
+---
+--- CTRL+Click on any drag box or slider to turn them into an input box.
+--- Manually input values aren't clamped by default and can go off-bounds.
+--- Use SliderFlags_AlwaysClamp to always clamp.
+---
+--- Adjust format string to decorate the value with a prefix, a suffix, or adapt the
+--- editing and display precision e.g. "%.3f" -> 1.234; "%5.2f secs" -> 01.23 secs;
+--- "Biscuit: %.0f" -> Biscuit: 1; etc.
+---
+--- Format string may also be set to nil or use the default format ("%f" or "%d").
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field SliderFlags_WrapAround integer
 ---
 --- **Draw List > DrawFlags\_Closed**
 ---
@@ -3251,9 +3302,11 @@
 ---
 --- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_Ctrl**
 ---
+--- Cmd when ConfigVar_MacOSXBehaviors is enabled.
+---
 --- ---
 ---
---- @since 0.8
+--- @since 0.9.2
 --- @field Mod_Ctrl integer
 ---
 --- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_None**
@@ -3270,20 +3323,13 @@
 --- @since 0.8
 --- @field Mod_Shift integer
 ---
---- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_Shortcut**
----
---- Alias for Mod_Ctrl on Linux and Windows and Mod_Super on macOS (Cmd key).
----
---- ---
----
---- @since 0.8
---- @field Mod_Shortcut integer
----
 --- **Keyboard \& Mouse > Keyboard > Named Keys > Modifiers > Mod\_Super**
 ---
+--- Ctrl when ConfigVar_MacOSXBehaviors is enabled.
+---
 --- ---
 ---
---- @since 0.8
+--- @since 0.9.2
 --- @field Mod_Super integer
 ---
 --- **Keyboard \& Mouse > Keyboard > Named Keys > Mouse Buttons > Key\_MouseLeft**
@@ -3672,6 +3718,486 @@
 ---
 --- @since 0.1
 --- @field MouseCursor_TextInput integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > InputFlags\_None**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_None integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > InputFlags\_Repeat**
+---
+--- Enable repeat. Return true on successive repeats.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_Repeat integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > InputFlags\_RouteFromRootWindow**
+---
+--- Option: route evaluated from the point of view of root window rather than current window.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_RouteFromRootWindow integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > InputFlags\_RouteOverActive**
+---
+--- Global route: higher priority than active item. Unlikely you need to
+---    use that: will interfere with every active items, e.g. Ctrl+A registered by
+---    InputText will be overridden by this. May not be fully honored as user/internal
+---    code is likely to always assume they can access keys when active.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_RouteOverActive integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > InputFlags\_RouteOverFocused**
+---
+--- Global route: higher priority than focused route
+---    (unless active item in focused route).
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_RouteOverFocused integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > InputFlags\_RouteUnlessBgFocused**
+---
+--- Option: global route: will not be applied if underlying background/void is
+---    focused (== no Dear ImGui windows are focused). Useful for overlay applications.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_RouteUnlessBgFocused integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > InputFlags\_Tooltip**
+---
+--- Automatically display a tooltip when hovering item
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_Tooltip integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > Routing policies > InputFlags\_RouteActive**
+---
+--- Route to active item only.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > Routing policies**
+---
+--- RouteGlobal+OverActive >> RouteActive or RouteFocused (if owner is active item)
+---    \>> RouteGlobal+OverFocused >> RouteFocused (if in focused window stack) >> RouteGlobal.
+---
+---    Default policy is RouteFocused. Can select only one policy among all available.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_RouteActive integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > Routing policies > InputFlags\_RouteAlways**
+---
+--- Do not register route, poll keys directly.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > Routing policies**
+---
+--- RouteGlobal+OverActive >> RouteActive or RouteFocused (if owner is active item)
+---    \>> RouteGlobal+OverFocused >> RouteFocused (if in focused window stack) >> RouteGlobal.
+---
+---    Default policy is RouteFocused. Can select only one policy among all available.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_RouteAlways integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > Routing policies > InputFlags\_RouteFocused**
+---
+--- Route to windows in the focus stack. Deep-most focused window takes inputs.
+---    Active item takes inputs over deep-most focused window.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > Routing policies**
+---
+--- RouteGlobal+OverActive >> RouteActive or RouteFocused (if owner is active item)
+---    \>> RouteGlobal+OverFocused >> RouteFocused (if in focused window stack) >> RouteGlobal.
+---
+---    Default policy is RouteFocused. Can select only one policy among all available.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_RouteFocused integer
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > Routing policies > InputFlags\_RouteGlobal**
+---
+--- Global route (unless a focused window or active item registered the route).
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags > Routing policies**
+---
+--- RouteGlobal+OverActive >> RouteActive or RouteFocused (if owner is active item)
+---    \>> RouteGlobal+OverFocused >> RouteFocused (if in focused window stack) >> RouteGlobal.
+---
+---    Default policy is RouteFocused. Can select only one policy among all available.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts > Flags**
+---
+
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputFlags_RouteGlobal integer
 ---
 --- **Popup \& Modal > Flags > PopupFlags\_None**
 ---
@@ -4260,40 +4786,66 @@
 ---
 --- **Style > Colors > Col\_Tab**
 ---
---- TabItem in a TabBar
+--- Tab background, when tab-bar is focused & tab is unselected
 ---
 --- ---
 ---
 --- @since 0.1
 --- @field Col_Tab integer
 ---
---- **Style > Colors > Col\_TabActive**
+--- **Style > Colors > Col\_TabDimmed**
+---
+--- Tab background, when tab-bar is unfocused & tab is unselected
 ---
 --- ---
 ---
---- @since 0.1
---- @field Col_TabActive integer
+--- @since 0.9.2
+--- @field Col_TabDimmed integer
+---
+--- **Style > Colors > Col\_TabDimmedSelected**
+---
+--- Tab background, when tab-bar is unfocused & tab is selected
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field Col_TabDimmedSelected integer
+---
+--- **Style > Colors > Col\_TabDimmedSelectedOverline**
+---
+--- Horizontal overline, when tab-bar is unfocused & tab is selected
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field Col_TabDimmedSelectedOverline integer
 ---
 --- **Style > Colors > Col\_TabHovered**
+---
+--- Tab background, when hovered
 ---
 --- ---
 ---
 --- @since 0.1
 --- @field Col_TabHovered integer
 ---
---- **Style > Colors > Col\_TabUnfocused**
+--- **Style > Colors > Col\_TabSelected**
+---
+--- Tab background, when tab-bar is focused & tab is selected
 ---
 --- ---
 ---
---- @since 0.1
---- @field Col_TabUnfocused integer
+--- @since 0.9.2
+--- @field Col_TabSelected integer
 ---
---- **Style > Colors > Col\_TabUnfocusedActive**
+--- **Style > Colors > Col\_TabSelectedOverline**
+---
+--- Tab horizontal overline, when tab-bar is focused & tab is selected
 ---
 --- ---
 ---
---- @since 0.1
---- @field Col_TabUnfocusedActive integer
+--- @since 0.9.2
+--- @field Col_TabSelectedOverline integer
 ---
 --- **Style > Colors > Col\_TableBorderLight**
 ---
@@ -4712,6 +5264,15 @@
 ---
 --- @since 0.1
 --- @field TabBarFlags_AutoSelectNewTabs integer
+---
+--- **Tab Bar > TabBarFlags\_DrawSelectedOverline**
+---
+--- Draw selected overline markers over selected tab
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field TabBarFlags_DrawSelectedOverline integer
 ---
 --- **Tab Bar > TabBarFlags\_FittingPolicyResizeDown**
 ---
@@ -5220,7 +5781,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5287,7 +5848,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5353,7 +5914,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5419,7 +5980,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5486,7 +6047,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5553,7 +6114,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5619,7 +6180,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5686,7 +6247,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5754,7 +6315,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5820,7 +6381,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5886,7 +6447,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -5953,7 +6514,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6019,7 +6580,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6086,7 +6647,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6152,7 +6713,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6218,7 +6779,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6284,7 +6845,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6350,7 +6911,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6417,7 +6978,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6484,7 +7045,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6557,7 +7118,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6629,7 +7190,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6701,7 +7262,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -6773,7 +7334,7 @@
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -9810,354 +10371,6 @@
 --- @since 0.1
 --- @field TableFlags_SortTristate integer
 ---
---- **Text \& Scalar Input > Flags > InputTextFlags\_AllowTabInput**
----
---- Pressing TAB input a '\t' character into the text field.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_AllowTabInput integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_AlwaysOverwrite**
----
---- Overwrite mode.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.2
---- @field InputTextFlags_AlwaysOverwrite integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_AutoSelectAll**
----
---- Select entire text when first taking mouse focus.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_AutoSelectAll integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackAlways**
----
---- Callback on each iteration. User code may query cursor position, modify text buffer.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.8.5
---- @field InputTextFlags_CallbackAlways integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackCharFilter**
----
---- Callback on character inputs to replace or discard them.
----    Modify 'EventChar' to replace or 'EventChar = 0' to discard.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.8.5
---- @field InputTextFlags_CallbackCharFilter integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackCompletion**
----
---- Callback on pressing TAB (for completion handling).
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.8.5
---- @field InputTextFlags_CallbackCompletion integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackEdit**
----
---- Callback on any edit (note that InputText() already returns true on edit,
----    the callback is useful mainly to manipulate the underlying buffer while
----    focus is active).
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.8.5
---- @field InputTextFlags_CallbackEdit integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CallbackHistory**
----
---- Callback on pressing Up/Down arrows (for history handling).
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.8.5
---- @field InputTextFlags_CallbackHistory integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CharsDecimal**
----
---- Allow 0123456789.+-*/.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_CharsDecimal integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CharsHexadecimal**
----
---- Allow 0123456789ABCDEFabcdef.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_CharsHexadecimal integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CharsNoBlank**
----
---- Filter out spaces, tabs.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_CharsNoBlank integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CharsScientific**
----
---- Allow 0123456789.+-*/eE (Scientific notation input).
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_CharsScientific integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CharsUppercase**
----
---- Turn a..z into A..Z.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_CharsUppercase integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_CtrlEnterForNewLine**
----
---- In multi-line mode, unfocus with Enter, add new line with Ctrl+Enter
----    (default is opposite: unfocus with Ctrl+Enter, add line with Enter).
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_CtrlEnterForNewLine integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_EnterReturnsTrue**
----
---- Return 'true' when Enter is pressed (as opposed to every time the value was
----    modified). Consider looking at the IsItemDeactivatedAfterEdit function.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_EnterReturnsTrue integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_EscapeClearsAll**
----
---- Escape key clears content if not empty, and deactivate otherwise
----    (constrast to default behavior of Escape to revert).
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.8
---- @field InputTextFlags_EscapeClearsAll integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_NoHorizontalScroll**
----
---- Disable following the cursor horizontally.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_NoHorizontalScroll integer
----
---- **Text \& Scalar Input > Flags > InputTextFlags\_NoUndoRedo**
----
---- Disable undo/redo. Note that input text owns the text data while active.
----
---- ---
----
---- **Text \& Scalar Input > Flags**
----
---- Most of these are only useful for InputText*() and not for InputDoubleX,
---- InputIntX etc.
----
---- (Those are per-item flags. There are shared flags in SetConfigVar:
---- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
----
---- ---
----
---- @since 0.1
---- @field InputTextFlags_NoUndoRedo integer
----
 --- **Text \& Scalar Input > Flags > InputTextFlags\_None**
 ---
 --- ---
@@ -10175,9 +10388,522 @@
 --- @since 0.1
 --- @field InputTextFlags_None integer
 ---
---- **Text \& Scalar Input > Flags > InputTextFlags\_Password**
+--- **Text \& Scalar Input > Flags > Basic filters > InputTextFlags\_CharsDecimal**
+---
+--- Allow 0123456789.+-*/.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Basic filters**
+---
+--- See also InputTextFlags_CallbackCharFilter.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsDecimal integer
+---
+--- **Text \& Scalar Input > Flags > Basic filters > InputTextFlags\_CharsHexadecimal**
+---
+--- Allow 0123456789ABCDEFabcdef.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Basic filters**
+---
+--- See also InputTextFlags_CallbackCharFilter.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsHexadecimal integer
+---
+--- **Text \& Scalar Input > Flags > Basic filters > InputTextFlags\_CharsNoBlank**
+---
+--- Filter out spaces, tabs.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Basic filters**
+---
+--- See also InputTextFlags_CallbackCharFilter.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsNoBlank integer
+---
+--- **Text \& Scalar Input > Flags > Basic filters > InputTextFlags\_CharsScientific**
+---
+--- Allow 0123456789.+-*/eE (Scientific notation input).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Basic filters**
+---
+--- See also InputTextFlags_CallbackCharFilter.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsScientific integer
+---
+--- **Text \& Scalar Input > Flags > Basic filters > InputTextFlags\_CharsUppercase**
+---
+--- Turn a..z into A..Z.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Basic filters**
+---
+--- See also InputTextFlags_CallbackCharFilter.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CharsUppercase integer
+---
+--- **Text \& Scalar Input > Flags > Callback features > InputTextFlags\_CallbackAlways**
+---
+--- Callback on each iteration. User code may query cursor position, modify text buffer.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Callback features**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackAlways integer
+---
+--- **Text \& Scalar Input > Flags > Callback features > InputTextFlags\_CallbackCharFilter**
+---
+--- Callback on character inputs to replace or discard them.
+---    Modify 'EventChar' to replace or 'EventChar = 0' to discard.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Callback features**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackCharFilter integer
+---
+--- **Text \& Scalar Input > Flags > Callback features > InputTextFlags\_CallbackCompletion**
+---
+--- Callback on pressing TAB (for completion handling).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Callback features**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackCompletion integer
+---
+--- **Text \& Scalar Input > Flags > Callback features > InputTextFlags\_CallbackEdit**
+---
+--- Callback on any edit (note that InputText() already returns true on edit,
+---    the callback is useful mainly to manipulate the underlying buffer while
+---    focus is active).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Callback features**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackEdit integer
+---
+--- **Text \& Scalar Input > Flags > Callback features > InputTextFlags\_CallbackHistory**
+---
+--- Callback on pressing Up/Down arrows (for history handling).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Callback features**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8.5
+--- @field InputTextFlags_CallbackHistory integer
+---
+--- **Text \& Scalar Input > Flags > Inputs > InputTextFlags\_AllowTabInput**
+---
+--- Pressing TAB input a '\t' character into the text field.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Inputs**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_AllowTabInput integer
+---
+--- **Text \& Scalar Input > Flags > Inputs > InputTextFlags\_CtrlEnterForNewLine**
+---
+--- In multi-line mode, unfocus with Enter, add new line with Ctrl+Enter
+---    (default is opposite: unfocus with Ctrl+Enter, add line with Enter).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Inputs**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_CtrlEnterForNewLine integer
+---
+--- **Text \& Scalar Input > Flags > Inputs > InputTextFlags\_EnterReturnsTrue**
+---
+--- Return 'true' when Enter is pressed (as opposed to every time the value was
+---    modified). Consider looking at the IsItemDeactivatedAfterEdit function.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Inputs**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_EnterReturnsTrue integer
+---
+--- **Text \& Scalar Input > Flags > Inputs > InputTextFlags\_EscapeClearsAll**
+---
+--- Escape key clears content if not empty, and deactivate otherwise
+---    (constrast to default behavior of Escape to revert).
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Inputs**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.8
+--- @field InputTextFlags_EscapeClearsAll integer
+---
+--- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_AlwaysOverwrite**
+---
+--- Overwrite mode.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Other options**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.2
+--- @field InputTextFlags_AlwaysOverwrite integer
+---
+--- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_AutoSelectAll**
+---
+--- Select entire text when first taking mouse focus.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Other options**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_AutoSelectAll integer
+---
+--- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_DisplayEmptyRefVal**
+---
+--- InputDouble(), InputInt() etc. only: when value is zero, do not display it.
+---    Generally used with InputTextFlags_ParseEmptyRefVal.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Other options**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputTextFlags_DisplayEmptyRefVal integer
+---
+--- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_NoHorizontalScroll**
+---
+--- Disable following the cursor horizontally.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Other options**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_NoHorizontalScroll integer
+---
+--- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_NoUndoRedo**
+---
+--- Disable undo/redo. Note that input text owns the text data while active.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Other options**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.1
+--- @field InputTextFlags_NoUndoRedo integer
+---
+--- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_ParseEmptyRefVal**
+---
+--- InputDouble(), InputInt() etc. only: parse empty string as zero value.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Other options**
+---
+
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags**
+---
+--- Most of these are only useful for InputText*() and not for InputDoubleX,
+--- InputIntX etc.
+---
+--- (Those are per-item flags. There are shared flags in SetConfigVar:
+--- ConfigVar_InputTextCursorBlink and ConfigVar_InputTextEnterKeepActive.)
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field InputTextFlags_ParseEmptyRefVal integer
+---
+--- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_Password**
 ---
 --- Password mode, display all characters as '*'.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Other options**
+---
+
 ---
 --- ---
 ---
@@ -10194,9 +10920,15 @@
 --- @since 0.1
 --- @field InputTextFlags_Password integer
 ---
---- **Text \& Scalar Input > Flags > InputTextFlags\_ReadOnly**
+--- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_ReadOnly**
 ---
 --- Read-only mode.
+---
+--- ---
+---
+--- **Text \& Scalar Input > Flags > Other options**
+---
+
 ---
 --- ---
 ---
@@ -10278,7 +11010,7 @@
 ---
 --- Use FramePadding (even for an unframed text node) to vertically align text
 ---    baseline to regular widget height.
----    Equivalent to calling AlignTextToFramePadding.
+---    Equivalent to calling AlignTextToFramePadding before the node.
 ---
 --- ---
 ---
@@ -10758,9 +11490,9 @@
 --- **Window > Child Windows > Child Flags > ChildFlags\_FrameStyle**
 ---
 --- Style the child window like a framed item: use Col_FrameBg,
---- StyleVar_FrameRounding, StyleVar_FrameBorderSize, StyleVar_FramePadding instead
---- of Col_ChildBg, StyleVar_ChildRounding, StyleVar_ChildBorderSize,
---- StyleVar_WindowPadding.
+---    StyleVar_FrameRounding, StyleVar_FrameBorderSize, StyleVar_FramePadding
+---    instead of Col_ChildBg, StyleVar_ChildRounding, StyleVar_ChildBorderSize,
+---    StyleVar_WindowPadding.
 ---
 --- ---
 ---
@@ -10800,6 +11532,50 @@
 ---
 --- @since 0.9
 --- @field ChildFlags_FrameStyle integer
+---
+--- **Window > Child Windows > Child Flags > ChildFlags\_NavFlattened**
+---
+--- Share focus scope, allow gamepad/keyboard navigation to cross over parent
+---    border to this child or between sibling child windows.
+---
+--- ---
+---
+--- **Window > Child Windows > Child Flags**
+---
+--- About using AutoResizeX/AutoResizeY flags:
+--- - May be combined with SetNextWindowSizeConstraints to set a min/max size for
+---   each axis (see Demo > Child > Auto-resize with Constraints).
+--- - Size measurement for a given axis is only performed when the child window is
+---   within visible boundaries, or is just appearing.
+---   - This allows BeginChild to return false when not within boundaries
+---     (e.g. when scrolling), which is more optimal. BUT it won't update its
+---     auto-size while clipped. While not perfect, it is a better default behavior
+---     as the always-on performance gain is more valuable than the occasional
+---     "resizing after becoming visible again" glitch.
+---   - You may also use ChildFlags_AlwaysAutoResize to force an update even when
+---     child window is not in view. HOWEVER PLEASE UNDERSTAND THAT DOING SO WILL
+---     PREVENT BeginChild FROM EVER RETURNING FALSE, disabling benefits of coarse
+---     clipping.
+---
+--- ---
+---
+--- **Window > Child Windows**
+---
+--- Use child windows to begin into a self-contained independent
+--- scrolling/clipping regions within a host window.
+--- Child windows can embed their own child.
+---
+--- ---
+---
+--- **Window**
+---
+--- Functions for creating and manipulating windows.
+--- Note that the bottom of the window stack always contains a window called "Debug".
+---
+--- ---
+---
+--- @since 0.9.2
+--- @field ChildFlags_NavFlattened integer
 ---
 --- **Window > Child Windows > Child Flags > ChildFlags\_None**
 ---
@@ -11779,6 +12555,7 @@ local ImGui = {}
 --- @class (exact) ImGui_ImageSet         : ImGui_Image
 --- @class (exact) ImGui_ListClipper      : ImGui_Resource
 --- @class (exact) ImGui_TextFilter       : ImGui_Resource
+--- @class (exact) LICE_IBitmap           : userdata
 --- @diagnostic disable: keyword
 
 --- **Button > ArrowButton**
@@ -14818,11 +15595,11 @@ function ImGui.DrawList_AddText(draw_list, x, y, col_rgba, text) end
 --- @param col_rgba integer
 --- @param text string
 --- @param wrap_width? number default value = `0.0`
---- @param cpu_fine_clip_rect_x? number default value = `nil`
---- @param cpu_fine_clip_rect_y? number default value = `nil`
---- @param cpu_fine_clip_rect_w? number default value = `nil`
---- @param cpu_fine_clip_rect_h? number default value = `nil`
-function ImGui.DrawList_AddTextEx(draw_list, font, font_size, pos_x, pos_y, col_rgba, text, wrap_width, cpu_fine_clip_rect_x, cpu_fine_clip_rect_y, cpu_fine_clip_rect_w, cpu_fine_clip_rect_h) end
+--- @param cpu_fine_clip_rect_min_x? number default value = `nil`
+--- @param cpu_fine_clip_rect_min_y? number default value = `nil`
+--- @param cpu_fine_clip_rect_max_x? number default value = `nil`
+--- @param cpu_fine_clip_rect_max_y? number default value = `nil`
+function ImGui.DrawList_AddTextEx(draw_list, font, font_size, pos_x, pos_y, col_rgba, text, wrap_width, cpu_fine_clip_rect_min_x, cpu_fine_clip_rect_min_y, cpu_fine_clip_rect_max_x, cpu_fine_clip_rect_max_y) end
 
 --- **Draw List > Primitives > DrawList\_AddTriangle**
 ---
@@ -15872,6 +16649,34 @@ function ImGui.Function_SetValue_String(func, name, value) end
 --- @return ImGui_Image retval
 function ImGui.CreateImage(file, flags) end
 
+--- **Image > CreateImageFromLICE**
+---
+--- Copies pixel data from a LICE bitmap created using JS_LICE_CreateBitmap.
+---
+--- ---
+---
+--- **Image**
+---
+--- ReaImGui currently supports loading PNG and JPEG bitmap images.
+--- Flat vector images may be loaded as fonts, see CreateFont.
+---
+--- UV parameters are texture coordinates in a scale of 0.0 (top/left) to 1.0
+--- (bottom/right). Use values below 0.0 or above 1.0 to tile the image.
+---
+--- Width/height are limited to 8192 pixels.
+---
+--- There are also image functions in the DrawList API such as
+--- DrawList_AddImageQuad and DrawList_AddImageRounded.
+---
+--- ---
+---
+--- @since 0.9.2
+--- @param bitmap LICE_IBitmap
+--- @param flags? integer default value = `nil`
+--- @nodiscard
+--- @return ImGui_Image retval
+function ImGui.CreateImageFromLICE(bitmap, flags) end
+
 --- **Image > CreateImageFromMem**
 ---
 --- Requires REAPER v6.44 or newer for EEL and Lua. Load from a file using
@@ -15896,9 +16701,10 @@ function ImGui.CreateImage(file, flags) end
 ---
 --- @since 0.9
 --- @param data string
+--- @param flags? integer default value = `nil`
 --- @nodiscard
 --- @return ImGui_Image retval
-function ImGui.CreateImageFromMem(data) end
+function ImGui.CreateImageFromMem(data, flags) end
 
 --- **Image > Image**
 ---
@@ -16090,6 +16896,11 @@ function ImGui.ImageSet_Add(set, scale, image) end
 ---
 --- Disable all user interactions and dim items visuals
 --- (applying StyleVar_DisabledAlpha over current colors).
+---
+--- Those can be nested but it cannot be used to enable an already disabled section
+--- (a single BeginDisabled(true) in the stack is enough to keep everything disabled).
+---
+--- Tooltips windows by exception are opted out of disabling.
 ---
 --- BeginDisabled(false) essentially does nothing useful but is provided to
 --- facilitate use of boolean expressions.
@@ -16600,19 +17411,6 @@ function ImGui.GetKeyMods(ctx) end
 --- @return integer retval
 function ImGui.GetKeyPressedAmount(ctx, key, repeat_delay, rate) end
 
---- **Keyboard \& Mouse > Keyboard > IsKeyChordPressed**
----
---- Was key chord (mods + key) pressed? You can pass e.g. `Mod_Shortcut | Key_S`
---- as a key chord.
----
---- ---
----
---- @since 0.9
---- @param ctx ImGui_Context
---- @param key_chord integer
---- @return boolean retval
-function ImGui.IsKeyChordPressed(ctx, key_chord) end
-
 --- **Keyboard \& Mouse > Keyboard > IsKeyDown**
 ---
 --- Is key being held.
@@ -16771,8 +17569,8 @@ function ImGui.GetMouseDownDuration(ctx, button) end
 ---
 --- Return the delta from the initial clicking position while the mouse button is
 --- pressed or was just released. This is locked and return 0.0 until the mouse
---- moves past a distance threshold at least once (if lock_threshold < -1.0, uses
---- ConfigVar_MouseDragThreshold).
+--- moves past a distance threshold at least once (uses ConfigVar_MouseDragThreshold
+--- if lock_threshold < 0.0).
 ---
 --- ---
 ---
@@ -16989,7 +17787,7 @@ function ImGui.IsMouseDown(ctx, button) end
 
 --- **Keyboard \& Mouse > Mouse > IsMouseDragging**
 ---
---- Is mouse dragging? (if lock_threshold < -1.0, uses ConfigVar_MouseDragThreshold)
+--- Is mouse dragging? (uses ConfigVar_MouseDragThreshold if lock_threshold < 0.0)
 ---
 --- ---
 ---
@@ -17169,6 +17967,116 @@ function ImGui.GetMouseCursor(ctx) end
 --- @param ctx ImGui_Context
 --- @param cursor_type integer
 function ImGui.SetMouseCursor(ctx, cursor_type) end
+
+--- **Keyboard \& Mouse > Shortcuts > IsKeyChordPressed**
+---
+--- Was key chord (mods + key) pressed? You can pass e.g. `Mod_Shortcut | Key_S`
+--- as a key chord. // This doesn't do any routing or focus check,
+--- please consider using the Shortcut() function instead.
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9
+--- @param ctx ImGui_Context
+--- @param key_chord integer
+--- @return boolean retval
+function ImGui.IsKeyChordPressed(ctx, key_chord) end
+
+--- **Keyboard \& Mouse > Shortcuts > SetNextItemShortcut**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @param ctx ImGui_Context
+--- @param key_chord integer
+--- @param flags? integer default value = `InputFlags_None`
+function ImGui.SetNextItemShortcut(ctx, key_chord, flags) end
+
+--- **Keyboard \& Mouse > Shortcuts > Shortcut**
+---
+--- ---
+---
+--- **Keyboard \& Mouse > Shortcuts**
+---
+---
+--- Key chords can combine a Key_* and a Mod_* value. For example: `Mod_Ctrl | Key_C`.
+--- Only Mod_* values can be combined a Key_* value. Another Key_* value cannot be combined.
+---
+--- Several callers may register interest in a shortcut, and only one owner gets it.
+---
+---     Parent -> call Shortcut(Ctrl+S) // When Parent is focused, Parent gets the shortcut.
+---     Child1 -> call Shortcut(Ctrl+S) // When Child1 is focused, Child1 gets the shortcut (Child1 overrides Parent shortcuts)
+---     Child2 -> no call               // When Child2 is focused, Parent gets the shortcut.
+---
+--- The whole system is order independent, so if Child1 makes its calls before Parent, results will be identical.
+--- This is an important property as it facilitate working with foreign code or larger codebase.
+---
+--- To understand the difference:
+--- - IsKeyChordPressed compares modifiers and calls IsKeyPressed -> function has no side-effect.
+--- - Shortcut submits a route, routes are resolved, if it currently can be routed it
+---   calls IsKeyChordPressed -> function has (desirable) side-effects as it can
+---   prevents another call from getting the route.
+---
+--- Registered routes may be visualized via Metrics/Debugger > Inputs (ShowMetricsWindow).
+---
+--- ---
+---
+--- @since 0.9.2
+--- @param ctx ImGui_Context
+--- @param key_chord integer
+--- @param flags? integer default value = `InputFlags_None`
+--- @return boolean retval
+function ImGui.Shortcut(ctx, key_chord, flags) end
 
 --- **Layout > BeginGroup**
 ---
@@ -18532,7 +19440,7 @@ function ImGui.EndTooltip(ctx) end
 
 --- **Popup \& Modal > Tooltips > SetItemTooltip**
 ---
---- Set a text-only tooltip if preceeding item was hovered.
+--- Set a text-only tooltip if preceding item was hovered.
 --- Override any previous call to SetTooltip(). Shortcut for
 --- `if (IsItemHovered(HoveredFlags_ForTooltip)) { SetTooltip(...); }`.
 ---
@@ -18839,14 +19747,14 @@ function ImGui.TabItemButton(ctx, label, flags) end
 --- @since 0.9
 --- @param ctx ImGui_Context
 --- @param str_id string
---- @param column integer
+--- @param columns integer
 --- @param flags? integer default value = `TableFlags_None`
 --- @param outer_size_w? number default value = `0.0`
 --- @param outer_size_h? number default value = `0.0`
 --- @param inner_width? number default value = `0.0`
 --- @nodiscard
 --- @return boolean retval
-function ImGui.BeginTable(ctx, str_id, column, flags, outer_size_w, outer_size_h, inner_width) end
+function ImGui.BeginTable(ctx, str_id, columns, flags, outer_size_w, outer_size_h, inner_width) end
 
 --- **Table > EndTable**
 ---
@@ -19231,7 +20139,7 @@ function ImGui.TableSetBgColor(ctx, target, color_rgba, column_n) end
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -19293,7 +20201,7 @@ function ImGui.TableAngledHeadersRow(ctx) end
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -19357,7 +20265,7 @@ function ImGui.TableGetColumnFlags(ctx, column_n) end
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -19406,6 +20314,71 @@ function ImGui.TableGetColumnFlags(ctx, column_n) end
 --- @return string retval
 function ImGui.TableGetColumnName(ctx, column_n) end
 
+--- **Table > Header \& Columns > TableGetHoveredColumn**
+---
+--- Returns hovered column or -1 when table is not hovered. Returns columns_count
+--- if the unused space at the right of visible columns is hovered.
+---
+--- Can also use (TableGetColumnFlags() & TableColumnFlags_IsHovered) instead.
+---
+--- ---
+---
+--- **Table > Header \& Columns**
+---
+--- Use TableSetupColumn() to specify label, resizing policy, default
+--- width/weight, id, various other flags etc.
+---
+--- Use TableHeadersRow() to create a header row and automatically submit a
+--- TableHeader() for each column. Headers are required to perform: reordering,
+--- sorting, and opening the context menu. The context menu can also be made
+--- available in columns body using TableFlags_ContextMenuInBody.
+---
+--- You may manually submit headers using TableNextRow() + TableHeader() calls, but
+--- this is only useful in some advanced use cases (e.g. adding custom widgets in
+--- header row).
+---
+--- Use TableSetupScrollFreeze() to lock columns/rows so they stay visible when
+--- scrolled.
+---
+--- ---
+---
+--- **Table**
+---
+--- See top of [imgui_tables.cpp](https://github.com/ocornut/imgui/blob/master/imgui_tables.cpp)
+--- for general commentary.
+---
+--- See TableFlags* and TableColumnFlags* enums for a description of available flags.
+---
+--- The typical call flow is:
+--- 1. Call BeginTable.
+--- 2. Optionally call TableSetupColumn to submit column name/flags/defaults.
+--- 3. Optionally call TableSetupScrollFreeze to request scroll freezing of columns/rows.
+--- 4. Optionally call TableHeadersRow to submit a header row. Names are pulled from
+---    TableSetupColumn data.
+--- 5. Populate contents:
+---    - In most situations you can use TableNextRow + TableSetColumnIndex(N) to
+---      start appending into a column.
+---    - If you are using tables as a sort of grid, where every column is holding
+---      the same type of contents,
+---      you may prefer using TableNextColumn instead of
+---      TableNextRow + TableSetColumnIndex.
+---      TableNextColumn will automatically wrap-around into the next row if needed.
+---    - Summary of possible call flow:
+---      ```
+---      TableNextRow() -> TableSetColumnIndex(0) -> Text("Hello 0") -> TableSetColumnIndex(1) -> Text("Hello 1")  // OK
+---      TableNextRow() -> TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK
+---                        TableNextColumn()      -> Text("Hello 0") -> TableNextColumn()      -> Text("Hello 1")  // OK: TableNextColumn() automatically gets to next row!
+---      TableNextRow()                           -> Text("Hello 0")                                               // Not OK! Missing TableSetColumnIndex() or TableNextColumn()! Text will not appear!
+---      ```
+--- 5. Call EndTable.
+---
+--- ---
+---
+--- @since 0.9.2
+--- @param ctx ImGui_Context
+--- @return integer retval
+function ImGui.TableGetHoveredColumn(ctx) end
+
 --- **Table > Header \& Columns > TableHeader**
 ---
 --- Submit one header cell manually (rarely used). See TableSetupColumn.
@@ -19420,7 +20393,7 @@ function ImGui.TableGetColumnName(ctx, column_n) end
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -19483,7 +20456,7 @@ function ImGui.TableHeader(ctx, label) end
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -19554,7 +20527,7 @@ function ImGui.TableHeadersRow(ctx) end
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -19618,7 +20591,7 @@ function ImGui.TableSetColumnEnabled(ctx, column_n, v) end
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in
@@ -19683,7 +20656,7 @@ function ImGui.TableSetupColumn(ctx, label, flags, init_width_or_weight, user_id
 --- Use TableHeadersRow() to create a header row and automatically submit a
 --- TableHeader() for each column. Headers are required to perform: reordering,
 --- sorting, and opening the context menu. The context menu can also be made
---- available in columns body using ImGuiTableFlags_ContextMenuInBody.
+--- available in columns body using TableFlags_ContextMenuInBody.
 ---
 --- You may manually submit headers using TableNextRow() + TableHeader() calls, but
 --- this is only useful in some advanced use cases (e.g. adding custom widgets in

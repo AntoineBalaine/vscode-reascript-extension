@@ -94,6 +94,8 @@ As it implies here you can set variables you like to watch, expressions etc. Scr
 
 ## Changelog
 
+- 0.1.11 (Aug 7th 2024)
+  - update ImGui defs to 0.9.2
 - 0.1.10 (Aug 7th 2024)
   - add live global variable view
 - 0.1.9 (June 6th 2024)

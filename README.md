@@ -94,6 +94,8 @@ As it implies here you can set variables you like to watch, expressions etc. Scr
 
 ## Changelog
 
+- 0.1.10 (Aug 7th 2024)
+  - add live global variable view
 - 0.1.9 (June 6th 2024)
   - include ReaWwise types
 - 0.1.8 (May 15th 2024)

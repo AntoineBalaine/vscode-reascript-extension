@@ -1,6 +1,6 @@
 --- ReaImGui LuaCATS definitions
 ---
---- Generated for version 0.9.2 - API version 0.9.2
+--- Generated for version 0.9.2-7-g5609a5d - API version 0.9.3
 ---
 --- @meta  imgui
 --- @class ImGui
@@ -3723,12 +3723,6 @@
 ---
 --- ---
 ---
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
----
---- ---
----
 --- **Keyboard \& Mouse > Shortcuts**
 ---
 ---
@@ -3763,12 +3757,6 @@
 ---
 --- ---
 ---
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
----
---- ---
----
 --- **Keyboard \& Mouse > Shortcuts**
 ---
 ---
@@ -3800,12 +3788,6 @@
 --- **Keyboard \& Mouse > Shortcuts > Flags > InputFlags\_RouteFromRootWindow**
 ---
 --- Option: route evaluated from the point of view of root window rather than current window.
----
---- ---
----
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
 ---
 --- ---
 ---
@@ -3846,12 +3828,6 @@
 ---
 --- ---
 ---
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
----
---- ---
----
 --- **Keyboard \& Mouse > Shortcuts**
 ---
 ---
@@ -3884,12 +3860,6 @@
 ---
 --- Global route: higher priority than focused route
 ---    (unless active item in focused route).
----
---- ---
----
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
 ---
 --- ---
 ---
@@ -3928,12 +3898,6 @@
 ---
 --- ---
 ---
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
----
---- ---
----
 --- **Keyboard \& Mouse > Shortcuts**
 ---
 ---
@@ -3965,12 +3929,6 @@
 --- **Keyboard \& Mouse > Shortcuts > Flags > InputFlags\_Tooltip**
 ---
 --- Automatically display a tooltip when hovering item
----
---- ---
----
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
 ---
 --- ---
 ---
@@ -4017,12 +3975,6 @@
 ---
 --- ---
 ---
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
----
---- ---
----
 --- **Keyboard \& Mouse > Shortcuts**
 ---
 ---
@@ -4063,12 +4015,6 @@
 ---    \>> RouteGlobal+OverFocused >> RouteFocused (if in focused window stack) >> RouteGlobal.
 ---
 ---    Default policy is RouteFocused. Can select only one policy among all available.
----
---- ---
----
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
 ---
 --- ---
 ---
@@ -4116,12 +4062,6 @@
 ---
 --- ---
 ---
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
----
---- ---
----
 --- **Keyboard \& Mouse > Shortcuts**
 ---
 ---
@@ -4162,12 +4102,6 @@
 ---    \>> RouteGlobal+OverFocused >> RouteFocused (if in focused window stack) >> RouteGlobal.
 ---
 ---    Default policy is RouteFocused. Can select only one policy among all available.
----
---- ---
----
---- **Keyboard \& Mouse > Shortcuts > Flags**
----
-
 ---
 --- ---
 ---
@@ -10519,12 +10453,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Callback features**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10545,12 +10473,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Callback features**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10567,12 +10489,6 @@
 --- **Text \& Scalar Input > Flags > Callback features > InputTextFlags\_CallbackCompletion**
 ---
 --- Callback on pressing TAB (for completion handling).
----
---- ---
----
---- **Text \& Scalar Input > Flags > Callback features**
----
-
 ---
 --- ---
 ---
@@ -10597,12 +10513,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Callback features**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10622,12 +10532,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Callback features**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10644,12 +10548,6 @@
 --- **Text \& Scalar Input > Flags > Inputs > InputTextFlags\_AllowTabInput**
 ---
 --- Pressing TAB input a '\t' character into the text field.
----
---- ---
----
---- **Text \& Scalar Input > Flags > Inputs**
----
-
 ---
 --- ---
 ---
@@ -10673,12 +10571,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Inputs**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10696,12 +10588,6 @@
 ---
 --- Return 'true' when Enter is pressed (as opposed to every time the value was
 ---    modified). Consider looking at the IsItemDeactivatedAfterEdit function.
----
---- ---
----
---- **Text \& Scalar Input > Flags > Inputs**
----
-
 ---
 --- ---
 ---
@@ -10725,12 +10611,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Inputs**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10750,12 +10630,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Other options**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10772,12 +10646,6 @@
 --- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_AutoSelectAll**
 ---
 --- Select entire text when first taking mouse focus.
----
---- ---
----
---- **Text \& Scalar Input > Flags > Other options**
----
-
 ---
 --- ---
 ---
@@ -10801,12 +10669,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Other options**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10823,12 +10685,6 @@
 --- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_NoHorizontalScroll**
 ---
 --- Disable following the cursor horizontally.
----
---- ---
----
---- **Text \& Scalar Input > Flags > Other options**
----
-
 ---
 --- ---
 ---
@@ -10851,12 +10707,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Other options**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10873,12 +10723,6 @@
 --- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_ParseEmptyRefVal**
 ---
 --- InputDouble(), InputInt() etc. only: parse empty string as zero value.
----
---- ---
----
---- **Text \& Scalar Input > Flags > Other options**
----
-
 ---
 --- ---
 ---
@@ -10901,12 +10745,6 @@
 ---
 --- ---
 ---
---- **Text \& Scalar Input > Flags > Other options**
----
-
----
---- ---
----
 --- **Text \& Scalar Input > Flags**
 ---
 --- Most of these are only useful for InputText*() and not for InputDoubleX,
@@ -10923,12 +10761,6 @@
 --- **Text \& Scalar Input > Flags > Other options > InputTextFlags\_ReadOnly**
 ---
 --- Read-only mode.
----
---- ---
----
---- **Text \& Scalar Input > Flags > Other options**
----
-
 ---
 --- ---
 ---
@@ -16326,6 +16158,42 @@ function ImGui.DrawList_PathStroke(draw_list, col_rgba, flags, thickness) end
 --- @return ImGui_Font retval
 function ImGui.CreateFont(family_or_file, size, flags) end
 
+--- **Font > CreateFontFromMem**
+---
+--- Requires REAPER v6.44 or newer for EEL and Lua. Use CreateFont or
+--- explicitely specify data_sz to support older versions.
+---
+--- - The first byte of 'flags' is used as the font index within the file
+--- - The font styles in 'flags' are simulated by the font renderer
+---
+--- ---
+---
+--- **Font**
+---
+--- Supports loading fonts from the system by family name or from a file.
+--- Glyphs may contain colors in COLR/CPAL format.
+---
+--- This API currently has multiple limitations (v1.0 blockers):
+--- - ReaImGui rasterizes glyphs only from the Basic Latin and Latin Supplement
+---   Unicode blocks (U+0020 to U+00FF). UTF-8 is fully supported internally,
+---   however characters outside those blocks are displayed as '?'.
+---   See [issue #5](https://github.com/cfillion/reaimgui/issues/5).
+--- - Dear ImGui does not support using new fonts in the middle of a frame.
+---   Because of this, fonts must first be registered using Attach before any
+---   other context functions are used in the same defer cycle.
+---   (Attaching a font is a heavy operation and should ideally be done outside
+---   of the defer loop.)
+---
+--- ---
+---
+--- @since 0.9.3
+--- @param data string
+--- @param size integer
+--- @param flags? integer default value = `FontFlags_None`
+--- @nodiscard
+--- @return ImGui_Font retval
+function ImGui.CreateFontFromMem(data, size, flags) end
+
 --- **Font > GetFont**
 ---
 --- Get the current font
@@ -16680,7 +16548,7 @@ function ImGui.CreateImageFromLICE(bitmap, flags) end
 --- **Image > CreateImageFromMem**
 ---
 --- Requires REAPER v6.44 or newer for EEL and Lua. Load from a file using
---- CreateImage or explicitely specify data_sz if supporting older versions.
+--- CreateImage or explicitely specify data_sz to support older versions.
 ---
 --- ---
 ---

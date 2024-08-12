@@ -4379,7 +4379,7 @@ function reaper.Splash_GetWnd() end
 ---the original item becomes the left-hand split, the function returns the right-hand split (or NULL if the split failed)
 ---@param item MediaItem
 ---@param position number
----@return MediaItem retval
+---@return MediaItem? retval
 function reaper.SplitMediaItem(item, position) end
 
 ---@param str string

@@ -5816,14 +5816,6 @@ function reaper.BR_GetMidiTakePoolGUID(take) end
 ---@return integer den
 function reaper.BR_GetMidiTakeTempoInfo(take) end
 
----[BR] Get mouse cursor context. Each parameter returns information in a form of string as specified in the table below.  
----To get more info on stuff that was found under mouse cursor see BR_GetMouseCursorContext_Envelope, BR_GetMouseCursorContext_Item, BR_GetMouseCursorContext_MIDI, BR_GetMouseCursorContext_Position, BR_GetMouseCursorContext_Take, BR_GetMouseCursorContext_Track   
----<table><tr><th style="width:100px">Window</th> <th style="width:100px">Segment</th> <th style="width:300px">Details</th>                                           </tr><tr><th rowspan="1"> unknown     </th>    <td> ""        </td>   <td> ""                                                           </td> </tr><tr><th rowspan="4"> ruler       </th>    <td> region_lane </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> marker_lane </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> tempo_lane  </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> timeline    </td>   <td> ""                                                           </td> </tr><tr><th rowspan="1"> transport   </th>    <td> ""        </td>   <td> ""                                                           </td> </tr><tr><th rowspan="3"> tcp         </th>    <td> track       </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> envelope    </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> empty       </td>   <td> ""                                                           </td> </tr><tr><th rowspan="2"> mcp         </th>    <td> track       </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> empty       </td>   <td> ""                                                           </td> </tr><tr><th rowspan="3"> arrange     </th>    <td> track       </td>   <td> empty,  item, item_stretch_marker,  env_point, env_segment </td> </tr><tr>                                                           <td> envelope    </td>   <td> empty, env_point, env_segment                                  </td> </tr><tr>                                                           <td> empty       </td>   <td> ""                                                           </td> </tr><tr><th rowspan="5"> midi_editor </th>    <td> unknown     </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> ruler       </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> piano       </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> notes       </td>   <td> ""                                                           </td> </tr><tr>                                                           <td> cc_lane     </td>   <td> cc_selector, cc_lane                                           </td> </tr></table>
----@return string window
----@return string segment
----@return string details
-function reaper.BR_GetMouseCursorContext() end
-
 ---[BR] Returns envelope that was captured with the last call to BR_GetMouseCursorContext. In case the envelope belongs to take, takeEnvelope will be true.
 ---@return TrackEnvelope retval
 ---@return boolean takeEnvelope
@@ -9637,6 +9629,44 @@ function reaper.gmem_write(index, value) end
 ---Returns the path to the directory containing imgui.lua, imgui.py and gfx2imgui.lua.
 ---@return string path
 function reaper.ImGui_GetBuiltinPath() end
+
+---[BR] Get mouse cursor context. Each parameter returns information in a form of string as specified in the table below.
+---
+---+------------+----------------+------------------------------------------------+  
+---| Window     | Segment        | Details                                        |  
+---+------------+----------------+------------------------------------------------+  
+---| unknown    | ""             | ""                                             |  
+---+------------+----------------+------------------------------------------------+  
+---| ruler      | region_lane    | ""                                             |  
+---|            | marker_lane    | ""                                             |  
+---|            | tempo_lane     | ""                                             |  
+---|            | timeline       | ""                                             |  
+---+------------+----------------+------------------------------------------------+  
+---| transport  | ""             | ""                                             |  
+---+------------+----------------+------------------------------------------------+  
+---| tcp        | track          | ""                                             |  
+---|            | envelope       | ""                                             |  
+---|            | empty          | ""                                             |  
+---+------------+----------------+------------------------------------------------+  
+---| mcp        | track          | ""                                             |  
+---|            | empty          | ""                                             |  
+---+------------+----------------+------------------------------------------------+  
+---| arrange    | track          | empty, item, item_stretch_marker,              |  
+---|            |                | env_point, env_segment                         |  
+---|            | envelope       | empty, env_point, env_segment                  |  
+---|            | empty          | ""                                             |  
+---+------------+----------------+------------------------------------------------+  
+---| midi_editor| unknown        | ""                                             |  
+---|            | ruler          | ""                                             |  
+---|            | piano          | ""                                             |  
+---|            | notes          | ""                                             |  
+---|            | cc_lane        | cc_selector, cc_lane                           |  
+---+------------+----------------+------------------------------------------------+  
+---To get more info on stuff that was found under mouse cursor see BR_GetMouseCursorContext_Envelope, BR_GetMouseCursorContext_Item, BR_GetMouseCursorContext_MIDI, BR_GetMouseCursorContext_Position, BR_GetMouseCursorContext_Take, BR_GetMouseCursorContext_Track
+---@return string window
+---@return string segment
+---@return string details
+function reaper.BR_GetMouseCursorContext() end
 
 ---@class gfx
 ---@field r number current red component (0..1) used by drawing operations.

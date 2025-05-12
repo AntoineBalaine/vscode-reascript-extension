@@ -6,6 +6,28 @@ Libraries that also have type-checking:
 - ReaImGui
 - Reawwise
 
+## Using the definitions with another editor?
+…is possible. Requires luals to work with your editor. 
+
+Create a `.luarc.json` at the root of your lua project, and point it to where the extension’s definitions file is located:
+
+```json
+{
+    "runtime.version": "Lua 5.4",
+    "diagnostics.globals": [
+        "reaper",
+    ],
+    "workspace": {
+        "library": [
+            "~/.vscode/extensions/antoinebalaine.reascript-docs-0.1.13/resources/Sexan_reaper_defs.lua",
+            "~/.vscode/extensions/antoinebalaine.reascript-docs-0.1.13/resources/imgui_defs_0.9.lua",
+            "~/.vscode/extensions/antoinebalaine.reascript-docs-0.1.13/resources/reawwise_defs.lua"
+        ]
+    }
+}
+```
+
+
 ### How to use the debugger:
 
 1. Create a launch.json config, and include the following:
@@ -94,6 +116,10 @@ As it implies here you can set variables you like to watch, expressions etc. Scr
 
 ## Changelog
 
+- 0.1.14 (May 12th 2025)
+  - readme docs for using defs with neovim
+- 0.1.13 (May 10th 2025)
+  - update to reaper defs
 - 0.1.12 (Aug 8th 2024)
   - hotfix ImGui defs 
 - 0.1.11 (Aug 7th 2024)

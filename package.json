@@ -90,7 +90,33 @@
               "address": "localhost"
             }
           }
-        ]
+        ],
+        "configurationAttributes": {
+          "attach": {
+            "properties": {
+              "reaperDebugActionID": {
+                "type": "string",
+                "description": "The command ID in actions list for the action to run when debugging starts. E.g., The script ID to have reaper execute. You can have multiple ID's to execute with delays by using the format: \"ID:delay;...\"",
+                "default": ""
+              },
+              "reaperOscIp": {
+                "type": "string",
+                "description": "The ip addressed configured under for the Osc control surface in Control/OSC/web. Note that for Osc to control reaper set \"Allow binding messages to control Reaper\".",
+                "default": "127.0.0.1"
+              },
+              "reaperOscPort": {
+                "type": "integer",
+                "description": "The osc port configured under for the Osc control surface in Control/OSC/web.",
+                "default": 8000
+              },
+              "debuggerTask": {
+                "type": "string",
+                "description": "A task to execute after the debug server has started.",
+                "default": ""
+              }
+            }
+          }
+        }
       }
     ],
     "configuration": {
@@ -171,6 +197,7 @@
     "@types/vscode": "^1.32.0",
     "@types/xml2js": "^0.4.11",
     "chai": "^4.3.7",
+    "koffi": "^2.10.1",
     "prettier": "^2.2.1",
     "typescript": "^4.0.2"
   },

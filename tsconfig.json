@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+	"include": ["src"],
 	"compilerOptions": {
 		"module": "commonjs",
 		"target": "es2015",
@@ -9,10 +9,16 @@
 		"strict": true,
 		"rootDir": "src",
 		"resolveJsonModule": true,
+
 		// Skip lib check is enabled because something funky about JSDOM types, breaks debugging and compiling the extension/project
 		"skipLibCheck": true,
-    "downlevelIteration": true,
+    	"downlevelIteration": true,
+		"typeRoots": ["./node_modules/@types", "./types"],
+    	"moduleResolution": "node",
+
+		"noErrorTruncation": true // Prevents truncation in errors/hover
 	},
+
 	"exclude": [
 		"node_modules",
 		".vscode-test",

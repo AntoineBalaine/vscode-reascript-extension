@@ -1,7 +1,7 @@
 {
   "name": "reascript-docs",
   "displayName": "REAPER ReaScript",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "publisher": "antoinebalaine",
   "icon": "reaperlogo.png",
   "repository": {
@@ -98,11 +98,12 @@
       "properties": {
         "reascript-docs.reaImGuiVersion": {
           "type": "string",
-          "default": "0.9",
+          "default": "0.10",
           "description": "which version of reaImGui your system uses",
           "enum": [
             "<0.9",
-            "0.9"
+            "0.9",
+            "0.10"
           ]
         }
       }

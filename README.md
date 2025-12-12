@@ -19,9 +19,9 @@ Create a `.luarc.json` at the root of your lua project, and point it to where th
     ],
     "workspace": {
         "library": [
-            "~/.vscode/extensions/antoinebalaine.reascript-docs-0.1.13/resources/Sexan_reaper_defs.lua",
-            "~/.vscode/extensions/antoinebalaine.reascript-docs-0.1.13/resources/imgui_defs_0.9.lua",
-            "~/.vscode/extensions/antoinebalaine.reascript-docs-0.1.13/resources/reawwise_defs.lua"
+            "~/.vscode/extensions/antoinebalaine.reascript-docs-0.1.15/resources/Sexan_reaper_defs.lua",
+            "~/.vscode/extensions/antoinebalaine.reascript-docs-0.1.15/resources/imgui_defs_0.10.lua",
+            "~/.vscode/extensions/antoinebalaine.reascript-docs-0.1.15/resources/reawwise_defs.lua"
         ]
     }
 }
@@ -116,6 +116,8 @@ As it implies here you can set variables you like to watch, expressions etc. Scr
 
 ## Changelog
 
+- 0.1.15 (Dec 12th 2025)
+  - add support for ReaImGui v0.10
 - 0.1.14 (May 12th 2025)
   - readme docs for using defs with neovim
 - 0.1.13 (May 10th 2025)
